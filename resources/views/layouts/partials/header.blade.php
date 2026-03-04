@@ -1,0 +1,142 @@
+<!-- HEADER -->
+        <header class="fixed top-0 left-0 w-full z-50
+            bg-gradient-to-r 
+            from-[#000000] 
+            via-[#000000] 
+            to-[#0d3c63]
+            border-b border-white/5 backdrop-blur-md">
+
+            <div class="mx-auto px-6 lg:px-8">
+
+                <div class="flex items-center justify-between h-20">
+
+                    <!-- LEFT LOGO -->
+                    <div class="flex items-center space-x-3">
+                        <img src="{{asset("logo.jpg")}}" alt="" class="w-auto h-10">
+                    </div>
+
+                    <!-- CENTER NAVIGATION -->
+                    <nav class="hidden lg:flex items-center space-x-8 text-[14px] font-medium text-gray-300">
+
+                        <a href="/" class="relative text-[#1ecbff] pb-1">
+                            Home
+                            <span class="absolute left-0 -bottom-2 w-full h-[2px] 
+                            bg-[#1ecbff] rounded-full shadow-[0_0_8px_#3b82f6]"></span>
+                        </a>
+
+                        <div class="relative group">
+
+                            <!-- Main Link -->
+                            <button class="flex items-center gap-1 hover:text-blue-400 transition duration-300">
+                                Services
+                                <i class="fa-solid fa-chevron-down text-[10px] mt-[2px] transition-transform duration-300 group-hover:rotate-180"></i>
+                            </button>
+
+                            <!-- Dropdown -->
+                            <div class="absolute left-0 mt-4 w-56 
+                                bg-[#0b2238] border border-white/10 
+                                rounded-md shadow-xl 
+                                opacity-0 invisible 
+                                group-hover:opacity-100 group-hover:visible
+                                transition-all duration-300">
+
+                                <ul class="py-3 text-sm text-gray-300">
+
+                                    <li>
+                                        <a href="#" class="block px-5 py-2 hover:bg-blue-600/20 hover:text-blue-400 transition">
+                                            Air Freight
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="#" class="block px-5 py-2 hover:bg-blue-600/20 hover:text-blue-400 transition">
+                                            Ocean Freight
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="#" class="block px-5 py-2 hover:bg-blue-600/20 hover:text-blue-400 transition">
+                                            Road Transport
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="#" class="block px-5 py-2 hover:bg-blue-600/20 hover:text-blue-400 transition">
+                                            Warehousing
+                                        </a>
+                                    </li>
+
+                                </ul>
+
+                            </div>
+
+                        </div>
+                        <a href="#" class="hover:text-blue-400 transition duration-300">Request Transport</a>
+                        <a href="#" class="hover:text-blue-400 transition duration-300">Track Shipment</a>
+                        <a href="#" class="hover:text-blue-400 transition duration-300">News & Insights</a>
+                        <a href="#" class="hover:text-blue-400 transition duration-300">Challenges</a>
+                        <a href="/about" class="hover:text-blue-400 transition duration-300">About Us</a>
+                        <a href="/contact" class="hover:text-blue-400 transition duration-300">Contact</a>
+
+                    </nav>
+
+                    <!-- RIGHT SIDE -->
+                <!-- RIGHT SIDE -->
+                    <div class="hidden lg:flex items-center space-x-5">
+
+                        <!-- Customer Support Icon -->
+                        <div class="w-9 h-9 flex items-center justify-center 
+                            bg-white/5 border border-white/10 rounded-md
+                            text-gray-300 hover:text-blue-400 
+                            hover:bg-blue-600/20 transition cursor-pointer">
+                            <i class="fa-solid fa-headset text-sm"></i>
+                        </div>
+
+                        <!-- Get Quote -->
+                        <a href="/getquote"
+                        class="bg-gradient-to-r from-blue-600 to-blue-500
+                        hover:from-blue-500 hover:to-blue-600
+                        transition px-5 py-2 rounded-md text-sm font-semibold
+                        shadow-lg shadow-blue-600/30">
+                            Get Quote
+                        </a>
+
+                    </div>
+
+                    <!-- MOBILE MENU BUTTON -->
+                    <button id="menuBtn" class="lg:hidden text-white text-2xl">
+                        ☰
+                    </button>
+
+                </div>
+
+                <!-- RIGHT LOWER ROW (Language + Icons) -->
+                <div class="flex items-center justify-end gap-6 pb-3">
+
+                    <!-- Language -->
+                    <div class="flex items-center space-x-2 text-sm text-gray-300 
+                            border border-white/10 px-3 py-1.5 rounded-md 
+                            bg-white/5 hover:bg-white/10 transition cursor-pointer">
+                        <i class="fa-solid fa-globe text-blue-400"></i>
+                        <span>EN</span>
+                    </div>
+
+                    <!-- Icons -->
+                    <div class="flex items-center space-x-5 text-gray-300 text-[15px]">
+                        <i class="fa-regular fa-bell hover:text-blue-400 cursor-pointer transition"></i>
+                        <i class="fa-solid fa-cart-shopping hover:text-blue-400 cursor-pointer transition"></i>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+        <script>
+            const menuBtn = document.getElementById('menuBtn');
+            const mobileMenu = document.getElementById('mobileMenu');
+
+            menuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        </script>
