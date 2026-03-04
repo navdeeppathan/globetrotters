@@ -1291,4 +1291,688 @@
         }
     </style>
 
+    <section class="bg-[#000000] overflow-hidden">
+
+        <div class="max-w-7xl mx-auto grid lg:grid-cols-2 items-center gap-12 px-8 lg:px-16 py-24">
+
+            <!-- LEFT CONTENT -->
+            <div class="text-white space-y-6">
+
+                <h2 class="text-5xl font-bold tracking-wide">
+                    OUR MISSION
+                </h2>
+
+                <div class="w-20 h-[3px] bg-blue-500 mt-6"></div>
+
+                <p class="text-gray-400 leading-relaxed text-lg max-w-xl">
+                    Our aim is to deliver a positive and reliable experience to each
+                    and every client while offering exceptional values in the
+                    marketplace and setting the standard for professionalism in the
+                    logistics solution we offer.
+                </p>
+
+                <p class="text-gray-400 leading-relaxed text-lg max-w-xl">
+                    In addition to operating our business profitably, we strive to
+                    operate it responsibly both for our clients and our employees.
+                </p>
+
+            </div>
+
+
+            <!-- RIGHT IMAGE -->
+            <div class="relative group">
+
+                <!-- glowing background -->
+                <div class="absolute inset-0 bg-blue-500/10 blur-3xl opacity-40 group-hover:opacity-70 transition duration-500"></div>
+
+                <img 
+                src="{{ asset('a1.jpg') }}"
+                class="relative rounded-xl shadow-2xl transform transition duration-700 group-hover:scale-105 group-hover:-translate-y-2"
+                >
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="bg-[#000000] py-28 relative overflow-hidden">
+
+        <div class="max-w-7xl mx-auto px-6">
+
+            <!-- TITLE -->
+            <div class="text-center mb-20">
+
+                <h2 class="text-white text-4xl md:text-5xl font-bold tracking-wide">
+                    OUR VISION
+                </h2>
+
+                <div class="w-20 h-[3px] bg-blue-500 mx-auto mt-6"></div>
+
+                <p class="text-gray-400 mt-6 max-w-2xl mx-auto">
+                    Delivering world-class logistics solutions through innovation,
+                    reliability and global expertise.
+                </p>
+
+            </div>
+
+
+            <!-- VISION ITEMS -->
+            <div class="grid md:grid-cols-3 gap-12 mb-20">
+
+                <!-- ITEM -->
+                <div class="group flex items-start gap-6 p-6 rounded-xl bg-[#0f1620] border border-[#1d2a3a] hover:border-blue-500 transition duration-500">
+
+                    <div class="text-5xl font-bold text-blue-500 group-hover:scale-110 transition">
+                        01
+                    </div>
+
+                    <div class="text-gray-300 font-semibold leading-relaxed">
+                        PROVIDING HIGH <br>
+                        QUALITY OF SERVICES
+                    </div>
+
+                </div>
+
+
+                <!-- ITEM -->
+                <div class="group flex items-start gap-6 p-6 rounded-xl bg-[#0f1620] border border-[#1d2a3a] hover:border-blue-500 transition duration-500">
+
+                    <div class="text-5xl font-bold text-blue-500 group-hover:scale-110 transition">
+                        02
+                    </div>
+
+                    <div class="text-gray-300 font-semibold leading-relaxed">
+                        GLOBAL EXPERTISE IN <br>
+                        LOGISTICS
+                    </div>
+
+                </div>
+
+
+                <!-- ITEM -->
+                <div class="group flex items-start gap-6 p-6 rounded-xl bg-[#0f1620] border border-[#1d2a3a] hover:border-blue-500 transition duration-500">
+
+                    <div class="text-5xl font-bold text-blue-500 group-hover:scale-110 transition">
+                        03
+                    </div>
+
+                    <div class="text-gray-300 font-semibold leading-relaxed">
+                        GOAL OF BECOMING <br>
+                        THE INDUSTRY LEADER
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- IMAGE GRID -->
+        <div class="max-w-7xl mx-auto px-6">
+
+            <div class="grid md:grid-cols-3 gap-8">
+
+                <!-- IMAGE -->
+                <div class="relative group overflow-hidden rounded-xl">
+
+                    <img src="{{ asset('a3.jpg') }}"
+                    class="w-full h-[260px] object-cover transform group-hover:scale-110 transition duration-700">
+
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+
+                </div>
+
+
+                <!-- IMAGE -->
+                <div class="relative group overflow-hidden rounded-xl">
+
+                    <img src="{{ asset('a4.jpg') }}"
+                    class="w-full h-[260px] object-cover transform group-hover:scale-110 transition duration-700">
+
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+
+                </div>
+
+
+                <!-- IMAGE -->
+                <div class="relative group overflow-hidden rounded-xl">
+
+                    <img src="{{ asset('a5.jpg') }}"
+                    class="w-full h-[260px] object-cover transform group-hover:scale-110 transition duration-700">
+
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="bg-[#000000] py-28">
+
+        <div class="max-w-7xl mx-auto px-6 text-center">
+
+            <!-- TITLE -->
+            <h2 class="text-white text-4xl md:text-5xl font-bold tracking-wide">
+                INDUSTRIES WE SERVE
+            </h2>
+
+            <div class="w-20 h-[3px] bg-blue-500 mx-auto mt-6 mb-20"></div>
+
+
+            <!-- GRID -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-12">
+
+                <!-- CARD -->
+                <div class="industry-card group">
+
+                    <div class="industry-title">
+                        RETAIL
+                    </div>
+
+                    <div class="industry-popup">
+                        End-to-end retail logistics including warehousing,
+                        distribution and inventory management.
+                    </div>
+
+                </div>
+
+
+                <div class="industry-card group">
+
+                    <div class="industry-title">
+                        MANUFACTURING
+                    </div>
+
+                    <div class="industry-popup">
+                        Optimized supply chain operations for factories
+                        and industrial production logistics.
+                    </div>
+
+                </div>
+
+
+                <div class="industry-card group">
+
+                    <div class="industry-title">
+                        FOOD & BEVERAGE
+                    </div>
+
+                    <div class="industry-popup">
+                        Temperature-controlled logistics and global
+                        distribution for perishable goods.
+                    </div>
+
+                </div>
+
+
+                <div class="industry-card group">
+
+                    <div class="industry-title">
+                        AUTOMOTIVE
+                    </div>
+
+                    <div class="industry-popup">
+                        Global automotive supply chain solutions,
+                        parts distribution and freight transport.
+                    </div>
+
+                </div>
+
+
+                <div class="industry-card group">
+
+                    <div class="industry-title">
+                        HEALTHCARE
+                    </div>
+
+                    <div class="industry-popup">
+                        Secure and compliant transportation for
+                        medical equipment and pharmaceuticals.
+                    </div>
+
+                </div>
+
+
+                <div class="industry-card group">
+
+                    <div class="industry-title">
+                        FASHION
+                    </div>
+
+                    <div class="industry-popup">
+                        Fast global delivery solutions for apparel
+                        brands and fashion retailers.
+                    </div>
+
+                </div>
+
+
+                <div class="industry-card group">
+
+                    <div class="industry-title">
+                        OIL & ENERGY
+                    </div>
+
+                    <div class="industry-popup">
+                        Specialized logistics support for heavy
+                        equipment and energy infrastructure.
+                    </div>
+
+                </div>
+
+
+                <div class="industry-card group">
+
+                    <div class="industry-title">
+                        TECHNOLOGY
+                    </div>
+
+                    <div class="industry-popup">
+                        Secure shipping for high-value electronics
+                        and global tech supply chains.
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- LAST CARD -->
+            <div class="flex justify-center mt-20">
+
+                <div class="industry-card w-[380px] group">
+
+                    <div class="industry-title">
+                        AVIATION & AEROSPACE
+                    </div>
+
+                    <div class="industry-popup">
+                        Precision logistics solutions for aircraft
+                        parts, aerospace cargo and global transport.
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+<style>
+    .industry-card{
+        position:relative;
+        background:#0f1620;
+        border:1px solid #1d2a3a;
+        padding:40px 25px;
+        border-radius:12px;
+        cursor:pointer;
+        overflow:hidden;
+
+        transition:all .35s ease;
+    }
+
+    .industry-card:hover{
+        border-color:#3b82f6;
+        transform:translateY(-6px);
+        box-shadow:0 15px 40px rgba(59,130,246,.15);
+    }
+
+    .industry-title{
+        color:white;
+        font-weight:600;
+        letter-spacing:.05em;
+    }
+
+    /* popup */
+
+    .industry-popup{
+        position:absolute;
+        bottom:0;
+        left:0;
+        width:100%;
+        padding:20px;
+
+        background:linear-gradient(to top,#0b0f14,#0b0f14cc);
+
+        color:#cbd5e1;
+        font-size:14px;
+        line-height:1.6;
+
+        transform:translateY(100%);
+        transition:.4s ease;
+    }
+
+    .industry-card:hover .industry-popup{
+        transform:translateY(0);
+    }
+
+</style>
+
+
+<section class="bg-[#000000] py-28">
+
+    <div class="max-w-[1400px] mx-auto px-6">
+
+        <!-- TITLE -->
+        <div class="text-center mb-20">
+
+            <h2 class="text-white text-4xl md:text-5xl font-bold tracking-wide">
+                OUR SERVICES
+            </h2>
+
+            <div class="w-24 h-[3px] bg-blue-500 mx-auto mt-6"></div>
+
+            <p class="text-gray-400 mt-6 max-w-2xl mx-auto">
+                We deliver reliable logistics solutions across the globe with
+                advanced transportation networks and supply chain expertise.
+            </p>
+
+        </div>
+
+
+        <!-- SERVICES GRID -->
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+
+            <!-- SERVICE -->
+            <div class="group relative rounded-xl overflow-hidden border border-[#1d2a3a] hover:border-blue-500 transition duration-500">
+
+                <img src="{{ asset('a1.jpg') }}"
+                class="w-full h-[260px] object-cover group-hover:scale-110 transition duration-700">
+
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
+
+                <div class="absolute bottom-6 left-6 right-6">
+
+                    <h3 class="text-white text-xl font-semibold mb-2">
+                        Ocean Freight
+                    </h3>
+
+                    <p class="text-gray-300 text-sm opacity-0 group-hover:opacity-100 transition duration-500">
+                        Reliable global ocean shipping solutions with secure
+                        cargo handling and optimized transit routes.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- SERVICE -->
+            <div class="group relative rounded-xl overflow-hidden border border-[#1d2a3a] hover:border-blue-500 transition duration-500">
+
+                <img src="{{ asset('a2.jpg') }}"
+                class="w-full h-[260px] object-cover group-hover:scale-110 transition duration-700">
+
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
+
+                <div class="absolute bottom-6 left-6 right-6">
+
+                    <h3 class="text-white text-xl font-semibold mb-2">
+                        Air Freight
+                    </h3>
+
+                    <p class="text-gray-300 text-sm opacity-0 group-hover:opacity-100 transition duration-500">
+                        Fast and secure air transportation services ensuring
+                        timely delivery across international destinations.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- SERVICE -->
+            <div class="group relative rounded-xl overflow-hidden border border-[#1d2a3a] hover:border-blue-500 transition duration-500">
+
+                <img src="{{ asset('a3.jpg') }}"
+                class="w-full h-[260px] object-cover group-hover:scale-110 transition duration-700">
+
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
+
+                <div class="absolute bottom-6 left-6 right-6">
+
+                    <h3 class="text-white text-xl font-semibold mb-2">
+                        Road Transport
+                    </h3>
+
+                    <p class="text-gray-300 text-sm opacity-0 group-hover:opacity-100 transition duration-500">
+                        Efficient road logistics solutions providing flexible
+                        and cost-effective transportation services.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- SERVICE -->
+            <div class="group relative rounded-xl overflow-hidden border border-[#1d2a3a] hover:border-blue-500 transition duration-500">
+
+                <img src="{{ asset('a4.jpg') }}"
+                class="w-full h-[260px] object-cover group-hover:scale-110 transition duration-700">
+
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
+
+                <div class="absolute bottom-6 left-6 right-6">
+
+                    <h3 class="text-white text-xl font-semibold mb-2">
+                        Rail Freight
+                    </h3>
+
+                    <p class="text-gray-300 text-sm opacity-0 group-hover:opacity-100 transition duration-500">
+                        Sustainable and high-capacity rail freight solutions
+                        connecting major industrial hubs.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="bg-[#0b0f14] py-28">
+
+    <div class="max-w-[1500px] mx-auto px-10">
+
+        <!-- TITLE -->
+        <div class="text-center mb-20">
+
+            <h2 class="text-white text-4xl md:text-5xl font-bold tracking-wide">
+                OUR PORTFOLIO
+            </h2>
+
+            <div class="w-24 h-[3px] bg-blue-500 mx-auto mt-6"></div>
+
+            <p class="text-gray-400 mt-6 max-w-2xl mx-auto">
+                Our logistics portfolio reflects years of experience delivering
+                reliable transportation, supply chain optimization and global freight solutions.
+            </p>
+
+        </div>
+
+
+        <!-- GRID -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+
+            <!-- CARD -->
+            <div class="portfolio-card group">
+                <img src="{{ asset('a1.jpg') }}" class="portfolio-img">
+
+                <div class="portfolio-overlay">
+                    <h3>Transportation Management</h3>
+                    <p>FTL, LTL, Intermodal and specialty freight shipping worldwide.</p>
+                </div>
+            </div>
+
+
+            <div class="portfolio-card group">
+                <img src="{{ asset('a2.jpg') }}" class="portfolio-img">
+
+                <div class="portfolio-overlay">
+                    <h3>Supply Chain Analysis</h3>
+                    <p>Strategic logistics planning and route optimization.</p>
+                </div>
+            </div>
+
+
+            <div class="portfolio-card group">
+                <img src="{{ asset('a3.jpg') }}" class="portfolio-img">
+
+                <div class="portfolio-overlay">
+                    <h3>Freight Forwarding</h3>
+                    <p>Efficient air and ocean freight services globally.</p>
+                </div>
+            </div>
+
+
+            <div class="portfolio-card group">
+                <img src="{{ asset('a4.jpg') }}" class="portfolio-img">
+
+                <div class="portfolio-overlay">
+                    <h3>Project Shipments</h3>
+                    <p>Large scale cargo logistics handled by experts.</p>
+                </div>
+            </div>
+
+
+            <div class="portfolio-card group">
+                <img src="{{ asset('a5.jpg') }}" class="portfolio-img">
+
+                <div class="portfolio-overlay">
+                    <h3>Special Equipment</h3>
+                    <p>Transport solutions for heavy machinery and equipment.</p>
+                </div>
+            </div>
+
+
+            <div class="portfolio-card group">
+                <img src="{{ asset('a1.jpg') }}" class="portfolio-img">
+
+                <div class="portfolio-overlay">
+                    <h3>Warehousing & Distribution</h3>
+                    <p>1M+ sq.ft of commercial storage facilities.</p>
+                </div>
+            </div>
+
+
+            <div class="portfolio-card group">
+                <img src="{{ asset('a2.jpg') }}" class="portfolio-img">
+
+                <div class="portfolio-overlay">
+                    <h3>Custom Clearance</h3>
+                    <p>Government licensed customs brokerage services.</p>
+                </div>
+            </div>
+
+
+            <div class="portfolio-card group">
+                <img src="{{ asset('a3.jpg') }}" class="portfolio-img">
+
+                <div class="portfolio-overlay">
+                    <h3>Final Mile</h3>
+                    <p>Last mile delivery including white glove services.</p>
+                </div>
+            </div>
+
+
+            <div class="portfolio-card group">
+                <img src="{{ asset('a4.jpg') }}" class="portfolio-img">
+
+                <div class="portfolio-overlay">
+                    <h3>Third Party Logistics</h3>
+                    <p>Complete 3PL procurement and distribution solutions.</p>
+                </div>
+            </div>
+
+
+            <div class="portfolio-card group">
+                <img src="{{ asset('a5.jpg') }}" class="portfolio-img">
+
+                <div class="portfolio-overlay">
+                    <h3>Special Cargo Handling</h3>
+                    <p>Handling fragile, dangerous and perishable cargo.</p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<style>
+   .portfolio-card{
+        position:relative;
+        overflow:hidden;
+        border-radius:12px;
+        border:1px solid #1d2a3a;
+        transition:all .4s ease;
+    }
+
+    .portfolio-card:hover{
+        border-color:#3b82f6;
+
+        box-shadow:
+            0 10px 30px rgba(59,130,246,0.25),
+            0 0 20px rgba(59,130,246,0.2);
+    }
+
+    .portfolio-img{
+        width:100%;
+        height:260px;
+        object-fit:cover;
+        transition:transform .6s ease;
+    }
+
+    .portfolio-card:hover .portfolio-img{
+        transform:scale(1.1);
+    }
+
+    .portfolio-overlay{
+        position:absolute;
+        inset:0;
+
+        background:linear-gradient(
+            to top,
+            #0b0f14 0%,
+            rgba(11,15,20,0.85) 40%,
+            transparent 100%
+        );
+
+        padding:25px;
+        display:flex;
+        flex-direction:column;
+        justify-content:flex-end;
+
+        transform:translateY(60%);
+        transition:.5s ease;
+    }
+
+    .portfolio-card:hover .portfolio-overlay{
+        transform:translateY(0);
+    }
+
+    .portfolio-overlay h3{
+        color:white;
+        font-size:18px;
+        font-weight:600;
+    }
+
+    .portfolio-overlay p{
+        color:#cbd5e1;
+        font-size:14px;
+        margin-top:6px;
+    }
+</style>
+
 @endsection

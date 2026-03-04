@@ -33,3 +33,11 @@ Route::get('/services', function () {
 Route::get('/getquote', function () {
     return view('getquote');
 });
+
+Route::get('/challenge', function () {
+    return view('challanges');
+});
+
+Route::get('/blog', function () {
+    return view('blog');
+});

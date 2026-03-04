@@ -73,8 +73,8 @@
                         </div>
                         <a href="#" class="hover:text-blue-400 transition duration-300">Request Transport</a>
                         <a href="#" class="hover:text-blue-400 transition duration-300">Track Shipment</a>
-                        <a href="#" class="hover:text-blue-400 transition duration-300">News & Insights</a>
-                        <a href="#" class="hover:text-blue-400 transition duration-300">Challenges</a>
+                        <a href="/blog" class="hover:text-blue-400 transition duration-300">News & Insights</a>
+                        <a href="/challenge" class="hover:text-blue-400 transition duration-300">Challenges</a>
                         <a href="/about" class="hover:text-blue-400 transition duration-300">About Us</a>
                         <a href="/contact" class="hover:text-blue-400 transition duration-300">Contact</a>
 
