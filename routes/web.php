@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Controllers\AuthController;
+use App\Http\Controllers\ContactController;
+
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -12,6 +15,34 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+Route::post('/contact/send',[ContactController::class,'store'])->name('contact.send');
+
+Route::get('/register',[AuthController::class,'showRegister'])->name('register');
+Route::post('/register',[AuthController::class,'register']);
+
+Route::get('/login',[AuthController::class,'showLogin'])->name('login');
+Route::post('/login',[AuthController::class,'login']);
+
+Route::post('/logout',[AuthController::class,'logout'])->name('logout');
+
+Route::get('/dashboard', function () {
+    return view('admin.dashboard');
+})->middleware('auth')->name('dashboard');
+
+use App\Http\Controllers\BlogController;
+use App\Models\Blog;
+
+Route::middleware(['auth'])->prefix('admin')->name('admin.')->group(function () {
+
+Route::resource('blogs', BlogController::class);
+
+Route::get('/messages',[ContactController::class,'index'])->name('messages');
+
+Route::delete('/messages/{id}',[ContactController::class,'destroy'])->name('messages.delete');
+
+
+});
+
 
 Route::get('/', function () {
     return view('home');
@@ -39,5 +70,7 @@ Route::get('/challenge', function () {
 });
 
 Route::get('/blog', function () {
-    return view('blog');
+    $blogs = Blog::latest()->paginate(10);
+
+    return view('blog',compact('blogs'));
 });

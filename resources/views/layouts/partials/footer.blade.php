@@ -14,7 +14,7 @@
                     </p>
                 </div>
 
-                <a href="#"
+                <a href="/contact"
                 class="bg-gradient-to-r 
                 py-3 px-6 rounded-md text-white text-sm font-semibold
                 from-[#1d4ed8] via-[#2563eb] to-[#0ea5e9]

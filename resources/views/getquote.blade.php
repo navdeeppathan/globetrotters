@@ -101,28 +101,42 @@
             Send Us a Message
             </h3>
 
-            <form class="space-y-6">
+            
+            <form method="POST" action="{{ route('contact.send') }}" class="space-y-6">
+            @csrf
 
-                <input type="text"
-                placeholder="Your Name"
+                <input type="text" name="name" placeholder="Your Name"
                 class="w-full bg-[#000000] border border-[#1d2a3a] rounded-lg px-4 py-3 text-white focus:border-blue-500 focus:outline-none">
 
-                <input type="email"
-                placeholder="Email Address"
+                <input type="email" name="email" placeholder="Email Address"
                 class="w-full bg-[#000000] border border-[#1d2a3a] rounded-lg px-4 py-3 text-white focus:border-blue-500 focus:outline-none">
 
-                <input type="text"
-                placeholder="Subject"
+                <input type="text" name="subject" placeholder="Subject"
                 class="w-full bg-[#000000] border border-[#1d2a3a] rounded-lg px-4 py-3 text-white focus:border-blue-500 focus:outline-none">
 
-                <textarea rows="5"
+                <textarea rows="5" name="message"
                 placeholder="Your Message"
                 class="w-full bg-[#000000] border border-[#1d2a3a] rounded-lg px-4 py-3 text-white focus:border-blue-500 focus:outline-none"></textarea>
 
                 <button
-                class="bg-blue-600 hover:bg-blue-500 text-white px-8 py-3 rounded-lg transition shadow-[0_10px_30px_rgba(59,130,246,0.25)]">
-                Send Message
+                    type="submit"
+                    class="bg-blue-600 hover:bg-blue-500 text-white px-8 py-3 rounded-lg transition shadow-[0_10px_30px_rgba(59,130,246,0.25)]">
+                    Send Message
                 </button>
+
+                @if ($errors->any())
+                    <div class="bg-red-500 text-white p-3 mb-4 rounded">
+                    @foreach ($errors->all() as $error)
+                    <div>{{ $error }}</div>
+                    @endforeach
+                    </div>
+                @endif
+
+                @if(session('success'))
+                <div class="bg-green-500 text-white p-3 mb-4 rounded">
+                {{ session('success') }}
+                </div>
+                @endif
 
             </form>
 

@@ -466,7 +466,7 @@
                     from-[#000000] via-[#000000] to-[#000000]/70 z-10">
                 </div>
 
-                <div class="relative z-20 mt-10  pl-6 pr-6 md:pr-0 lg:pl-16">
+                <div class="relative z-20   pl-6 pr-6 md:pr-0 lg:pl-16">
 
                     <div class="grid lg:grid-cols-2 items-center min-h-[90vh]">
 

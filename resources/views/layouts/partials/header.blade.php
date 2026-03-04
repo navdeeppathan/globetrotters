@@ -18,10 +18,21 @@
                     <!-- CENTER NAVIGATION -->
                     <nav class="hidden lg:flex items-center space-x-8 text-[14px] font-medium text-gray-300">
 
-                        <a href="/" class="relative text-[#1ecbff] pb-1">
-                            Home
-                            <span class="absolute left-0 -bottom-2 w-full h-[2px] 
-                            bg-[#1ecbff] rounded-full shadow-[0_0_8px_#3b82f6]"></span>
+                        <a href="/"
+                        class="relative pb-1 text-gray-300 hover:text-blue-400
+                        after:absolute after:left-0 after:-bottom-2
+                        after:h-[2px] after:w-0 after:bg-blue-400
+                        after:transition-all after:duration-300
+                        hover:after:w-full">
+                        {{-- class="relative pb-1 {{ request()->is('/') ? 'text-[#1ecbff]' : 'text-gray-300 hover:text-blue-400' }}"> --}}
+
+                        Home
+
+                        @if(request()->is('/'))
+                        <span class="absolute left-0 -bottom-2 w-full h-[2px] 
+                        bg-[#1ecbff] rounded-full shadow-[0_0_8px_#3b82f6]"></span>
+                        @endif
+
                         </a>
 
                         <div class="relative group">
@@ -71,12 +82,71 @@
                             </div>
 
                         </div>
-                        <a href="#" class="hover:text-blue-400 transition duration-300">Request Transport</a>
-                        <a href="#" class="hover:text-blue-400 transition duration-300">Track Shipment</a>
-                        <a href="/blog" class="hover:text-blue-400 transition duration-300">News & Insights</a>
-                        <a href="/challenge" class="hover:text-blue-400 transition duration-300">Challenges</a>
-                        <a href="/about" class="hover:text-blue-400 transition duration-300">About Us</a>
-                        <a href="/contact" class="hover:text-blue-400 transition duration-300">Contact</a>
+                        
+                        <a href="/blog"
+                        class="relative pb-1 text-gray-300 hover:text-blue-400
+                        after:absolute after:left-0 after:-bottom-2
+                        after:h-[2px] after:w-0 after:bg-blue-400
+                        after:transition-all after:duration-300
+                        hover:after:w-full">
+                        {{-- class="relative pb-1 {{ request()->is('blog*') ? 'text-[#1ecbff]' : 'text-gray-300 hover:text-blue-400' }}"> --}}
+
+                        News & Insights
+
+                        @if(request()->is('blog*'))
+                        <span class="absolute left-0 -bottom-2 w-full h-[2px] 
+                        bg-[#1ecbff] rounded-full shadow-[0_0_8px_#3b82f6]"></span>
+                        @endif
+
+                        </a>
+                        <a href="/challenge"
+                        class="relative pb-1 text-gray-300 hover:text-blue-400
+                        after:absolute after:left-0 after:-bottom-2
+                        after:h-[2px] after:w-0 after:bg-blue-400
+                        after:transition-all after:duration-300
+                        hover:after:w-full">
+                        {{-- class="relative pb-1 {{ request()->is('challenge*') ? 'text-[#1ecbff]' : 'text-gray-300 hover:text-blue-400' }}"> --}}
+
+                        Challenges
+
+                        @if(request()->is('challenge*'))
+                        <span class="absolute left-0 -bottom-2 w-full h-[2px] 
+                        bg-[#1ecbff] rounded-full shadow-[0_0_8px_#3b82f6]"></span>
+                        @endif
+
+                        </a>
+                        <a href="/about"
+                        class="relative pb-1 text-gray-300 hover:text-blue-400
+                        after:absolute after:left-0 after:-bottom-2
+                        after:h-[2px] after:w-0 after:bg-blue-400
+                        after:transition-all after:duration-300
+                        hover:after:w-full">
+                        {{-- class="relative pb-1 {{ request()->is('about*') ? 'text-[#1ecbff]' : 'text-gray-300 hover:text-blue-400' }}"> --}}
+
+                        About Us
+
+                        @if(request()->is('about*'))
+                        <span class="absolute left-0 -bottom-2 w-full h-[2px] 
+                        bg-[#1ecbff] rounded-full shadow-[0_0_8px_#3b82f6]"></span>
+                        @endif
+
+                        </a>
+                        <a href="/contact"
+                        class="relative pb-1 text-gray-300 hover:text-blue-400
+                        after:absolute after:left-0 after:-bottom-2
+                        after:h-[2px] after:w-0 after:bg-blue-400
+                        after:transition-all after:duration-300
+                        hover:after:w-full">
+                        {{-- class="relative pb-1 {{ request()->is('contact*') ? 'text-[#1ecbff]' : 'text-gray-300 hover:text-blue-400' }}"> --}}
+
+                        Contact
+
+                        @if(request()->is('contact*'))
+                        <span class="absolute left-0 -bottom-2 w-full h-[2px] 
+                        bg-[#1ecbff] rounded-full shadow-[0_0_8px_#3b82f6]"></span>
+                        @endif
+
+                        </a>
 
                     </nav>
 
@@ -111,7 +181,7 @@
                 </div>
 
                 <!-- RIGHT LOWER ROW (Language + Icons) -->
-                <div class="flex items-center justify-end gap-6 pb-3">
+                {{-- <div class="flex items-center justify-end gap-6 pb-3">
 
                     <!-- Language -->
                     <div class="flex items-center space-x-2 text-sm text-gray-300 
@@ -127,7 +197,7 @@
                         <i class="fa-solid fa-cart-shopping hover:text-blue-400 cursor-pointer transition"></i>
                     </div>
 
-                </div>
+                </div> --}}
 
             </div>
 
