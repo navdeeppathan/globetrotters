@@ -120,6 +120,13 @@
             transform: translateY(0);
         }
         }
+
+        @media (max-width: 768px) {
+        .inner {
+            grid-template-columns: repeat(1, 1fr);
+        }
+        }
+
     </style>
     <style>
         .wrapper {
@@ -432,7 +439,8 @@
 
             /* Tabs wrap properly */
             .send-tabs {
-                flex-wrap: wrap;
+                flex-direction: column;
+
                 gap: 6px;
             }
 
@@ -505,6 +513,7 @@
         padding: 20px;
         position: relative;
         text-align: center;
+        
 
         animation: popupScale 0.35s ease;
         }
@@ -561,14 +570,14 @@
 
 
     <!-- HERO SECTION -->
-    <section class="relative min-h-screen flex flex-col">
+    <section class="relative bg-[#000000] min-h-screen flex flex-col">
 
             <!-- Background Image -->
             <div class="absolute inset-0">
                 <img src="{{ asset('images/logistics-bg.jpg') }}" 
                     class="w-full h-full object-cover" 
                     alt="Logistics Background">
-                <div class="absolute inset-0 bg-gradient-to-r from-[#06121e] via-[#071a2c]/90 to-[#071a2c]/60"></div>
+                {{-- <div class="absolute inset-0 bg-gradient-to-r from-[#06121e] via-[#071a2c]/90 to-[#071a2c]/60"></div> --}}
             </div>
 
         
@@ -739,27 +748,27 @@
 
     <!-- FEATURE BAR SECTION -->
    <!-- FEATURE BAR SECTION -->
-    <section class="relative bg-[#000000] -mt-20 z-30 mx-auto px-6 lg:px-16">
+    <section class=" bg-[#000000] mx-auto px-6 lg:px-16">
         <div style="margin: 0 auto; width: 100%; box-sizing: border-box">
             <div class="feature-bar">
             <div class="inner">
                 <!-- ITEM 1 -->
                 <div class="item">
-                <div class="icon-circle">
-                    <i class="fa-solid fa-file-signature"></i>
-                </div>
+                    <div class="icon-circle">
+                        <i class="fa-solid fa-file-signature"></i>
+                    </div>
 
-                <a href="/contact">
-                    <div class="title">
-                        
-                        Request Transport
-                        
-                    </div>
-                    <div>
-                    <span class="subtitle-orange">Get Instant Quote</span>
-                    <span class="arrow">→</span>
-                    </div>
-                </a>
+                    <a href="/contact">
+                        <div class="title">
+                            
+                            Request Transport
+                            
+                        </div>
+                        <div>
+                        <span class="subtitle-orange">Get Instant Quote</span>
+                        <span class="arrow">→</span>
+                        </div>
+                    </a>
 
                 <div class="divider"></div>
                 </div>
@@ -805,13 +814,14 @@
                     <i class="fa-solid fa-file-lines"></i>
                 </div>
 
-                <div>
+                <a href="/global">
+
                     <div class="title">Customs & Compliance</div>
                     <div>
                     <span class="subtitle-gray">Cross-Border Experts</span>
                     <span class="arrow">→</span>
                     </div>
-                </div>
+                </a>
                 </div>
             </div>
             </div>
@@ -1475,8 +1485,8 @@
                 <!-- IMAGE -->
                 <div class="relative group overflow-hidden rounded-xl">
 
-                    <img src="{{ asset('a3.jpg') }}"
-                    class="w-full h-[260px] object-cover transform group-hover:scale-110 transition duration-700">
+                    <img src="{{ asset('s3.png') }}"
+                    class="w-full h-[260px] object-fit transform group-hover:scale-110 transition duration-700">
 
                     <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
 
@@ -1486,8 +1496,8 @@
                 <!-- IMAGE -->
                 <div class="relative group overflow-hidden rounded-xl">
 
-                    <img src="{{ asset('a4.jpg') }}"
-                    class="w-full h-[260px] object-cover transform group-hover:scale-110 transition duration-700">
+                    <img src="{{ asset('s2.png') }}"
+                    class="w-full h-[260px] object-fit transform group-hover:scale-110 transition duration-700">
 
                     <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
 
@@ -1497,8 +1507,8 @@
                 <!-- IMAGE -->
                 <div class="relative group overflow-hidden rounded-xl">
 
-                    <img src="{{ asset('a5.jpg') }}"
-                    class="w-full h-[260px] object-cover transform group-hover:scale-110 transition duration-700">
+                    <img src="{{ asset('s1.png') }}"
+                    class="w-full h-[260px] object-fit transform group-hover:scale-110 transition duration-700">
 
                     <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
 
@@ -1510,7 +1520,7 @@
 
     </section>
 
-    <section class="bg-[#000000] py-28">
+    {{-- <section class="bg-[#000000] py-28">
 
         <div class="max-w-7xl mx-auto px-6 text-center">
 
@@ -1710,7 +1720,7 @@
         transform:translateY(0);
     }
 
-</style>
+</style> --}}
 
 
 <section class="bg-[#000000] py-28">
@@ -1738,9 +1748,10 @@
         <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
 
             <!-- SERVICE -->
+            <a href="/services/ocean-freight">
             <div class="group relative rounded-xl overflow-hidden border border-[#1d2a3a] hover:border-blue-500 transition duration-500">
 
-                <img src="{{ asset('a1.jpg') }}"
+                <img src="{{ asset('c1.webp') }}"
                 class="w-full h-[260px] object-cover group-hover:scale-110 transition duration-700">
 
                 <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
@@ -1759,12 +1770,14 @@
                 </div>
 
             </div>
+            </a>
 
 
             <!-- SERVICE -->
+            <a href="/services/air-freight">
             <div class="group relative rounded-xl overflow-hidden border border-[#1d2a3a] hover:border-blue-500 transition duration-500">
 
-                <img src="{{ asset('a2.jpg') }}"
+                <img src="{{ asset('c2.webp') }}"
                 class="w-full h-[260px] object-cover group-hover:scale-110 transition duration-700">
 
                 <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
@@ -1783,12 +1796,14 @@
                 </div>
 
             </div>
+            </a>
 
 
             <!-- SERVICE -->
+            <a href="/services/road-freight">
             <div class="group relative rounded-xl overflow-hidden border border-[#1d2a3a] hover:border-blue-500 transition duration-500">
 
-                <img src="{{ asset('a3.jpg') }}"
+                <img src="{{ asset('c3.webp') }}"
                 class="w-full h-[260px] object-cover group-hover:scale-110 transition duration-700">
 
                 <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
@@ -1807,12 +1822,14 @@
                 </div>
 
             </div>
+            </a>
 
 
             <!-- SERVICE -->
+            <a href="/services/rail-freight">
             <div class="group relative rounded-xl overflow-hidden border border-[#1d2a3a] hover:border-blue-500 transition duration-500">
 
-                <img src="{{ asset('a4.jpg') }}"
+                <img src="{{ asset('c5.webp') }}"
                 class="w-full h-[260px] object-cover group-hover:scale-110 transition duration-700">
 
                 <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
@@ -1831,6 +1848,7 @@
                 </div>
 
             </div>
+            </a>
 
         </div>
 
@@ -1864,7 +1882,7 @@
 
             <!-- CARD -->
             <div class="portfolio-card group">
-                <img src="{{ asset('a1.jpg') }}" class="portfolio-img">
+                <img src="{{ asset('p1.png') }}" class="portfolio-img">
 
                 <div class="portfolio-overlay">
                     <h3>Transportation Management</h3>
@@ -1874,7 +1892,7 @@
 
 
             <div class="portfolio-card group">
-                <img src="{{ asset('a2.jpg') }}" class="portfolio-img">
+                <img src="{{ asset('a3.jpg') }}" class="portfolio-img">
 
                 <div class="portfolio-overlay">
                     <h3>Supply Chain Analysis</h3>
@@ -1884,7 +1902,7 @@
 
 
             <div class="portfolio-card group">
-                <img src="{{ asset('a3.jpg') }}" class="portfolio-img">
+                <img src="{{ asset('p2.png') }}" class="portfolio-img">
 
                 <div class="portfolio-overlay">
                     <h3>Freight Forwarding</h3>
@@ -1894,7 +1912,7 @@
 
 
             <div class="portfolio-card group">
-                <img src="{{ asset('a4.jpg') }}" class="portfolio-img">
+                <img src="{{ asset('p3.png') }}" class="portfolio-img">
 
                 <div class="portfolio-overlay">
                     <h3>Project Shipments</h3>
@@ -1904,7 +1922,7 @@
 
 
             <div class="portfolio-card group">
-                <img src="{{ asset('a5.jpg') }}" class="portfolio-img">
+                <img src="{{ asset('p4.png') }}" class="portfolio-img">
 
                 <div class="portfolio-overlay">
                     <h3>Special Equipment</h3>
@@ -1914,7 +1932,7 @@
 
 
             <div class="portfolio-card group">
-                <img src="{{ asset('a1.jpg') }}" class="portfolio-img">
+                <img src="{{ asset('p5.png') }}" class="portfolio-img">
 
                 <div class="portfolio-overlay">
                     <h3>Warehousing & Distribution</h3>
@@ -1934,7 +1952,7 @@
 
 
             <div class="portfolio-card group">
-                <img src="{{ asset('a3.jpg') }}" class="portfolio-img">
+                <img src="{{ asset('p6.png') }}" class="portfolio-img">
 
                 <div class="portfolio-overlay">
                     <h3>Final Mile</h3>
@@ -1944,7 +1962,7 @@
 
 
             <div class="portfolio-card group">
-                <img src="{{ asset('a4.jpg') }}" class="portfolio-img">
+                <img src="{{ asset('p7.jpg') }}" class="portfolio-img">
 
                 <div class="portfolio-overlay">
                     <h3>Third Party Logistics</h3>

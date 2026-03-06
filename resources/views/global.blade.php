@@ -75,26 +75,13 @@
         class="w-[320px] rounded-xl shadow-xl relative z-10"
       >
 
-      <!-- Floating images -->
-      <img
-        src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d"
-        class="absolute -top-10 -left-12 w-20 rounded-lg shadow-lg"
-      >
+    
 
-      <img
-        src="https://images.unsplash.com/photo-1601582589907-f92af5ed9db8"
-        class="absolute top-10 -right-14 w-20 rounded-lg shadow-lg"
-      >
+     
 
-      <img
-        src="https://images.unsplash.com/photo-1581093458791-9d42c2e9f2f4"
-        class="absolute bottom-0 -left-14 w-20 rounded-lg shadow-lg"
-      >
+     
 
-      <img
-        src="https://images.unsplash.com/photo-1606788075761-0f2c7a5b38d3"
-        class="absolute bottom-12 -right-12 w-20 rounded-lg shadow-lg"
-      >
+     
 
       <!-- blue glow -->
       <div class="absolute w-72 h-72 bg-blue-500/20 blur-3xl rounded-full"></div>

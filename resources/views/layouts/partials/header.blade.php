@@ -174,15 +174,15 @@
                     <div class="hidden lg:flex items-center space-x-5">
 
                         <!-- Customer Support Icon -->
-                        <div class="w-9 h-9 flex items-center justify-center 
+                        {{-- <div class="w-9 h-9 flex items-center justify-center 
                             bg-white/5 border border-white/10 rounded-md
                             text-gray-300 hover:text-blue-400 
                             hover:bg-blue-600/20 transition cursor-pointer">
                             <i class="fa-solid fa-headset text-sm"></i>
-                        </div>
+                        </div> --}}
 
                         <!-- Get Quote -->
-                        <a href="/getquote"
+                        <a href="/contact"
                         class="bg-gradient-to-r from-blue-600 to-blue-500
                         hover:from-blue-500 hover:to-blue-600
                         transition px-5 py-2 rounded-md text-sm font-semibold
@@ -220,12 +220,71 @@
 
             </div>
 
+
+            <!-- MOBILE MENU -->
+<div id="mobileMenu" class="lg:hidden hidden bg-[#0b2238] border-t border-white/10">
+
+    <div class="px-6 py-6 space-y-4 text-gray-300 text-sm">
+
+        <a href="/" class="block hover:text-blue-400 transition">
+            Home
+        </a>
+
+        <a href="/services/air-freight" class="block hover:text-blue-400 transition">
+            Air Freight
+        </a>
+
+        <a href="/services/ocean-freight" class="block hover:text-blue-400 transition">
+            Ocean Freight
+        </a>
+
+        <a href="/services/road-freight" class="block hover:text-blue-400 transition">
+            Road Transport
+        </a>
+
+        <a href="/services/rail-freight" class="block hover:text-blue-400 transition">
+            Rail Transport
+        </a>
+
+        <a href="/blog" class="block hover:text-blue-400 transition">
+            News & Insights
+        </a>
+
+        <a href="/industry" class="block hover:text-blue-400 transition">
+            Industries we serve
+        </a>
+
+        <a href="/challenge" class="block hover:text-blue-400 transition">
+            Challenges
+        </a>
+
+        <a href="/about" class="block hover:text-blue-400 transition">
+            About Us
+        </a>
+
+        <a href="/contact" class="block hover:text-blue-400 transition">
+            Contact
+        </a>
+
+        <!-- Get Quote Button -->
+        <a href="/contact"
+           class="block mt-4 text-center bg-blue-600 hover:bg-blue-500
+           transition px-5 py-2 rounded-md font-semibold">
+            Get Quote
+        </a>
+
+    </div>
+
+</div>
+
         </header>
         <script>
-            const menuBtn = document.getElementById('menuBtn');
-            const mobileMenu = document.getElementById('mobileMenu');
+        const menuBtn = document.getElementById('menuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
 
-            menuBtn.addEventListener('click', () => {
-                mobileMenu.classList.toggle('hidden');
-            });
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
         </script>
+
+
