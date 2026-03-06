@@ -129,27 +129,8 @@ Related Articles
 </h3>
 
 <div class="grid md:grid-cols-2 gap-8">
-@foreach($allblogs as $item)
-<div class="bg-[#0f1620] rounded-xl overflow-hidden border border-[#1d2a3a] hover:border-blue-500 transition">
 
-<img
-src="{{ asset('blogs/'.$item->image) }}"
-class="h-48 w-full object-cover"
-/>
 
-<div class="p-6">
-
-<h4 class="font-semibold mb-2">
-{{ $item->title }}
-</h4>
-
-<p class="text-gray-400 text-sm">
-{{ !! $item->description !!}}
-</p>
-
-</div>
-
-</div>
 
 
 <div class="bg-[#0f1620] rounded-xl overflow-hidden border border-[#1d2a3a] hover:border-blue-500 transition">
