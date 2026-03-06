@@ -54,7 +54,7 @@ and global supply chain management.
     </h3>
 
     <p class="text-gray-400 text-sm line-clamp-2 group-hover:line-clamp-none transition-all duration-500">
-    {{ $blog->description }}
+    {!! $blog->short_description !!}
     </p>
 
     </div>

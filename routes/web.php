@@ -4,6 +4,8 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\ContactController;
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\BlogController;
+use App\Models\Blog;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,6 +17,9 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+
+Route::get('/blogs/{slug}', [BlogController::class, 'show'])->name('blogs.show');
+
 Route::post('/contact/send',[ContactController::class,'store'])->name('contact.send');
 
 Route::get('/register',[AuthController::class,'showRegister'])->name('register');
@@ -29,12 +34,11 @@ Route::get('/dashboard', function () {
     return view('admin.dashboard');
 })->middleware('auth')->name('dashboard');
 
-use App\Http\Controllers\BlogController;
-use App\Models\Blog;
+
 
 Route::middleware(['auth'])->prefix('admin')->name('admin.')->group(function () {
 
-Route::get('/blogs/{slug}', [BlogController::class, 'show'])->name('blogs.show');
+
 
 Route::resource('blogs', BlogController::class);
 
