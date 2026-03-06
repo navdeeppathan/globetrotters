@@ -112,7 +112,7 @@
 
                         Industries we serve
 
-                        @if(request()->is('challenge*'))
+                        @if(request()->is('industry*'))
                         <span class="absolute left-0 -bottom-2 w-full h-[2px] 
                         bg-[#1ecbff] rounded-full shadow-[0_0_8px_#3b82f6]"></span>
                         @endif

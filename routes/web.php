@@ -34,6 +34,8 @@ use App\Models\Blog;
 
 Route::middleware(['auth'])->prefix('admin')->name('admin.')->group(function () {
 
+Route::get('/blogs/{slug}', [BlogController::class, 'show'])->name('blogs.show');
+
 Route::resource('blogs', BlogController::class);
 
 Route::get('/messages',[ContactController::class,'index'])->name('messages');
@@ -79,9 +81,15 @@ Route::get('/global', function () {
     return view('global');
 });
 
+Route::get('/blog-details', function () {
+    return view('blogdetails');
+});
+
 use App\Http\Controllers\ServiceController;
 
 Route::get('/services/{slug}', [ServiceController::class, 'show']);
+
+
 
 Route::get('/blog', function () {
     $blogs = Blog::latest()->paginate(10);

@@ -17,9 +17,7 @@
             <img src="{{ asset('a1.jpg') }}" class="w-full transform group-hover:scale-110 transition duration-700">
         </div>
 
-        <div class="overflow-hidden rounded-xl border border-[#1d2a3a] shadow-xl group">
-            <img src="{{ asset('a2.jpg') }}" class="w-full transform group-hover:scale-110 transition duration-700">
-        </div>
+       
 
     </div>
 

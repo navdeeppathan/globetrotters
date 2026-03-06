@@ -30,7 +30,7 @@ and global supply chain management.
     
 
     @foreach($blogs as $blog)
-
+<a href="{{ route('blogs.show', $blog->slug) }}">
     <div class="group bg-[#0f1620] border border-[#1d2a3a] rounded-xl overflow-hidden
     transition duration-500 hover:-translate-y-3
     hover:border-blue-500
@@ -60,6 +60,7 @@ and global supply chain management.
     </div>
 
     </div>
+    </a>
 
     @endforeach
 

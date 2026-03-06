@@ -9,6 +9,7 @@ use Illuminate\Support\Str;
 class BlogController extends Controller
 {
     
+   
 
     // BLOG LIST
     public function index()
@@ -16,6 +17,15 @@ class BlogController extends Controller
         $blogs = Blog::latest()->paginate(10);
 
         return view('admin.blogs.index', compact('blogs'));
+    }
+
+     public function show($slug)
+    {
+        $blog = Blog::where('slug', $slug)->firstOrFail();
+
+        $allblogs = Blog::latest()->take(5)->get();
+
+        return view('blogdetails', compact('blog','allblogs'));
     }
 
 
@@ -29,12 +39,13 @@ class BlogController extends Controller
 
 
     // STORE BLOG
-    public function store(Request $request)
+   public function store(Request $request)
     {
 
         $request->validate([
             'title' => 'required|max:255',
             'description' => 'required',
+            'short_description' => 'nullable',
             'image' => 'nullable|image',
             'published_at' => 'nullable|date'
         ]);
@@ -52,16 +63,23 @@ class BlogController extends Controller
             'title' => $request->title,
             'slug' => Str::slug($request->title),
             'description' => $request->description,
+            'short_description' => $request->short_description,
+            'challanges' => $request->challanges,
+            'quote' => $request->quote,
             'image' => $imageName,
             'published_at' => $request->published_at,
+            'fb_link' => $request->fb_link,
+            'twitter' => $request->twitter,
+            'linkedin' => $request->linkedin,
+            'author_name' => $request->author_name,
+            'category' => $request->category,
+            'bio' => $request->bio,
             'status' => 'published'
         ]);
 
         return redirect()->route('admin.blogs.index')
             ->with('success','Blog created successfully');
-
     }
-
 
 
     // EDIT FORM
@@ -98,8 +116,17 @@ class BlogController extends Controller
             'title' => $request->title,
             'slug' => Str::slug($request->title),
             'description' => $request->description,
+            'short_description' => $request->short_description,
+            'challanges' => $request->challanges,
+            'quote' => $request->quote,
             'image' => $imageName,
-            'published_at' => $request->published_at
+            'published_at' => $request->published_at,
+            'fb_link' => $request->fb_link,
+            'twitter' => $request->twitter,
+            'linkedin' => $request->linkedin,
+            'author_name' => $request->author_name,
+            'category' => $request->category,
+            'bio' => $request->bio
         ]);
 
         return redirect()->route('admin.blogs.index')

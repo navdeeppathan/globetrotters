@@ -14,9 +14,18 @@ class Blog extends Model
         'title',
         'slug',
         'description',
+        'short_description',
         'image',
         'published_at',
-        'status'
+        'status',
+        'challanges',
+        'quote',
+        'fb_link',
+        'twitter',
+        'linkedin',
+        'author_name',
+        'category',
+        'bio'
     ];
 
     protected $casts = [

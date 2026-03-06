@@ -1429,6 +1429,7 @@
             <div class="grid md:grid-cols-3 gap-12 mb-20">
 
                 <!-- ITEM -->
+                <a href="/industy">
                 <div class="group flex items-start gap-6 p-6 rounded-xl bg-[#0f1620] border border-[#1d2a3a] hover:border-blue-500 transition duration-500">
 
                     <div class="text-5xl font-bold text-blue-500 group-hover:scale-110 transition">
@@ -1441,9 +1442,12 @@
                     </div>
 
                 </div>
+                </a>
 
 
                 <!-- ITEM -->
+                <a href="/global">
+
                 <div class="group flex items-start gap-6 p-6 rounded-xl bg-[#0f1620] border border-[#1d2a3a] hover:border-blue-500 transition duration-500">
 
                     <div class="text-5xl font-bold text-blue-500 group-hover:scale-110 transition">
@@ -1456,9 +1460,12 @@
                     </div>
 
                 </div>
+                </a>
 
 
                 <!-- ITEM -->
+                <a href="/global">
+
                 <div class="group flex items-start gap-6 p-6 rounded-xl bg-[#0f1620] border border-[#1d2a3a] hover:border-blue-500 transition duration-500">
 
                     <div class="text-5xl font-bold text-blue-500 group-hover:scale-110 transition">
@@ -1471,6 +1478,7 @@
                     </div>
 
                 </div>
+                </a>
 
             </div>
 
