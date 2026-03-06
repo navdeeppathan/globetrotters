@@ -2,7 +2,7 @@
 
 @section('content')
 
-<section class="bg-black text-white py-24 mt-10">
+<section class="bg-white text-black py-24 mt-10">
 
 <div class="max-w-7xl mx-auto px-6 lg:px-8 grid lg:grid-cols-3 gap-16">
 
@@ -45,23 +45,23 @@ class="rounded-xl shadow-lg w-full"
 <!-- BLOG CONTENT -->
 <div class="space-y-6 text-gray-300 leading-relaxed">
 
-<div class="space-y-6 text-gray-300 leading-relaxed">
+<div class="space-y-6 text-gray-500 leading-relaxed">
 {!! $blog->description !!}
 </div>
 
 
-<div class="text-gray-300">
+<div class="text-gray-500">
 {!! $blog->challanges !!}
 </div>
 
 
 
 <!-- QUOTE BLOCK -->
-<div class="border-l-4 border-blue-500 pl-6 italic text-gray-400 my-10">
+<div class="border-l-4 border-blue-500 pl-6 italic text-black my-10">
 {!! $blog->quote !!}
 </div>
 
-<div class="text-gray-300">
+<div class="text-gray-500">
 {!! $blog->short_description !!}
 </div>
 
@@ -84,15 +84,15 @@ class="rounded-xl shadow-lg w-full"
 
 <span class="text-gray-400">Share:</span>
 
-<a href="{{ $blog->fb_link }}" target="_blank" class="text-blue-400 hover:text-blue-300">
+<a href="{{ $blog->fb_link }}" target="_blank" class="text-blue-500 hover:text-blue-300">
 <i class="fa-brands fa-facebook"></i>
 </a>
 
-<a href="{{ $blog->twitter }}" target="_blank" class="text-blue-400 hover:text-blue-300">
+<a href="{{ $blog->twitter }}" target="_blank" class="text-blue-500 hover:text-blue-300">
 <i class="fa-brands fa-twitter"></i>
 </a>
 
-<a href="{{ $blog->linkedin }}" target="_blank" class="text-blue-400 hover:text-blue-300">
+<a href="{{ $blog->linkedin }}" target="_blank" class="text-blue-500 hover:text-blue-300">
 <i class="fa-brands fa-linkedin"></i>
 </a>
 
@@ -142,8 +142,8 @@ class="h-48 w-full object-cover"
 
 <div class="p-6">
 
-<h4 class="font-semibold mb-2">
-<a href="{{ route('blogs.show',$item->slug) }}" class="hover:text-blue-400 transition">
+<h4 class="font-semibold text-white mb-2">
+<a href="{{ route('blogs.show',$item->slug) }}" class=" hover:text-blue-400 transition">
 {{ $item->title }}
 </a>
 </h4>
@@ -203,7 +203,7 @@ class="w-16 h-16 rounded object-cover"
 <a href="{{ route('blogs.show',$item->slug) }}" class="text-sm hover:text-blue-400">
 {{ $item->title }}
 </a>
-
+<br>
 <span class="text-gray-400 text-xs">
 {{ \Carbon\Carbon::parse($item->published_at)->format('M d, Y') }}
 </span>

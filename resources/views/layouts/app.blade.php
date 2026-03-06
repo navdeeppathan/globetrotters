@@ -24,7 +24,7 @@
     @stack('styles')
 </head>
 
-<body class="bg-slate-950 text-white">
+<body class="">
 
     {{-- HEADER --}}
     @include('layouts.partials.header')
@@ -103,7 +103,7 @@
         offset: 120
     });
     </script>
-    <section class="bg-black text-white">
+    <section class="bg-white text-white">
 
     @stack('scripts')
 

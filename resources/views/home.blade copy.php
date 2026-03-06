@@ -482,7 +482,7 @@
 
                     <!-- LEFT LOGO -->
                     <div class="flex items-center space-x-3">
-                        <img src="{{asset("logo.jpg")}}" alt="" class="w-auto h-10">
+                        <img src="{{asset("logo.png")}}" alt="" class="w-auto h-10">
                     </div>
 
                     <!-- CENTER NAVIGATION -->
@@ -720,7 +720,7 @@
     </section>
 
     <!-- FEATURE BAR SECTION -->
-    <section class="relative bg-[#000000] -mt-20 z-30 mx-auto px-6 lg:px-16">
+    <section class="relative bg-white -mt-20 z-30 mx-auto px-6 lg:px-16">
 
         <div style=" margin:0 auto; width:100%; box-sizing:border-box;">
 
@@ -790,7 +790,7 @@
         </div>
     </section>
 
-    <section class="relative py-20 bg-[#000000] mx-auto px-6 lg:px-16">
+    <section class="relative py-20 bg-white mx-auto px-6 lg:px-16">
 
         <div class="wrapper">
 
@@ -1060,7 +1060,7 @@
 
     </section>
 
-    <section class="mx-auto px-6 bg-[#000000] mb-4 lg:px-16">
+    <section class="mx-auto px-6 bg-white mb-4 lg:px-16">
         <div class="section">
         <div class="trap-wrap">
 
@@ -1446,7 +1446,7 @@
     </style>
 
     <!-- ================= FOOTER ================= -->
-    <footer class="relative bg-[#000000] border-t border-white/10 mt-20">
+    <footer class="relative bg-white border-t border-white/10 mt-20">
 
         <!-- Top CTA Strip -->
         <div class="bg-gradient-to-r from-[#0d2a4a] via-[#0b2238] to-[#0d2a4a] border-b border-white/10">
@@ -1478,7 +1478,7 @@
 
             <!-- Logo + About -->
             <div>
-                <img src="{{ asset('logo.jpg') }}" 
+                <img src="{{ asset('logo.png') }}" 
                     alt="Globetrotters Logo" 
                     class="h-12 w-auto mb-6">
 

@@ -89,6 +89,10 @@ Route::get('/blog-details', function () {
     return view('blogdetails');
 });
 
+Route::get('/privacy-policy', function () {
+    return view('privacypolicy');
+});
+
 use App\Http\Controllers\ServiceController;
 
 Route::get('/services/{slug}', [ServiceController::class, 'show']);

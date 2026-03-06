@@ -4,7 +4,7 @@
 
 {{-- HERO SECTION --}}
 
-<section class="relative bg-black py-32 overflow-hidden mt-10">
+<section class="relative bg-white py-32 overflow-hidden mt-10">
 
 <div class="absolute inset-0 ">
 <img src="{{ asset('c8.png') }}" class="w-full h-full object-fill">
@@ -35,7 +35,7 @@ reduce delays, and deliver cargo efficiently across international markets.
 
 {{-- CHALLENGE CARDS --}}
 
-<section class="bg-black py-20">
+<section class="bg-white py-20">
 
 <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-10">
 
@@ -198,13 +198,13 @@ Urban deliveries require flexible and fast transportation strategies.
 
 {{-- SOLUTIONS SECTION --}}
 
-<section class="bg-black py-28">
+<section class="bg-white py-28">
 
 <div class="max-w-6xl mx-auto px-6">
 
 <div class="text-center mb-20">
 
-<h2 class="text-white text-4xl font-bold">
+<h2 class="text-black text-4xl font-bold">
 OUR SOLUTIONS
 </h2>
 
@@ -218,11 +218,11 @@ OUR SOLUTIONS
 
 <div class="space-y-4">
 
-<img src="{{ asset('icons/planning.png') }}" class="w-16 mx-auto">
+
 
 <div class="text-blue-500 text-5xl font-bold">01</div>
 
-<h3 class="text-white text-xl font-semibold">
+<h3 class="text-black text-xl font-semibold">
 Advanced Planning
 </h3>
 
@@ -236,11 +236,11 @@ delays and improve logistics efficiency.
 
 <div class="space-y-4">
 
-<img src="{{ asset('icons/tracking.png') }}" class="w-16 mx-auto">
+
 
 <div class="text-blue-500 text-5xl font-bold">02</div>
 
-<h3 class="text-white text-xl font-semibold">
+<h3 class="text-black text-xl font-semibold">
 Real-Time Tracking
 </h3>
 
@@ -254,11 +254,10 @@ and maintain visibility throughout the supply chain.
 
 <div class="space-y-4">
 
-<img src="{{ asset('icons/network.png') }}" class="w-16 mx-auto">
 
 <div class="text-blue-500 text-5xl font-bold">03</div>
 
-<h3 class="text-white text-xl font-semibold">
+<h3 class="text-black text-xl font-semibold">
 Global Partnerships
 </h3>
 

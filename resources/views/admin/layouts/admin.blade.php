@@ -995,7 +995,7 @@
                 </svg>
             </div> --}}
             {{-- <span class="brand-name">GLOBETROTTERS (GB) LTD</span> --}}
-            <img src="{{asset('logo.jpg')}}" class="sidebar-logo" alt="">
+            <img src="{{asset('logo.png')}}" class="sidebar-logo" alt="">
             <button class="collapse-btn" onclick="toggleSidebar()">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="16" height="16">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>

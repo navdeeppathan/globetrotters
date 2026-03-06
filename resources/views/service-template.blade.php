@@ -2,7 +2,7 @@
 
 @section('content')
 
-<section class="bg-black text-white">
+<section class="bg-white text-white">
 
 <!-- HERO -->
 <div class="py-28  border-b border-blue-900/30">

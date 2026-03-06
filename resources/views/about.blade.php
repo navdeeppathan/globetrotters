@@ -4,7 +4,7 @@
 
 <!-- HERO -->
 
-<section class="relative bg-black py-36 overflow-hidden mt-10">
+<section class="relative bg-white py-36 overflow-hidden mt-10">
 
 <div class="absolute inset-0 opacity-30">
 <img src="{{ asset('p4.png') }}" class="w-full h-full object-fill scale-110 animate-slowZoom">
@@ -35,7 +35,7 @@ seamless cargo movement worldwide.
 
 <!-- ABOUT SECTION -->
 
-<section class="bg-black py-28 px-6 lg:px-16">
+<section class="bg-white py-28 px-6 lg:px-16">
 
 <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
 
@@ -116,7 +116,7 @@ smooth international trade operations.
 
 <!-- WHY CHOOSE US -->
 
-<section class="bg-black py-28">
+<section class="bg-white py-28">
 
 <div class="max-w-7xl mx-auto px-6">
 

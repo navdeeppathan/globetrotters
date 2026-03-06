@@ -5,7 +5,7 @@
    
 
 
-<section class="bg-[#000000] py-28 px-10 relative overflow-hidden mt-10">
+<section class="bg-white py-28 px-10 relative overflow-hidden mt-10">
 
     <!-- background glow -->
     <div class="absolute w-[400px] h-[400px] bg-blue-600/10 blur-[120px] -top-40 -left-40"></div>
@@ -106,17 +106,17 @@
             @csrf
 
                 <input type="text" name="name" placeholder="Your Name"
-                class="w-full bg-[#000000] border border-[#1d2a3a] rounded-lg px-4 py-3 text-white focus:border-blue-500 focus:outline-none">
+                class="w-full bg-white border border-[#1d2a3a] rounded-lg px-4 py-3 text-white focus:border-blue-500 focus:outline-none">
 
                 <input type="email" name="email" placeholder="Email Address"
-                class="w-full bg-[#000000] border border-[#1d2a3a] rounded-lg px-4 py-3 text-white focus:border-blue-500 focus:outline-none">
+                class="w-full bg-white border border-[#1d2a3a] rounded-lg px-4 py-3 text-white focus:border-blue-500 focus:outline-none">
 
                 <input type="text" name="subject" placeholder="Subject"
-                class="w-full bg-[#000000] border border-[#1d2a3a] rounded-lg px-4 py-3 text-white focus:border-blue-500 focus:outline-none">
+                class="w-full bg-white border border-[#1d2a3a] rounded-lg px-4 py-3 text-white focus:border-blue-500 focus:outline-none">
 
                 <textarea rows="5" name="message"
                 placeholder="Your Message"
-                class="w-full bg-[#000000] border border-[#1d2a3a] rounded-lg px-4 py-3 text-white focus:border-blue-500 focus:outline-none"></textarea>
+                class="w-full bg-white border border-[#1d2a3a] rounded-lg px-4 py-3 text-white focus:border-blue-500 focus:outline-none"></textarea>
 
                 <button
                     type="submit"
@@ -189,7 +189,7 @@
 </section>
 
 
- <section class="bg-[#000000] py-28">
+ <section class="bg-white py-28">
 
         <div class="max-w-7xl mx-auto px-6 text-center">
 

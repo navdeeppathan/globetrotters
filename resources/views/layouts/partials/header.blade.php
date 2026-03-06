@@ -1,10 +1,8 @@
 <!-- HEADER -->
         <header class="fixed top-0 left-0 w-full z-50
-            bg-gradient-to-r 
-            from-[#000000] 
-            via-[#000000] 
-            to-[#0d3c63]
-            border-b border-white/5 backdrop-blur-md">
+            bg-gray-50 backdrop-blur-md
+            border-b border-gray-200 shadow-sm"
+            >
 
             <div class="mx-auto px-6 lg:px-8">
 
@@ -12,14 +10,14 @@
 
                     <!-- LEFT LOGO -->
                     <div class="flex items-center space-x-3">
-                        <img src="{{asset("logo.jpg")}}" alt="" class="w-auto h-10">
+                        <img src="{{asset("logo.png")}}" alt="" class="w-auto h-10">
                     </div>
 
                     <!-- CENTER NAVIGATION -->
-                    <nav class="hidden lg:flex items-center space-x-8 text-[14px] font-medium text-gray-300">
+                    <nav class="hidden lg:flex items-center space-x-8 text-[14px] font-medium text-gray-900">
 
                         <a href="/"
-                        class="relative pb-1 text-gray-300 hover:text-blue-400
+                        class="relative pb-1 text-gray-900 hover:text-blue-400
                         after:absolute after:left-0 after:-bottom-2
                         after:h-[2px] after:w-0 after:bg-blue-400
                         after:transition-all after:duration-300
@@ -45,13 +43,13 @@
 
                             <!-- Dropdown -->
                             <div class="absolute left-0 mt-4 w-56 
-                                bg-[#0b2238] border border-white/10 
-                                rounded-md shadow-xl 
+                                bg-gray-50 border border-gray-200 
+                                rounded-md 
                                 opacity-0 invisible 
                                 group-hover:opacity-100 group-hover:visible
                                 transition-all duration-300">
 
-                                <ul class="py-3 text-sm text-gray-300">
+                                <ul class="py-3 text-sm text-gray-900">
 
                                     <li>
                                         <a href="/services/air-freight" class="block px-5 py-2 hover:bg-blue-600/20 hover:text-blue-400 transition">
@@ -87,7 +85,7 @@
                         </div>
                         
                         <a href="/blog"
-                        class="relative pb-1 text-gray-300 hover:text-blue-400
+                        class="relative pb-1 text-gray-900 hover:text-blue-400
                         after:absolute after:left-0 after:-bottom-2
                         after:h-[2px] after:w-0 after:bg-blue-400
                         after:transition-all after:duration-300
@@ -103,7 +101,7 @@
 
                         </a>
                         <a href="/industry"
-                        class="relative pb-1 text-gray-300 hover:text-blue-400
+                        class="relative pb-1 text-gray-900 hover:text-blue-400
                         after:absolute after:left-0 after:-bottom-2
                         after:h-[2px] after:w-0 after:bg-blue-400
                         after:transition-all after:duration-300
@@ -119,7 +117,7 @@
 
                         </a>
                         <a href="/challenge"
-                        class="relative pb-1 text-gray-300 hover:text-blue-400
+                        class="relative pb-1 text-gray-900 hover:text-blue-400
                         after:absolute after:left-0 after:-bottom-2
                         after:h-[2px] after:w-0 after:bg-blue-400
                         after:transition-all after:duration-300
@@ -135,7 +133,7 @@
 
                         </a>
                         <a href="/about"
-                        class="relative pb-1 text-gray-300 hover:text-blue-400
+                        class="relative pb-1 text-gray-900 hover:text-blue-400
                         after:absolute after:left-0 after:-bottom-2
                         after:h-[2px] after:w-0 after:bg-blue-400
                         after:transition-all after:duration-300
@@ -151,7 +149,7 @@
 
                         </a>
                         <a href="/contact"
-                        class="relative pb-1 text-gray-300 hover:text-blue-400
+                        class="relative pb-1 text-gray-900 hover:text-blue-400
                         after:absolute after:left-0 after:-bottom-2
                         after:h-[2px] after:w-0 after:bg-blue-400
                         after:transition-all after:duration-300
@@ -185,7 +183,7 @@
                         <a href="/contact"
                         class="bg-gradient-to-r from-blue-600 to-blue-500
                         hover:from-blue-500 hover:to-blue-600
-                        transition px-5 py-2 rounded-md text-sm font-semibold
+                        transition text-white px-5 py-2 rounded-md text-sm font-semibold
                         shadow-lg shadow-blue-600/30">
                             Get Quote
                         </a>

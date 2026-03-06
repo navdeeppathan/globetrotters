@@ -62,7 +62,7 @@
 
 </section>
 
-<section class="bg-black py-28 text-white overflow-hidden">
+<section class="bg-white py-28 text-white overflow-hidden">
 
   <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-20 items-center">
 
@@ -166,7 +166,7 @@
 
 </section>
 
-<section class="bg-black py-28 text-white">
+<section class="bg-white py-28 text-white">
 
   <div class="max-w-7xl mx-auto px-6 text-center">
 

@@ -2,14 +2,14 @@
 @section('content')
 
 
-<section class="bg-[#000000] py-28 mt-10">
+<section class="bg-gray-50 py-28 mt-10">
 
 <div class="max-w-7xl mx-auto px-6">
 
 <!-- TITLE -->
 <div class="text-center mb-20">
 
-<h2 class="text-white text-4xl md:text-5xl font-bold">
+<h2 class="text-black text-4xl md:text-5xl font-bold">
 LATEST BLOG
 </h2>
 
@@ -31,7 +31,7 @@ and global supply chain management.
 
     @foreach($blogs as $blog)
 <a href="{{ route('blogs.show', $blog->slug) }}">
-    <div class="group bg-[#0f1620] border border-[#1d2a3a] rounded-xl overflow-hidden
+    <div class="group bg-gray-100 border border-gray-300 rounded-xl overflow-hidden
     transition duration-500 hover:-translate-y-3
     hover:border-blue-500
     hover:shadow-[0_15px_40px_rgba(59,130,246,0.25)]">
@@ -45,15 +45,15 @@ and global supply chain management.
     <!-- CONTENT -->
     <div class="p-6">
 
-    <p class="text-blue-400 text-sm mb-2">
+    <p class="text-blue-500 text-sm mb-2">
     {{ \Carbon\Carbon::parse($blog->published_at)->format('d F Y') }}
     </p>
 
-    <h3 class="text-white text-xl font-semibold mb-3">
+    <h3 class="text-black text-xl font-semibold mb-3">
     {{ $blog->title }}
     </h3>
 
-    <p class="text-gray-400 text-sm line-clamp-2 group-hover:line-clamp-none transition-all duration-500">
+    <p class=" text-sm line-clamp-2 group-hover:line-clamp-none transition-all duration-500">
     {!! $blog->short_description !!}
     </p>
 

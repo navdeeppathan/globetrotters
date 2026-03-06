@@ -3,12 +3,12 @@
 @section('content')
     <style>
        .feature-bar {
-        background: #06121e;
-        border-radius: 12px;
-        border: 1px solid rgba(59, 130, 246, 0.35);
-        box-shadow: 0 0 30px rgba(59, 130, 246, 0.15);
-        overflow: hidden;
-        position: relative;
+            background: #ffffff;
+            border-radius: 12px;
+            border: 1px solid rgba(37, 99, 235, 0.25);
+            box-shadow: 0 10px 25px rgba(37, 99, 235, 0.08);
+            overflow: hidden;
+            position: relative;
         }
 
         .inner {
@@ -66,7 +66,7 @@
         background: rgba(37, 99, 235, 0.18);
         border: 1px solid rgba(59, 130, 246, 0.45);
         box-shadow: 0 0 15px rgba(59, 130, 246, 0.35);
-        color: #60a5fa;
+        color: #000000;
         font-size: 18px;
 
         transition: all 0.3s ease;
@@ -78,7 +78,7 @@
         }
 
         .title {
-        color: #fff;
+        color: #000;
         font-weight: 600;
         font-size: 14px;
         margin-bottom: 3px;
@@ -141,7 +141,7 @@
 
         /* ── SHARED CARD ── */
         .card {
-            background: #000000;
+           background: #f8fafc;
             border: 1px solid rgba(59,130,246,0.3);
             border-radius: 12px;
             padding: 22px;
@@ -158,7 +158,7 @@
         }
 
         .card-title {
-            color: #fff;
+            color: #000;
             font-size: 16px;
             font-weight: 700;
             margin-bottom: 16px;
@@ -570,7 +570,7 @@
 
 
     <!-- HERO SECTION -->
-    <section class="relative bg-[#000000] min-h-screen flex flex-col">
+    <section class="relative bg-white min-h-screen flex flex-col">
 
             <!-- Background Image -->
             <div class="absolute inset-0">
@@ -584,28 +584,31 @@
 
             <!-- HERO CONTENT -->
             <!-- HERO SECTION -->
-            <section class="relative  overflow-hidden">
+            <section class="relative overflow-hidden bg-[#f8fafc]">
 
-                <!-- Background Overlay Glow -->
+                <!-- Background Gradient -->
                 <div class="absolute inset-0 bg-gradient-to-r 
-                    from-[#000000] via-[#000000] to-[#000000]/70 z-10">
+                    from-white via-[#f1f5f9] to-white z-10">
                 </div>
 
-                <div class="relative z-20   pl-6 pr-6 md:pr-0 lg:pl-16">
+                <div class="relative z-20 pl-6 pr-6 md:pr-0 lg:pl-16">
 
                     <div class="grid lg:grid-cols-2 items-center min-h-[90vh]">
 
-                        <!-- LEFT SECTION -->
-                        <div class="py-20 ">
+                        <!-- LEFT -->
+                        <div class="py-20">
 
-                            <h2 style="font-family: 'Playfair Display', serif;" class="text-[28px] md:text-[40px] lg:text-[56px] 
-                                    font-medium leading-[1.1] tracking-tight text-white">
+                            <h2 style="font-family: 'Playfair Display', serif;"
+                                class="text-[28px] md:text-[40px] lg:text-[56px]
+                                font-medium leading-[1.1] tracking-tight text-[#0f172a]">
+
                                 Global Logistics Solutions <br>
                                 Delivered with 
-                                <span class="text-[#1ecbff]">Excellence</span>
+                                <span class="text-[#2563eb]">Excellence</span>
+
                             </h2>
 
-                            <p class="mt-6 text-gray-300 text-lg md:text-xl font-light max-w-xl">
+                            <p class="mt-6 text-[#64748b] text-lg md:text-xl font-light max-w-xl">
                                 Cross-Border Transport, Container Shipping & Supply Chain Simplified
                             </p>
 
@@ -613,22 +616,22 @@
                             <div class="mt-10 flex flex-col md:flex-row items-center gap-10">
 
                                 <div>
-                                    <h3 class="text-2xl font-semibold text-blue-500">150+</h3>
-                                    <p class="text-gray-400 text-sm mt-1">Global Destinations</p>
+                                    <h3 class="text-2xl font-semibold text-[#2563eb]">150+</h3>
+                                    <p class="text-gray-500 text-sm mt-1">Global Destinations</p>
                                 </div>
 
-                                <div class="h-10 w-px bg-white/20"></div>
+                                <div class="h-10 w-px bg-gray-300"></div>
 
                                 <div>
-                                    <h3 class="text-2xl font-semibold text-white">24/7</h3>
-                                    <p class="text-gray-400 text-sm mt-1">Tracking & Support</p>
+                                    <h3 class="text-2xl font-semibold text-[#0f172a]">24/7</h3>
+                                    <p class="text-gray-500 text-sm mt-1">Tracking & Support</p>
                                 </div>
 
-                                <div class="h-10 w-px bg-white/20"></div>
+                                <div class="h-10 w-px bg-gray-300"></div>
 
                                 <div>
-                                    <h3 class="text-2xl font-semibold text-yellow-400">10+</h3>
-                                    <p class="text-gray-400 text-sm mt-1">Years Experience</p>
+                                    <h3 class="text-2xl font-semibold text-[#0f172a]">10+</h3>
+                                    <p class="text-gray-500 text-sm mt-1">Years Experience</p>
                                 </div>
 
                             </div>
@@ -636,102 +639,62 @@
                             <!-- Buttons -->
                             <div class="mt-12 flex flex-col sm:flex-row gap-5">
 
-                                <a href="/contact"
-                                class="bg-gradient-to-r 
-                                p-4 rounded-md text-white text-sm font-semibold
-                                from-[#1d4ed8] via-[#2563eb] to-[#0ea5e9]
-                                shadow-[inset_0_1px_0_rgba(255,255,255,0.2),0_0_20px_rgba(37,99,235,0.45)]"
+                                <!-- Primary -->
+                                <a href="/contact" class="bg-gradient-to-r p-4 rounded-md text-white text-sm font-semibold from-[#1d4ed8] via-[#2563eb] to-[#0ea5e9] shadow-[inset_0_1px_0_rgba(255,255,255,0.2),0_0_20px_rgba(37,99,235,0.45)]" > Request a Quote </a>
+
+                                <!-- Secondary -->
+                                <!-- WATCH VIDEO BUTTON --> 
+                                 
+
+                                 <a
+                                    href="#"
+                                    id="openVideo"
+                                    class="flex items-center gap-3 
+                                    px-7 py-3 rounded-md 
+                                    border border-gray-300 
+                                    text-gray-700 text-sm font-medium 
+                                    hover:bg-gray-100 transition"
                                 >
-                                    Request a Quote
+
+                                    <span
+                                        class="w-7 h-7 flex items-center justify-center
+                                        bg-blue-600 rounded-full text-white text-xs">
+                                        <i class="fa-solid fa-play"></i>
+                                    </span>
+
+                                    Watch Company Video
+
                                 </a>
-
-                                <!-- WATCH VIDEO BUTTON -->
-                                <a
-                                href="#"
-                                id="openVideo"
-                                class="flex items-center gap-3 
-                                        px-7 py-3 rounded-md 
-                                        border border-white/20 
-                                        text-white text-sm font-medium 
-                                        hover:bg-white/5 transition"
-                                >
-                                <span
-                                    class="w-7 h-7 flex items-center justify-center 
-                                        bg-yellow-500 rounded-full text-black text-xs"
-                                >
-                                    <i class="fa-solid fa-play"></i>
-                                </span>
-
-                                Watch Company Video
-                                </a>
-
-                                <!-- VIDEO MODAL -->
-                                <div id="videoModal" class="video-modal">
-                                <div class="video-content">
-                                    <span class="close-video"><i class="fa-solid fa-xmark"></i></span>
-
-                                    <h2 class="video-title">Meet Our Company</h2>
-
-                                    <div class="video-wrapper">
-                                    <iframe
-                                        id="videoFrame"
-                                        src=""
-                                        frameborder="0"
-                                        allow="autoplay; encrypted-media"
-                                        allowfullscreen
-                                    ></iframe>
-                                    </div>
-
-                                    <div class="skip-video">Close Video</div>
-                                </div>
-                                </div>
-                                <script>
-                                const openBtn = document.getElementById("openVideo");
-                                const modal = document.getElementById("videoModal");
-                                const closeBtn = document.querySelector(".close-video");
-                                const skipBtn = document.querySelector(".skip-video");
-                                const frame = document.getElementById("videoFrame");
-
-                                const videoURL = "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1";
-
-                                openBtn.addEventListener("click", function (e) {
-                                    e.preventDefault();
-
-                                    modal.style.display = "flex";
-                                    frame.src = videoURL;
-                                });
-
-                                function closeVideo() {
-                                    modal.style.display = "none";
-                                    frame.src = "";
-                                }
-
-                                closeBtn.addEventListener("click", closeVideo);
-                                skipBtn.addEventListener("click", closeVideo);
-
-                                window.addEventListener("click", function (e) {
-                                    if (e.target === modal) {
-                                    closeVideo();
-                                    }
-                                });
-                                </script>
+                                <!-- VIDEO MODAL --> 
+                                <div id="videoModal" class="video-modal"> 
+                                    <div class="video-content"> 
+                                        <span class="close-video">
+                                            <i class="fa-solid fa-xmark"></i>
+                                        </span> 
+                                        <h2 class="video-title">Meet Our Company</h2> 
+                                        <div class="video-wrapper"> 
+                                            <iframe id="videoFrame" src="" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen >
+                                            </iframe> 
+                                        </div> 
+                                        <div class="skip-video">Close Video</div>
+                                     </div> 
+                                    </div> 
+                                     <script> const openBtn = document.getElementById("openVideo"); const modal = document.getElementById("videoModal"); const closeBtn = document.querySelector(".close-video"); const skipBtn = document.querySelector(".skip-video"); const frame = document.getElementById("videoFrame"); const videoURL = "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1"; openBtn.addEventListener("click", function (e) { e.preventDefault(); modal.style.display = "flex"; frame.src = videoURL; }); function closeVideo() { modal.style.display = "none"; frame.src = ""; } closeBtn.addEventListener("click", closeVideo); skipBtn.addEventListener("click", closeVideo); window.addEventListener("click", function (e) { if (e.target === modal) { closeVideo(); } }); </script>
 
                             </div>
 
                         </div>
 
-
-                        <!-- RIGHT SECTION -->
+                        <!-- RIGHT IMAGE -->
                         <div class="relative flex justify-end hidden md:block">
 
-                            <img src="{{ asset('/banner.jpg') }}" 
+                            <img src="{{ asset('/banner.jpg') }}"
                                 alt="Logistics"
-                                class="w-full max-w-[750px] h-[500px] object-fill">
+                                class="w-full max-w-[750px] h-[500px] object-cover  shadow-xl">
 
-                                 <!-- Fade Overlay (Hides Left Border of Image) -->
                             <div class="absolute inset-0 z-20
                                 bg-gradient-to-r
-                                from-[#000000]/80
+                                from-[#f8fafc]
                                 via-transparent
                                 to-transparent">
                             </div>
@@ -748,87 +711,87 @@
 
     <!-- FEATURE BAR SECTION -->
    <!-- FEATURE BAR SECTION -->
-    <section class=" bg-[#000000] mx-auto px-6 lg:px-16">
+    <section class=" bg-white mx-auto px-6 lg:px-16">
         <div style="margin: 0 auto; width: 100%; box-sizing: border-box">
             <div class="feature-bar">
-            <div class="inner">
-                <!-- ITEM 1 -->
-                <div class="item">
-                    <div class="icon-circle">
-                        <i class="fa-solid fa-file-signature"></i>
+                <div class="inner">
+                    <!-- ITEM 1 -->
+                    <div class="item">
+                        <div class="icon-circle">
+                            <i class="fa-solid fa-file-signature"></i>
+                        </div>
+
+                        <a href="/contact">
+                            <div class="title">
+                                
+                                Request Transport
+                                
+                            </div>
+                            <div>
+                            <span class="subtitle-orange">Get Instant Quote</span>
+                            <span class="arrow">→</span>
+                            </div>
+                        </a>
+
+                    <div class="divider"></div>
                     </div>
 
-                    <a href="/contact">
-                        <div class="title">
-                            
-                            Request Transport
-                            
-                        </div>
+                    <!-- ITEM 2 -->
+                    <div class="item">
+                    <div class="icon-circle">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </div>
+
+                    <div>
+                        <div class="title">Track Shipment</div>
                         <div>
-                        <span class="subtitle-orange">Get Instant Quote</span>
+                        <span class="subtitle-gray">Real-Time Tracking</span>
+                        <span class="arrow">→</span>
+                        </div>
+                    </div>
+
+                    <div class="divider"></div>
+                    </div>
+
+                    <!-- ITEM 3 -->
+                    <div class="item">
+                    <div class="icon-circle">
+                        <i class="fa-solid fa-globe"></i>
+                    </div>
+
+                    <a href="/global">
+
+                        <div class="title">Global Network</div>
+                        <div>
+                        <span class="subtitle-orange">150+ Countries</span>
                         <span class="arrow">→</span>
                         </div>
                     </a>
 
-                <div class="divider"></div>
-                </div>
+                    <div class="divider"></div>
+                    </div>
 
-                <!-- ITEM 2 -->
-                <div class="item">
-                <div class="icon-circle">
-                    <i class="fa-solid fa-location-dot"></i>
-                </div>
+                    <!-- ITEM 4 -->
+                    <div class="item">
+                    <div class="icon-circle">
+                        <i class="fa-solid fa-file-lines"></i>
+                    </div>
 
-                <div>
-                    <div class="title">Track Shipment</div>
-                    <div>
-                    <span class="subtitle-gray">Real-Time Tracking</span>
-                    <span class="arrow">→</span>
+                    <a href="/global">
+
+                        <div class="title">Customs & Compliance</div>
+                        <div>
+                        <span class="subtitle-gray">Cross-Border Experts</span>
+                        <span class="arrow">→</span>
+                        </div>
+                    </a>
                     </div>
                 </div>
-
-                <div class="divider"></div>
-                </div>
-
-                <!-- ITEM 3 -->
-                <div class="item">
-                <div class="icon-circle">
-                    <i class="fa-solid fa-globe"></i>
-                </div>
-
-                <a href="/global">
-
-                    <div class="title">Global Network</div>
-                    <div>
-                    <span class="subtitle-orange">150+ Countries</span>
-                    <span class="arrow">→</span>
-                    </div>
-                </a>
-
-                <div class="divider"></div>
-                </div>
-
-                <!-- ITEM 4 -->
-                <div class="item">
-                <div class="icon-circle">
-                    <i class="fa-solid fa-file-lines"></i>
-                </div>
-
-                <a href="/global">
-
-                    <div class="title">Customs & Compliance</div>
-                    <div>
-                    <span class="subtitle-gray">Cross-Border Experts</span>
-                    <span class="arrow">→</span>
-                    </div>
-                </a>
-                </div>
-            </div>
             </div>
         </div>
     </section>
 
-    <section class="relative py-20 bg-[#000000] mx-auto px-6 lg:px-16">
+    <section class="relative py-20 bg-white mx-auto px-6 lg:px-16">
 
         <div class="wrapper">
 
@@ -932,13 +895,13 @@
             <style>
                 /* === MAIN CARD === */
                 .send-card {
-                    background: #000000;
+                    background: #f8fafc;
                     border: 1px solid rgba(59,130,246,0.3);
                     border-radius: 14px;
                     padding: 28px;
                     box-shadow: 0 0 40px rgba(59,130,246,0.2);
                     backdrop-filter: blur(12px);
-                    color: white;
+                    color: #000;
                 }
 
                 /* Bottom Neon Border Glow */
@@ -1359,7 +1322,7 @@
 
     
 
-    <section class="bg-[#000000] overflow-hidden">
+    <section class="bg-gradient-to-r from-black via-[#06122b] to-[#0a2a55] overflow-hidden">
 
         <div class="max-w-7xl mx-auto grid lg:grid-cols-2 items-center gap-12 px-8 lg:px-16 py-24">
 
@@ -1404,14 +1367,14 @@
 
     </section>
 
-    <section class="bg-[#000000] py-28 relative overflow-hidden">
+    <section class="bg-white py-28 relative overflow-hidden">
 
         <div class="max-w-7xl mx-auto px-6">
 
             <!-- TITLE -->
             <div class="text-center mb-20">
 
-                <h2 class="text-white text-4xl md:text-5xl font-bold tracking-wide">
+                <h2 class="text-black text-4xl md:text-5xl font-bold tracking-wide">
                     OUR VISION
                 </h2>
 
@@ -1430,7 +1393,7 @@
 
                 <!-- ITEM -->
                 <a href="/industy">
-                <div class="group flex items-start gap-6 p-6 rounded-xl bg-[#0f1620] border border-[#1d2a3a] hover:border-blue-500 transition duration-500">
+                <div class="group flex items-start gap-6 p-6 rounded-xl bg-gradient-to-r from-[#0d2a4a] via-[#0b2238] to-[#0d2a4a]  border border-[#1d2a3a] hover:border-blue-500 transition duration-500">
 
                     <div class="text-5xl font-bold text-blue-500 group-hover:scale-110 transition">
                         01
@@ -1448,7 +1411,7 @@
                 <!-- ITEM -->
                 <a href="/global">
 
-                <div class="group flex items-start gap-6 p-6 rounded-xl bg-[#0f1620] border border-[#1d2a3a] hover:border-blue-500 transition duration-500">
+                <div class="group flex items-start gap-6 p-6 rounded-xl bg-gradient-to-r from-[#0d2a4a] via-[#0b2238] to-[#0d2a4a]  border border-[#1d2a3a] hover:border-blue-500 transition duration-500">
 
                     <div class="text-5xl font-bold text-blue-500 group-hover:scale-110 transition">
                         02
@@ -1466,7 +1429,7 @@
                 <!-- ITEM -->
                 <a href="/global">
 
-                <div class="group flex items-start gap-6 p-6 rounded-xl bg-[#0f1620] border border-[#1d2a3a] hover:border-blue-500 transition duration-500">
+                <div class="group flex items-start gap-6 p-6 rounded-xl bg-gradient-to-r from-[#0d2a4a] via-[#0b2238] to-[#0d2a4a]  border border-[#1d2a3a] hover:border-blue-500 transition duration-500">
 
                     <div class="text-5xl font-bold text-blue-500 group-hover:scale-110 transition">
                         03
@@ -1528,7 +1491,7 @@
 
     </section>
 
-    {{-- <section class="bg-[#000000] py-28">
+    {{-- <section class="bg-white py-28">
 
         <div class="max-w-7xl mx-auto px-6 text-center">
 
@@ -1731,14 +1694,14 @@
 </style> --}}
 
 
-<section class="bg-[#000000] py-28">
+<section class="bg-gray-50 py-28">
 
     <div class="max-w-[1400px] mx-auto px-6">
 
         <!-- TITLE -->
         <div class="text-center mb-20">
 
-            <h2 class="text-white text-4xl md:text-5xl font-bold tracking-wide">
+            <h2 class="text-black text-4xl md:text-5xl font-bold tracking-wide">
                 OUR SERVICES
             </h2>
 
@@ -1864,14 +1827,14 @@
 
 </section>
 
-<section class="bg-[#0b0f14] py-28">
+<section class="bg-white py-28">
 
     <div class="max-w-[1500px] mx-auto px-10">
 
         <!-- TITLE -->
         <div class="text-center mb-20">
 
-            <h2 class="text-white text-4xl md:text-5xl font-bold tracking-wide">
+            <h2 class="text-black  text-4xl md:text-5xl font-bold tracking-wide">
                 OUR PORTFOLIO
             </h2>
 
@@ -2059,389 +2022,79 @@
     }
 </style>
 
-    <section class="mx-auto px-6 bg-[#000000] mb-4 lg:px-16">
-        <div class="section">
-        <div class="trap-wrap">
+   <section class="mx-auto px-6 lg:px-16 mb-10">
 
-            <!-- SVG Trapezoid: top angled in on both sides, bottom full width -->
-            <svg class="trap-svg" viewBox="0 0 1200 130" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-            <defs>
-                <!-- Gradient for top border line -->
-                <linearGradient id="topGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-                <stop offset="0%"   stop-color="rgba(59,130,246,0.0)"/>
-                <stop offset="15%"  stop-color="rgba(59,130,246,0.8)"/>
-                <stop offset="85%"  stop-color="rgba(59,130,246,0.8)"/>
-                <stop offset="100%" stop-color="rgba(59,130,246,0.0)"/>
-                </linearGradient>
-                <!-- Gradient for bottom border -->
-                <linearGradient id="botGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-                <stop offset="0%"   stop-color="rgba(59,130,246,0.0)"/>
-                <stop offset="10%"  stop-color="rgba(59,130,246,0.6)"/>
-                <stop offset="90%"  stop-color="rgba(59,130,246,0.6)"/>
-                <stop offset="100%" stop-color="rgba(59,130,246,0.0)"/>
-                </linearGradient>
-                <linearGradient id="bgGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-                <stop offset="0%"   stop-color="#0b1f35"/>
-                <stop offset="100%" stop-color="#071525"/>
-                </linearGradient>
-            </defs>
+    <div class="relative bg-gradient-to-r from-[#0d2a4a] via-[#0b2238] to-[#0d2a4a]  rounded-xl shadow-xl border border-blue-500/30 py-14">
 
-            <!-- Trapezoid fill: top corners angled inward -->
-            <!-- top-left: (55,0), top-right: (1145,0), bottom-right: (1200,130), bottom-left: (0,130) -->
-            <polygon
-                points="55,0 1145,0 1200,130 0,130"
-                fill="url(#bgGrad)"
-            />
-
-            <!-- Top border line -->
-            <line x1="55" y1="0" x2="1145" y2="0" stroke="url(#topGrad)" stroke-width="1.5" vector-effect="non-scaling-stroke"/>
-
-            <!-- Bottom border line -->
-            <line x1="0" y1="130" x2="1200" y2="130" stroke="url(#botGrad)" stroke-width="1.5" vector-effect="non-scaling-stroke"/>
-
-            <!-- Left angled side -->
-            <line x1="55" y1="0" x2="0" y2="130" stroke="rgba(59,130,246,0.5)" stroke-width="1.5" vector-effect="non-scaling-stroke"/>
-
-            <!-- Right angled side -->
-            <line x1="1145" y1="0" x2="1200" y2="130" stroke="rgba(59,130,246,0.5)" stroke-width="1.5" vector-effect="non-scaling-stroke"/>
-            </svg>
-
-            <!-- CONTENT -->
-            <div class="trap-content">
-
-            <!-- TITLE sits on the top border line -->
-            <div class="top-label">
-                <span class="top-label-text">
-                Our <span class="highlight">Global Partners</span> &amp; Networks
-                </span>
-            </div>
-
-            <!-- LOGOS ROW -->
-            <div class="logos-row">
-                <div class="nav-btn"><i class="fa-solid fa-chevron-left"></i></div>
-
-                <div class="logos-list">
-                <div class="logo-item">
-                    <div class="brand maersk">
-                    <div class="star-box"><i class="fa-solid fa-star"></i></div>
-                    MAERSK
-                    </div>
-                </div>
-                <div class="logo-item">
-                    <div class="msc-wrap">
-                    <span class="msc-m">m</span>
-                    <span class="msc-sc">sc</span>
-                    </div>
-                </div>
-                <div class="logo-item">
-                    <div class="brand dpworld">
-                    <i class="fa-solid fa-recycle dp-icon"></i>
-                    DP WORLD
-                    </div>
-                </div>
-                <div class="logo-item">
-                    <div class="brand cmacgm">CMA CGM</div>
-                </div>
-                <div class="logo-item">
-                    <span class="dhl">DHL</span>
-                </div>
-                <div class="logo-item">
-                    <span class="fedex"><span class="fed">Fed</span><span class="ex">Ex</span></span>
-                </div>
-                <div class="logo-item">
-                    <div class="cosco-circle">COSCO<br>SHIPPING</div>
-                </div>
-                </div>
-
-                <div class="nav-btn"><i class="fa-solid fa-chevron-right"></i></div>
-            </div>
-
-            <!-- FEATURES sit on the bottom border line -->
-            <div class="bottom-label">
-                <div class="bottom-label-inner">
-                <div class="feat-dot"></div>
-                <div class="feature"><i class="fa-solid fa-truck-fast"></i> Fast &amp; Secure Delivery</div>
-                <div class="feature"><i class="fa-solid fa-location-dot"></i> Real-Time Tracking</div>
-                <div class="feature"><i class="fa-solid fa-people-group"></i> Expert Logistics Team</div>
-                <div class="feature"><i class="fa-solid fa-headset"></i> 24/7 Customer Support</div>
-                <div class="feat-dot"></div>
-                </div>
-            </div>
-
-            </div>
+        <!-- TOP TITLE -->
+        <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-blue-500 rounded-full px-4">
+            <h3 class="text-sm text-slate-300 font-medium whitespace-nowrap">
+               <span class="text-white font-semibold"> Our Global Partners & Networks</span>
+            </h3>
         </div>
+
+        <!-- SLIDER AREA -->
+        <div class="flex items-center justify-between px-6 lg:px-10">
+
+            <!-- LEFT BUTTON -->
+            <button class="w-8 h-8 rounded-full border border-white/20 flex items-center justify-center text-gray-300 hover:text-blue-400">
+                <i class="fa-solid fa-chevron-left text-xs"></i>
+            </button>
+
+            <!-- LOGOS -->
+            <div class="flex items-center justify-between flex-1 px-6 gap-8 overflow-hidden">
+
+                <div class="text-white font-bold">MAERSK</div>
+                <div class="text-white font-bold">MSC</div>
+                <div class="text-white font-bold">DP WORLD</div>
+                <div class="text-white font-bold">CMA CGM</div>
+                <div class="text-yellow-400 font-bold">DHL</div>
+                <div class="text-white font-bold">
+                    <span class="text-white">Fed</span><span class="text-orange-500">Ex</span>
+                </div>
+                <div class="text-white font-bold">COSCO</div>
+
+            </div>
+
+            <!-- RIGHT BUTTON -->
+            <button class="w-8 h-8 rounded-full border border-white/20 flex items-center justify-center text-gray-300 hover:text-blue-400">
+                <i class="fa-solid fa-chevron-right text-xs"></i>
+            </button>
+
         </div>
+
+
+        <!-- BOTTOM FEATURES -->
+        <div class="absolute -bottom-2 p-2 left-1/2 -translate-x-1/2 bg-gradient-to-r from-[#0d2a4a] via-[#0b2238] to-[#0d2a4a]  rounded-full px-6">
+
+            <div class="flex items-center gap-8 text-xs text-white whitespace-nowrap">
+
+                <div class="flex items-center gap-2">
+                    <i class="fa-solid fa-truck-fast text-blue-500"></i>
+                    Fast & Secure Delivery
+                </div>
+
+                <div class="flex items-center gap-2">
+                    <i class="fa-solid fa-location-dot text-blue-500"></i>
+                    Real-Time Tracking
+                </div>
+
+                <div class="flex items-center gap-2">
+                    <i class="fa-solid fa-people-group text-blue-500"></i>
+                    Expert Logistics Team
+                </div>
+
+                <div class="flex items-center gap-2">
+                    <i class="fa-solid fa-headset text-blue-500"></i>
+                    24/7 Customer Support
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
     </section>
-    <style>
-        
-
-        /* ─── TRAPEZOID CONTAINER ───
-            Trapezoid shape: top-left angled in, top-right angled in more sharply
-            Bottom is full width
-        */
-        .trap-wrap {
-            position: relative;
-            width: 100%;
-            background: #000000;
-        }
-
-        /* The SVG draws the full trapezoid shape as background + border */
-        .trap-svg {
-            position: absolute;
-            top: 0; left: 0;
-            width: 100%; height: 100%;
-            overflow: visible;
-            pointer-events: none;
-            z-index: 0;
-        }
-
-        /* Content sits on top of SVG */
-        .trap-content {
-            position: relative;
-            z-index: 2;
-            padding: 0 50px;
-
-        }
-
-        /* ─── TITLE ON TOP BORDER ─── */
-        .top-label {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 0;
-            position: relative;
-            /* Push text to sit on the top border line */
-        bottom: -10px;
-        }
-
-        .top-label-text {
-            background: transparent;
-            padding: 0 18px;
-            color: #cbd5e1;
-            font-size: 14px;
-            font-weight: 500;
-            white-space: nowrap;
-            position: relative;
-            top: -10px; /* half the text height, so it straddles the line */
-        }
-        .top-label-text .highlight { color: #3b82f6; font-weight: 700; }
-
-        /* ─── LOGOS ROW ─── */
-        .logos-row {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 22px 0 18px;
-        }
-
-        .nav-btn {
-            width: 26px; height: 26px;
-            border-radius: 50%;
-            border: 1px solid rgba(255,255,255,0.2);
-            background: rgba(255,255,255,0.05);
-            color: #9ca3af;
-            font-size: 10px;
-            display: flex; align-items: center; justify-content: center;
-            cursor: pointer; flex-shrink: 0;
-            transition: all 0.2s;
-        }
-        .nav-btn:hover { border-color: #3b82f6; color: #3b82f6; }
-
-        .logos-list {
-            display: flex;
-            align-items: center;
-            flex: 1;
-            justify-content: space-around;
-            padding: 0 10px;
-        }
-
-        .logo-item {
-            display: flex; align-items: center; justify-content: center;
-            padding: 4px 16px;
-            border-right: 1px solid rgba(255,255,255,0.08);
-            cursor: pointer;
-            transition: opacity 0.2s;
-        }
-        .logo-item:last-child { border-right: none; }
-        .logo-item:hover { opacity: 0.7; }
-
-        .brand { display: flex; align-items: center; gap: 7px; font-weight: 800; white-space: nowrap; }
-
-        /* MAERSK */
-        .maersk { color: #fff; font-size: 14px; letter-spacing: 1.5px; }
-        .star-box {
-            background: #1a56db; width: 26px; height: 26px; border-radius: 4px;
-            display: flex; align-items: center; justify-content: center; font-size: 11px; color: #fff; flex-shrink: 0;
-        }
-
-        /* MSC */
-        .msc-wrap { display: flex; flex-direction: column; align-items: center; line-height: 1; }
-        .msc-m { font-size: 20px; font-weight: 900; color: #fff; }
-        .msc-sc { font-size: 10px; font-weight: 800; color: #fff; letter-spacing: 2.5px; }
-
-        /* DP WORLD */
-        .dpworld { color: #fff; font-size: 13px; letter-spacing: 0.5px; }
-        .dp-icon { color: #22c55e; font-size: 14px; }
-
-        /* CMA CGM */
-        .cmacgm { color: #fff; font-size: 12px; font-weight: 900; letter-spacing: 1px; }
-
-        /* DHL */
-        .dhl { color: #f5c518; font-size: 22px; font-weight: 900; font-style: italic; letter-spacing: -1px; }
-
-        /* FedEx */
-        .fedex { font-size: 20px; font-weight: 900; }
-        .fed { color: #fff; }
-        .ex  { color: #f97316; }
-
-        /* COSCO */
-        .cosco-circle {
-            width: 38px; height: 38px; border-radius: 50%;
-            border: 2px solid #dc2626;
-            display: flex; flex-direction: column; align-items: center; justify-content: center;
-            font-size: 6px; font-weight: 900; color: #fff; line-height: 1.3; text-align: center;
-        }
-
-        /* ─── BOTTOM FEATURES ON BORDER LINE ─── */
-        .bottom-label {
-            display: flex;
-            align-items: center;
-            justify-content: space-around;
-            height: 0;
-            position: relative;
-        }
-
-        .bottom-label-inner {
-            background: transparent;
-            padding: 0 20px;
-            display: flex;
-            align-items: center;
-            gap: 0;
-            justify-content: space-around;
-            width: 92%;
-            position: relative;
-            
-        }
-
-        .feature {
-            display: flex; align-items: center; gap: 7px;
-            color: #94a3b8; font-size: 12px; font-weight: 500; white-space: nowrap;
-            padding: 0 20px;
-            border-right: 1px solid rgba(255,255,255,0.1);
-        }
-        .feature:last-child { border-right: none; }
-        .feature i { color: #3b82f6; font-size: 13px; }
-
-        .feat-dot {
-            width: 5px; height: 5px; border-radius: 50%;
-            background: rgba(100,150,255,0.5);
-            flex-shrink: 0;
-        }
-
-        /* ============================== */
-        /* 📱 RESPONSIVE FIXES */
-        /* ============================== */
-
-        @media (max-width: 1024px) {
-
-            /* Reduce side padding */
-            .trap-content {
-                padding: 0 20px;
-            }
-
-            /* Logos wrap instead of squeeze */
-            .logos-list {
-                flex-wrap: wrap;
-                gap: 14px;
-                justify-content: center;
-            }
-
-            .logo-item {
-                border-right: none;
-                padding: 6px 10px;
-            }
-
-            /* Hide nav arrows on tablet/mobile */
-            .nav-btn {
-                display: none;
-            }
-
-            /* Bottom features wrap */
-            .bottom-label-inner {
-                flex-wrap: wrap;
-                gap: 10px;
-                justify-content: center;
-            }
-
-            .feature {
-                border-right: none;
-                padding: 0 10px;
-                font-size: 11px;
-            }
-        }
-
-        @media (max-width: 768px) {
-
-            /* Increase trapezoid height */
-            .trap-wrap {
-                padding-top: 30px;
-                padding-bottom: 30px;
-            }
-
-            /* Make title normal positioned */
-            .top-label {
-                position: static;
-                height: auto;
-                margin-bottom: 18px;
-            }
-
-            .top-label-text {
-                position: static;
-                top: 0;
-                font-size: 13px;
-                text-align: center;
-                white-space: normal;
-            }
-
-            /* Logos stacked grid style */
-            .logos-list {
-                display: grid;
-                grid-template-columns: repeat(2, 1fr);
-                gap: 18px;
-                padding: 0;
-            }
-
-            .logo-item {
-                justify-content: center;
-                border: none;
-            }
-
-            /* Make logo sizes slightly smaller */
-            .dhl { font-size: 18px; }
-            .fedex { font-size: 16px; }
-
-            /* Bottom features stacked */
-            .bottom-label {
-                position: static;
-                height: auto;
-                margin-top: 20px;
-            }
-
-            .bottom-label-inner {
-                width: 100%;
-                flex-direction: column;
-                gap: 12px;
-            }
-
-            .feature {
-                font-size: 12px;
-                padding: 0;
-            }
-
-            .feat-dot {
-                display: none;
-            }
-        }
-    </style>
 
 @endsection

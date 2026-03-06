@@ -1,5 +1,5 @@
    <!-- ================= FOOTER ================= -->
-    <footer class="relative bg-[#000000] border-t border-white/10 mt-20">
+    <footer class="relative bg-gradient-to-r from-[#0d2a4a] via-[#0b2238] to-[#0d2a4a] border-t  border-white/10 mt-20">
 
         <!-- Top CTA Strip -->
         <div class="bg-gradient-to-r from-[#0d2a4a] via-[#0b2238] to-[#0d2a4a] border-b border-white/10">
@@ -9,7 +9,7 @@
                     <h3 class="text-xl md:text-2xl font-semibold text-white">
                         Ready to Ship Your Cargo Worldwide?
                     </h3>
-                    <p class="text-gray-400 mt-2 text-sm">
+                    <p class="text-gray-100 mt-2 text-sm">
                         Get fast, secure and reliable logistics solutions today.
                     </p>
                 </div>
@@ -31,7 +31,7 @@
 
             <!-- Logo + About -->
             <div>
-                <img src="{{ asset('logo.jpg') }}" 
+                <img src="{{ asset('logo.png') }}" 
                     alt="Globetrotters Logo" 
                     class="h-12 w-auto mb-6">
 
@@ -44,25 +44,25 @@
                 <!-- Social Icons -->
                 <div class="flex items-center gap-4">
                     <a href="#" class="w-9 h-9 flex items-center justify-center rounded-md 
-                        bg-white/5 border border-white/10
+                        bg-white/50 border border-white/10
                         hover:bg-blue-600/20 hover:text-blue-400 transition">
                         <i class="fa-brands fa-facebook-f"></i>
                     </a>
 
                     <a href="#" class="w-9 h-9 flex items-center justify-center rounded-md 
-                        bg-white/5 border border-white/10
+                        bg-white/50 border border-white/10
                         hover:bg-blue-600/20 hover:text-blue-400 transition">
                         <i class="fa-brands fa-linkedin-in"></i>
                     </a>
 
                     <a href="#" class="w-9 h-9 flex items-center justify-center rounded-md 
-                        bg-white/5 border border-white/10
+                        bg-white/50 border border-white/10
                         hover:bg-blue-600/20 hover:text-blue-400 transition">
                         <i class="fa-brands fa-x-twitter"></i>
                     </a>
 
                     <a href="#" class="w-9 h-9 flex items-center justify-center rounded-md 
-                        bg-white/5 border border-white/10
+                        bg-white/50 border border-white/10
                         hover:bg-blue-600/20 hover:text-blue-400 transition">
                         <i class="fa-brands fa-instagram"></i>
                     </a>
@@ -75,8 +75,16 @@
                 <ul class="space-y-3 text-sm text-gray-400">
                     <li><a href="/about" class="hover:text-blue-400 transition">About Us</a></li>
                     <li><a href="/services" class="hover:text-blue-400 transition">Our Services</a></li>
-                    <li><a href="#" class="hover:text-blue-400 transition">Global Network</a></li>
-                    <li><a href="#" class="hover:text-blue-400 transition">Careers</a></li>
+                    <li><a href="/global" class="hover:text-blue-400 transition">Global Network</a></li>
+                    {{-- <li>
+                        <a href="{{ asset('terms.pdf') }}" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        class="hover:text-blue-400 transition">
+                        Terms & Conditions
+                        </a>
+                    </li> --}}
+                    {{-- <li><a href="/privacy-policy" class="hover:text-blue-400 transition">Privacy Policy</a></li> --}}
                     <li><a href="/contact" class="hover:text-blue-400 transition">Contact</a></li>
                 </ul>
             </div>
@@ -85,11 +93,11 @@
             <div>
                 <h4 class="text-white font-semibold mb-5">Services</h4>
                 <ul class="space-y-3 text-sm text-gray-400">
-                    <li><a href="#" class="hover:text-blue-400 transition">Air Freight</a></li>
-                    <li><a href="#" class="hover:text-blue-400 transition">Ocean Freight</a></li>
-                    <li><a href="#" class="hover:text-blue-400 transition">Road Transport</a></li>
-                    <li><a href="#" class="hover:text-blue-400 transition">Warehousing</a></li>
-                    <li><a href="#" class="hover:text-blue-400 transition">Custom Clearance</a></li>
+                    <li><a href="/services/air-freight" class="hover:text-blue-400 transition">Air Freight</a></li>
+                    <li><a href="/services/ocean-freight" class="hover:text-blue-400 transition">Ocean Freight</a></li>
+                    <li><a href="/services/road-freight" class="hover:text-blue-400 transition">Road Transport</a></li>
+                    <li><a href="/services/rail-freight" class="hover:text-blue-400 transition">Rail Transport</a></li>
+                    
                 </ul>
             </div>
 
@@ -131,8 +139,13 @@
                 </div>
 
                 <div class="flex gap-6">
-                    <a href="#" class="hover:text-blue-400 transition">Privacy</a>
-                    <a href="#" class="hover:text-blue-400 transition">Terms</a>
+                    <a href="/privacy-policy" class="hover:text-blue-400 transition">Privacy Policy</a>
+                    <a href="{{ asset('terms.pdf') }}" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        class="hover:text-blue-400 transition">
+                        Terms & Conditions
+                    </a>
                     <a href="#" class="hover:text-blue-400 transition">Cookies</a>
                 </div>
 
