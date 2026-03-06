@@ -129,23 +129,22 @@ Related Articles
 </h3>
 
 <div class="grid md:grid-cols-2 gap-8">
-
+@foreach($allblogs as $item)
 <div class="bg-[#0f1620] rounded-xl overflow-hidden border border-[#1d2a3a] hover:border-blue-500 transition">
 
 <img
-src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?auto=format&fit=crop&w=800&q=80"
+src="{{ asset('blogs/'.$item->image) }}"
 class="h-48 w-full object-cover"
 />
 
 <div class="p-6">
 
 <h4 class="font-semibold mb-2">
-The Future of Freight Transportation
+{{ $item->title }}
 </h4>
 
 <p class="text-gray-400 text-sm">
-Exploring how technology is transforming freight
-and logistics industries worldwide.
+{{ !! $item->description !!}}
 </p>
 
 </div>
