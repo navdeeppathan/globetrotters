@@ -16,6 +16,11 @@
     <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     
+    <link
+    href="https://unpkg.com/aos@2.3.4/dist/aos.css"
+    rel="stylesheet"
+    />
+
     @stack('styles')
 </head>
 
@@ -89,6 +94,16 @@
 
 
 
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+    <script>
+    AOS.init({
+        duration: 900,
+        once: true,
+        offset: 120
+    });
+    </script>
+    <section class="bg-black text-white">
 
     @stack('scripts')
 

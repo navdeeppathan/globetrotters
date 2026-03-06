@@ -2,81 +2,124 @@
 
 @section('content')
     <style>
-       
-    
-
-        .parallelogram-bar {
-            transform: skewX(-8deg);
-            background: #06121e;
-            border-bottom: 1px solid rgba(59,130,246,0.35);
-            border-radius: 6px;
-            box-shadow: 0 0 40px rgba(59,130,246,0.18), inset 0 1px 0 rgba(255,255,255,0.05);
-            overflow: hidden;
+       .feature-bar {
+        background: #06121e;
+        border-radius: 12px;
+        border: 1px solid rgba(59, 130, 246, 0.35);
+        box-shadow: 0 0 30px rgba(59, 130, 246, 0.15);
+        overflow: hidden;
+        position: relative;
         }
 
-        .parallelogram-bar::after {
-            content: "";
-            position: absolute;
-            bottom: 0;
-            left: 0%;
-            width: 94%;
-            height: 4px;
-            background: linear-gradient(
-                to right,
-                transparent,
-                #3b82f6,
-                #0ea5e9,
-                #3b82f6,
-                transparent
-            );
-            border-radius: 50px;
-            filter: blur(3px);
-            opacity: 0.9;
-        }
-
-        .parallelogram-bar > .inner {
-            transform: skewX(8deg);
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-        }
-
-        .divider {
-            position: absolute;
-            right: 0;
-            top: 16px;
-            bottom: 16px;
-            width: 1px;
-            background: rgba(255,255,255,0.1);
-        }
-
-        .icon-circle {
-            width: 48px;
-            height: 48px;
-            flex-shrink: 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 50%;
-            background: rgba(37, 99, 235, 0.18);
-            border: 1px solid rgba(59,130,246,0.45);
-            box-shadow: 0 0 18px rgba(59,130,246,0.4);
+        .inner {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
         }
 
         .item {
-            display: flex;
-            align-items: center;
-            gap: 14px;
-            padding: 20px 24px;
-            position: relative;
-            cursor: pointer;
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        padding: 22px 24px;
+        position: relative;
+        cursor: pointer;
+
+        opacity: 0;
+        transform: translateY(30px);
+        animation: fadeUp 0.8s ease forwards;
         }
 
-        .item:hover .arrow { color: #60a5fa; margin-left: 6px; }
-        .arrow { transition: all 0.2s; color: #9ca3af; font-size: 12px; margin-left: 4px; }
+        /* Stagger animation delay */
 
-        .subtitle-orange { color: #fb923c; font-size: 12px; font-weight: 500; }
-        .subtitle-gray   { color: #9ca3af; font-size: 12px; }
-        .title           { color: #fff; font-weight: 600; font-size: 14px; margin-bottom: 3px; }
+        .item:nth-child(1) {
+        animation-delay: 0.1s;
+        }
+
+        .item:nth-child(2) {
+        animation-delay: 0.25s;
+        }
+
+        .item:nth-child(3) {
+        animation-delay: 0.4s;
+        }
+
+        .item:nth-child(4) {
+        animation-delay: 0.55s;
+        }
+
+        .divider {
+        position: absolute;
+        right: 0;
+        top: 18px;
+        bottom: 18px;
+        width: 1px;
+        background: rgba(255, 255, 255, 0.08);
+        }
+
+        .icon-circle {
+        width: 48px;
+        height: 48px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        background: rgba(37, 99, 235, 0.18);
+        border: 1px solid rgba(59, 130, 246, 0.45);
+        box-shadow: 0 0 15px rgba(59, 130, 246, 0.35);
+        color: #60a5fa;
+        font-size: 18px;
+
+        transition: all 0.3s ease;
+        }
+
+        .item:hover .icon-circle {
+        transform: scale(1.12);
+        box-shadow: 0 0 25px rgba(59, 130, 246, 0.7);
+        }
+
+        .title {
+        color: #fff;
+        font-weight: 600;
+        font-size: 14px;
+        margin-bottom: 3px;
+        }
+
+        .subtitle-orange {
+        color: #fb923c;
+        font-size: 12px;
+        font-weight: 500;
+        }
+
+        .subtitle-gray {
+        color: #9ca3af;
+        font-size: 12px;
+        }
+
+        .arrow {
+        transition: all 0.2s;
+        color: #9ca3af;
+        font-size: 12px;
+        margin-left: 4px;
+        }
+
+        .item:hover .arrow {
+        color: #60a5fa;
+        margin-left: 6px;
+        }
+
+        /* Entrance Animation */
+
+        @keyframes fadeUp {
+        from {
+            opacity: 0;
+            transform: translateY(35px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        }
     </style>
     <style>
         .wrapper {
@@ -443,6 +486,79 @@
         }
     </style>
 
+    <style>
+        .video-modal {
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.75);
+        display: none;
+        align-items: center;
+        justify-content: center;
+        z-index: 9999;
+        }
+
+        .video-content {
+        background: #ffffff;
+        width: 700px;
+        max-width: 90%;
+        border-radius: 6px;
+        padding: 20px;
+        position: relative;
+        text-align: center;
+
+        animation: popupScale 0.35s ease;
+        }
+
+        .video-title {
+        font-size: 24px;
+        font-weight: 700;
+        margin-bottom: 15px;
+        color: #000;
+        }
+
+        .video-wrapper {
+        width: 100%;
+        height: 400px;
+        }
+
+        .video-wrapper iframe {
+        width: 100%;
+        height: 100%;
+        border-radius: 4px;
+        }
+
+        .close-video {
+        position: absolute;
+        right: 15px;
+        top: 10px;
+        font-size: 22px;
+        cursor: pointer;
+        color: #666;
+        }
+
+        .skip-video {
+        margin-top: 10px;
+        font-size: 13px;
+        color: #666;
+        cursor: pointer;
+        }
+
+        /* animation */
+
+        @keyframes popupScale {
+        from {
+            opacity: 0;
+            transform: scale(0.85);
+        }
+
+        to {
+            opacity: 1;
+            transform: scale(1);
+        }
+        }
+
+    </style>
+
 
     <!-- HERO SECTION -->
     <section class="relative min-h-screen flex flex-col">
@@ -511,29 +627,85 @@
                             <!-- Buttons -->
                             <div class="mt-12 flex flex-col sm:flex-row gap-5">
 
-                                <a href="#"
+                                <a href="/contact"
                                 class="bg-gradient-to-r 
                                 p-4 rounded-md text-white text-sm font-semibold
                                 from-[#1d4ed8] via-[#2563eb] to-[#0ea5e9]
                                 shadow-[inset_0_1px_0_rgba(255,255,255,0.2),0_0_20px_rgba(37,99,235,0.45)]"
                                 >
-                                    Request Container Transport
+                                    Request a Quote
                                 </a>
 
-                                <a href="#"
+                                <!-- WATCH VIDEO BUTTON -->
+                                <a
+                                href="#"
+                                id="openVideo"
                                 class="flex items-center gap-3 
                                         px-7 py-3 rounded-md 
                                         border border-white/20 
                                         text-white text-sm font-medium 
-                                        hover:bg-white/5 transition">
+                                        hover:bg-white/5 transition"
+                                >
+                                <span
+                                    class="w-7 h-7 flex items-center justify-center 
+                                        bg-yellow-500 rounded-full text-black text-xs"
+                                >
+                                    <i class="fa-solid fa-play"></i>
+                                </span>
 
-                                    <span class="w-7 h-7 flex items-center justify-center 
-                                                bg-yellow-500 rounded-full text-black text-xs">
-                                        <i class="fa-solid fa-play"></i>
-                                    </span>
-
-                                    Watch Company Video
+                                Watch Company Video
                                 </a>
+
+                                <!-- VIDEO MODAL -->
+                                <div id="videoModal" class="video-modal">
+                                <div class="video-content">
+                                    <span class="close-video"><i class="fa-solid fa-xmark"></i></span>
+
+                                    <h2 class="video-title">Meet Our Company</h2>
+
+                                    <div class="video-wrapper">
+                                    <iframe
+                                        id="videoFrame"
+                                        src=""
+                                        frameborder="0"
+                                        allow="autoplay; encrypted-media"
+                                        allowfullscreen
+                                    ></iframe>
+                                    </div>
+
+                                    <div class="skip-video">Close Video</div>
+                                </div>
+                                </div>
+                                <script>
+                                const openBtn = document.getElementById("openVideo");
+                                const modal = document.getElementById("videoModal");
+                                const closeBtn = document.querySelector(".close-video");
+                                const skipBtn = document.querySelector(".skip-video");
+                                const frame = document.getElementById("videoFrame");
+
+                                const videoURL = "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1";
+
+                                openBtn.addEventListener("click", function (e) {
+                                    e.preventDefault();
+
+                                    modal.style.display = "flex";
+                                    frame.src = videoURL;
+                                });
+
+                                function closeVideo() {
+                                    modal.style.display = "none";
+                                    frame.src = "";
+                                }
+
+                                closeBtn.addEventListener("click", closeVideo);
+                                skipBtn.addEventListener("click", closeVideo);
+
+                                window.addEventListener("click", function (e) {
+                                    if (e.target === modal) {
+                                    closeVideo();
+                                    }
+                                });
+                                </script>
 
                             </div>
 
@@ -541,7 +713,7 @@
 
 
                         <!-- RIGHT SECTION -->
-                        <div class="relative flex justify-end">
+                        <div class="relative flex justify-end hidden md:block">
 
                             <img src="{{ asset('/banner.jpg') }}" 
                                 alt="Logistics"
@@ -566,72 +738,82 @@
     </section>
 
     <!-- FEATURE BAR SECTION -->
+   <!-- FEATURE BAR SECTION -->
     <section class="relative bg-[#000000] -mt-20 z-30 mx-auto px-6 lg:px-16">
-
-        <div style=" margin:0 auto; width:100%; box-sizing:border-box;">
-
-        <div class="parallelogram-bar">
+        <div style="margin: 0 auto; width: 100%; box-sizing: border-box">
+            <div class="feature-bar">
             <div class="inner">
-
                 <!-- ITEM 1 -->
                 <div class="item">
-                    <div class="icon-circle">
-                    <i class="fa-solid fa-file-signature" style="color:#60a5fa; font-size:18px;"></i>
+                <div class="icon-circle">
+                    <i class="fa-solid fa-file-signature"></i>
+                </div>
+
+                <a href="/contact">
+                    <div class="title">
+                        
+                        Request Transport
+                        
                     </div>
                     <div>
-                    <div class="title">Request Transport</div>
-                    <div>
-                        <span class="subtitle-orange">Get Instant Quote</span>
-                        <span class="arrow">→</span>
+                    <span class="subtitle-orange">Get Instant Quote</span>
+                    <span class="arrow">→</span>
                     </div>
-                    </div>
-                    <div class="divider"></div>
+                </a>
+
+                <div class="divider"></div>
                 </div>
 
                 <!-- ITEM 2 -->
                 <div class="item">
-                    <div class="icon-circle">
-                    <i class="fa-solid fa-location-dot" style="color:#60a5fa; font-size:18px;"></i>
-                    </div>
-                    <div>
+                <div class="icon-circle">
+                    <i class="fa-solid fa-location-dot"></i>
+                </div>
+
+                <div>
                     <div class="title">Track Shipment</div>
                     <div>
-                        <span class="subtitle-gray">Real-Time Tracking</span>
-                        <span class="arrow">→</span>
+                    <span class="subtitle-gray">Real-Time Tracking</span>
+                    <span class="arrow">→</span>
                     </div>
-                    </div>
-                    <div class="divider"></div>
+                </div>
+
+                <div class="divider"></div>
                 </div>
 
                 <!-- ITEM 3 -->
                 <div class="item">
-                    <div class="icon-circle">
-                    <i class="fa-solid fa-globe" style="color:#60a5fa; font-size:18px;"></i>
-                    </div>
-                    <div>
+                <div class="icon-circle">
+                    <i class="fa-solid fa-globe"></i>
+                </div>
+
+                <a href="/global">
+
                     <div class="title">Global Network</div>
                     <div>
-                        <span class="subtitle-orange">150+ Countries</span>
-                        <span class="arrow">→</span>
+                    <span class="subtitle-orange">150+ Countries</span>
+                    <span class="arrow">→</span>
                     </div>
-                    </div>
-                    <div class="divider"></div>
+                </a>
+
+                <div class="divider"></div>
                 </div>
 
                 <!-- ITEM 4 -->
                 <div class="item">
-                    <div class="icon-circle">
-                    <i class="fa-solid fa-file-lines" style="color:#60a5fa; font-size:18px;"></i>
-                    </div>
-                    <div>
-                    <div class="title">Customs & Compliance</div>
-                    <div>
-                        <span class="subtitle-gray">Cross-Border Experts</span>
-                        <span class="arrow">→</span>
-                    </div>
-                    </div>
+                <div class="icon-circle">
+                    <i class="fa-solid fa-file-lines"></i>
                 </div>
 
+                <div>
+                    <div class="title">Customs & Compliance</div>
+                    <div>
+                    <span class="subtitle-gray">Cross-Border Experts</span>
+                    <span class="arrow">→</span>
+                    </div>
+                </div>
+                </div>
+            </div>
             </div>
         </div>
     </section>
@@ -644,42 +826,98 @@
             <!-- ═══ CARD 1: SEND TRANSPORT REQUEST ═══ -->
             <!-- ═══ CARD 1: SEND TRANSPORT REQUEST ═══ -->
             <div class="send-card">
+            <div class="send-title">Send Transport Request</div>
 
-                <div class="send-title">Send Transport Request</div>
+            <!-- TABS -->
+            <div class="send-tabs">
+                <button class="send-tab send-active" data-tab="container">Container</button>
+                <button class="send-tab" data-tab="freight">Freight</button>
+                <button class="send-tab" data-tab="bulk">Bulk Cargo</button>
+                <button class="send-tab" data-tab="express">Express</button>
+            </div>
 
-                <div class="send-tabs">
-                    <button class="send-tab send-active">Container</button>
-                    <button class="send-tab">Freight</button>
-                    <button class="send-tab">Bulk Cargo</button>
-                    <button class="send-tab">Express</button>
-                </div>
+            <!-- FORM -->
+            <form id="quoteForm">
 
+                <!-- CONTAINER -->
+                <div class="tab-content active" id="container">
                 <div class="send-input-row">
-                    <div class="send-input">
-                        <i class="fa-regular fa-circle-dot"></i>
-                        <span>From (Country/Port)</span>
-                    </div>
-
-                    <div class="send-input">
-                        <i class="fa-solid fa-location-dot"></i>
-                        <span>To (Country/Port)</span>
-                    </div>
+                    <input class="send-input-field" placeholder="From (Country/Port)" />
+                    <input class="send-input-field" placeholder="To (Country/Port)" />
                 </div>
 
                 <div class="send-select-row">
-                    <div class="send-select">
-                        <span>Container Type</span>
-                        <i class="fa-solid fa-chevron-down"></i>
-                    </div>
-
-                    <div class="send-select">
-                        <span>Pickup Date</span>
-                        <i class="fa-regular fa-calendar"></i>
-                    </div>
+                    <input class="send-input-field" placeholder="Container Type" />
+                    <input class="send-input-field" type="date" />
+                </div>
                 </div>
 
-                <button class="send-btn">Get Quote</button>
+                <!-- FREIGHT -->
+                <div class="tab-content" id="freight">
+                <div class="send-input-row">
+                    <input class="send-input-field" placeholder="Origin Country" />
+                    <input class="send-input-field" placeholder="Destination Country" />
+                </div>
 
+                <div class="send-select-row">
+                    <input class="send-input-field" placeholder="Weight (KG)" />
+                    <input class="send-input-field" type="date" />
+                </div>
+                </div>
+
+                <!-- BULK -->
+                <div class="tab-content" id="bulk">
+                <div class="send-input-row">
+                    <input class="send-input-field" placeholder="Cargo Type" />
+                    <input class="send-input-field" placeholder="Quantity (Tons)" />
+                </div>
+
+                <div class="send-select-row">
+                    <input class="send-input-field" placeholder="Loading Port" />
+                    <input class="send-input-field" type="date" />
+                </div>
+                </div>
+
+                <!-- EXPRESS -->
+                <div class="tab-content" id="express">
+                <div class="send-input-row">
+                    <input class="send-input-field" placeholder="Pickup Address" />
+                    <input class="send-input-field" placeholder="Delivery Address" />
+                </div>
+
+                <div class="send-select-row">
+                    <input class="send-input-field" placeholder="Package Weight" />
+                    <input class="send-input-field" type="date" />
+                </div>
+                </div>
+
+                <button type="button" id="openQuotePopup" class="send-btn">
+                Get Quote
+                </button>
+            </form>
+            </div>
+
+            <div id="quotePopup" class="quote-modal">
+            <div class="quote-modal-content">
+
+                <span class="close-popup">&times;</span>
+
+                <h3>Request Quote</h3>
+
+                <form method="POST" action="{{ route('contact.send') }}" class="space-y-6">
+                @csrf
+
+                <input type="text" name="name" placeholder="Your Name" required />
+                <input type="email" name="email" placeholder="Your Email" required />
+                <input type="text" name="subject" placeholder="Subject" required />
+                <textarea name="message" placeholder="Message" rows="4"></textarea>
+
+                <button type="submit" class="send-btn">
+                    Submit Request
+                </button>
+                </form>
+
+            </div>
             </div>
             <style>
                 /* === MAIN CARD === */
@@ -742,6 +980,63 @@
                     transition: 0.3s ease;
                 }
 
+                .send-input-field {
+                flex: 1;
+                background: #0b2238;
+                border: 1px solid rgba(255, 255, 255, 0.08);
+                border-radius: 10px;
+                padding: 12px 14px;
+                color: #fff;
+                font-size: 13px;
+                }
+
+                .tab-content {
+                display: none;
+                }
+
+                .tab-content.active {
+                display: block;
+                }
+
+                /* Popup */
+
+                .quote-modal {
+                position: fixed;
+                inset: 0;
+                background: rgba(0,0,0,0.7);
+                display: none;
+                align-items: center;
+                justify-content: center;
+                z-index: 9999;
+                }
+
+                .quote-modal-content {
+                background: #0b2238;
+                padding: 30px;
+                border-radius: 12px;
+                width: 400px;
+                max-width: 90%;
+                color: white;
+                }
+
+                .quote-modal-content input,
+                .quote-modal-content textarea {
+                width: 100%;
+                padding: 12px;
+                border-radius: 8px;
+                border: 1px solid rgba(255,255,255,0.1);
+                background: #06121e;
+                color: white;
+                }
+
+                .close-popup {
+                position: absolute;
+                right: 20px;
+                top: 15px;
+                cursor: pointer;
+                font-size: 20px;
+                }
+
                 .send-tab:hover {
                     color: white;
                 }
@@ -751,6 +1046,13 @@
                     color: white;
                 }
 
+                .send-card {
+                    position: relative;
+                }
+
+                .quote-modal-content {
+                    position: relative;
+                }
                 /* === INPUT ROW === */
                 .send-input-row {
                     display: flex;
@@ -821,6 +1123,57 @@
                 }
             </style>
 
+            <script>
+                document.addEventListener("DOMContentLoaded", function () {
+
+                const tabs = document.querySelectorAll(".send-tab");
+                const contents = document.querySelectorAll(".tab-content");
+
+                tabs.forEach(tab => {
+                    tab.addEventListener("click", function () {
+
+                    tabs.forEach(t => t.classList.remove("send-active"));
+                    this.classList.add("send-active");
+
+                    const id = this.getAttribute("data-tab");
+
+                    contents.forEach(c => {
+                        c.classList.remove("active");
+                    });
+
+                    const activeContent = document.getElementById(id);
+                    if (activeContent) {
+                        activeContent.classList.add("active");
+                    }
+
+                    });
+                });
+
+                const popup = document.getElementById("quotePopup");
+                const openBtn = document.getElementById("openQuotePopup");
+                const closeBtn = document.querySelector(".close-popup");
+
+                if (openBtn) {
+                    openBtn.addEventListener("click", function () {
+                    popup.style.display = "flex";
+                    });
+                }
+
+                if (closeBtn) {
+                    closeBtn.addEventListener("click", function () {
+                    popup.style.display = "none";
+                    });
+                }
+
+                window.addEventListener("click", function (e) {
+                    if (e.target === popup) {
+                    popup.style.display = "none";
+                    }
+                });
+
+                });
+            </script>
+
 
             <!-- ═══ CARD 2: SHIPMENT TRACKING ═══ -->
             <div class="card">
@@ -859,437 +1212,142 @@
 
 
             <!-- ═══ CARD 3: LATEST NEWS ═══ -->
-            <div class="card">
+            <!-- ═══ CARD: LATEST NEWS ═══ -->
+           <!-- ═══ CARD: LATEST NEWS ═══ -->
+            <div class="card news-card">
+
                 <div class="news-header">
-                <div class="card-title" style="margin-bottom:0">Latest News &amp; Updates</div>
-                <a href="#" class="view-all">View All <i class="fa-solid fa-chevron-right" style="font-size:10px;"></i></a>
-                </div>
-
-                <!-- News Item 1 -->
-                <div class="news-item">
-                <div class="news-thumb" style="background: linear-gradient(135deg, #1e4060, #0d3050);">
-                    <i class="fa-solid fa-route"></i>
-                </div>
-                <div class="news-text">
-                    <div class="news-title">New Cross-Border Route: UK ← EU</div>
-                    <div class="news-date">Apr 20, 2024</div>
-                </div>
-                </div>
-                <div class="news-divider"></div>
-
-                <!-- News Item 2 -->
-                <div class="news-item">
-                <div class="news-thumb" style="background: linear-gradient(135deg, #3d2a10, #5a3a18);">
-                    <i class="fa-solid fa-boxes-stacked"></i>
-                </div>
-                <div class="news-text">
-                    <div class="news-title">Supply Chain Challenges in 2024</div>
-                    <div class="news-date">Apr 15, 2024</div>
-                </div>
-                </div>
-                <div class="news-divider"></div>
-
-                <!-- News Item 3 -->
-                <div class="news-item">
-                <div class="news-thumb" style="background: linear-gradient(135deg, #0d3828, #1a5a3a);">
-                    <i class="fa-solid fa-leaf"></i>
-                </div>
-                <div class="news-text">
-                    <div class="news-title">Carbon-Neutral Logistics Initiative</div>
-                    <div class="news-date">Apr 10, 2024</div>
-                </div>
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-    <section class="mx-auto px-6 bg-[#000000] mb-4 lg:px-16">
-        <div class="section">
-        <div class="trap-wrap">
-
-            <!-- SVG Trapezoid: top angled in on both sides, bottom full width -->
-            <svg class="trap-svg" viewBox="0 0 1200 130" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-            <defs>
-                <!-- Gradient for top border line -->
-                <linearGradient id="topGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-                <stop offset="0%"   stop-color="rgba(59,130,246,0.0)"/>
-                <stop offset="15%"  stop-color="rgba(59,130,246,0.8)"/>
-                <stop offset="85%"  stop-color="rgba(59,130,246,0.8)"/>
-                <stop offset="100%" stop-color="rgba(59,130,246,0.0)"/>
-                </linearGradient>
-                <!-- Gradient for bottom border -->
-                <linearGradient id="botGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-                <stop offset="0%"   stop-color="rgba(59,130,246,0.0)"/>
-                <stop offset="10%"  stop-color="rgba(59,130,246,0.6)"/>
-                <stop offset="90%"  stop-color="rgba(59,130,246,0.6)"/>
-                <stop offset="100%" stop-color="rgba(59,130,246,0.0)"/>
-                </linearGradient>
-                <linearGradient id="bgGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-                <stop offset="0%"   stop-color="#0b1f35"/>
-                <stop offset="100%" stop-color="#071525"/>
-                </linearGradient>
-            </defs>
-
-            <!-- Trapezoid fill: top corners angled inward -->
-            <!-- top-left: (55,0), top-right: (1145,0), bottom-right: (1200,130), bottom-left: (0,130) -->
-            <polygon
-                points="55,0 1145,0 1200,130 0,130"
-                fill="url(#bgGrad)"
-            />
-
-            <!-- Top border line -->
-            <line x1="55" y1="0" x2="1145" y2="0" stroke="url(#topGrad)" stroke-width="1.5" vector-effect="non-scaling-stroke"/>
-
-            <!-- Bottom border line -->
-            <line x1="0" y1="130" x2="1200" y2="130" stroke="url(#botGrad)" stroke-width="1.5" vector-effect="non-scaling-stroke"/>
-
-            <!-- Left angled side -->
-            <line x1="55" y1="0" x2="0" y2="130" stroke="rgba(59,130,246,0.5)" stroke-width="1.5" vector-effect="non-scaling-stroke"/>
-
-            <!-- Right angled side -->
-            <line x1="1145" y1="0" x2="1200" y2="130" stroke="rgba(59,130,246,0.5)" stroke-width="1.5" vector-effect="non-scaling-stroke"/>
-            </svg>
-
-            <!-- CONTENT -->
-            <div class="trap-content">
-
-            <!-- TITLE sits on the top border line -->
-            <div class="top-label">
-                <span class="top-label-text">
-                Our <span class="highlight">Global Partners</span> &amp; Networks
-                </span>
-            </div>
-
-            <!-- LOGOS ROW -->
-            <div class="logos-row">
-                <div class="nav-btn"><i class="fa-solid fa-chevron-left"></i></div>
-
-                <div class="logos-list">
-                <div class="logo-item">
-                    <div class="brand maersk">
-                    <div class="star-box"><i class="fa-solid fa-star"></i></div>
-                    MAERSK
+                    <div class="card-title" style="margin-bottom:0">
+                        Latest News & Updates
                     </div>
+
+                    <a href="{{ url('/blog') }}" class="view-all">
+                        View All
+                        <i class="fa-solid fa-chevron-right" style="font-size:10px;"></i>
+                    </a>
                 </div>
-                <div class="logo-item">
-                    <div class="msc-wrap">
-                    <span class="msc-m">m</span>
-                    <span class="msc-sc">sc</span>
+
+                @foreach($blogs->take(3) as $blog)
+
+                    <div class="news-item">
+
+                        <div class="news-thumb">
+                            <img
+                                src="{{ asset('blogs/'.$blog->image) }}"
+                                alt="{{ $blog->title }}"
+                            >
+                        </div>
+
+                        <div class="news-text">
+
+                            <div class="news-title">
+                                {{ $blog->title }}
+                            </div>
+
+                            <div class="news-date">
+                                {{ \Carbon\Carbon::parse($blog->published_at)->format('d F Y') }}
+                            </div>
+
+                        </div>
+
                     </div>
-                </div>
-                <div class="logo-item">
-                    <div class="brand dpworld">
-                    <i class="fa-solid fa-recycle dp-icon"></i>
-                    DP WORLD
-                    </div>
-                </div>
-                <div class="logo-item">
-                    <div class="brand cmacgm">CMA CGM</div>
-                </div>
-                <div class="logo-item">
-                    <span class="dhl">DHL</span>
-                </div>
-                <div class="logo-item">
-                    <span class="fedex"><span class="fed">Fed</span><span class="ex">Ex</span></span>
-                </div>
-                <div class="logo-item">
-                    <div class="cosco-circle">COSCO<br>SHIPPING</div>
-                </div>
-                </div>
 
-                <div class="nav-btn"><i class="fa-solid fa-chevron-right"></i></div>
-            </div>
+                    @if(!$loop->last)
+                        <div class="news-divider"></div>
+                    @endif
 
-            <!-- FEATURES sit on the bottom border line -->
-            <div class="bottom-label">
-                <div class="bottom-label-inner">
-                <div class="feat-dot"></div>
-                <div class="feature"><i class="fa-solid fa-truck-fast"></i> Fast &amp; Secure Delivery</div>
-                <div class="feature"><i class="fa-solid fa-location-dot"></i> Real-Time Tracking</div>
-                <div class="feature"><i class="fa-solid fa-people-group"></i> Expert Logistics Team</div>
-                <div class="feature"><i class="fa-solid fa-headset"></i> 24/7 Customer Support</div>
-                <div class="feat-dot"></div>
-                </div>
-            </div>
+                @endforeach
 
             </div>
-        </div>
-        </div>
-    </section>
-    <style>
-        
-
-        /* ─── TRAPEZOID CONTAINER ───
-            Trapezoid shape: top-left angled in, top-right angled in more sharply
-            Bottom is full width
-        */
-        .trap-wrap {
-            position: relative;
-            width: 100%;
-            background: #000000;
-        }
-
-        /* The SVG draws the full trapezoid shape as background + border */
-        .trap-svg {
-            position: absolute;
-            top: 0; left: 0;
-            width: 100%; height: 100%;
-            overflow: visible;
-            pointer-events: none;
-            z-index: 0;
-        }
-
-        /* Content sits on top of SVG */
-        .trap-content {
-            position: relative;
-            z-index: 2;
-            padding: 0 50px;
-
-        }
-
-        /* ─── TITLE ON TOP BORDER ─── */
-        .top-label {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 0;
-            position: relative;
-            /* Push text to sit on the top border line */
-        bottom: -10px;
-        }
-
-        .top-label-text {
-            background: transparent;
-            padding: 0 18px;
-            color: #cbd5e1;
-            font-size: 14px;
-            font-weight: 500;
-            white-space: nowrap;
-            position: relative;
-            top: -10px; /* half the text height, so it straddles the line */
-        }
-        .top-label-text .highlight { color: #3b82f6; font-weight: 700; }
-
-        /* ─── LOGOS ROW ─── */
-        .logos-row {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 22px 0 18px;
-        }
-
-        .nav-btn {
-            width: 26px; height: 26px;
-            border-radius: 50%;
-            border: 1px solid rgba(255,255,255,0.2);
-            background: rgba(255,255,255,0.05);
-            color: #9ca3af;
-            font-size: 10px;
-            display: flex; align-items: center; justify-content: center;
-            cursor: pointer; flex-shrink: 0;
-            transition: all 0.2s;
-        }
-        .nav-btn:hover { border-color: #3b82f6; color: #3b82f6; }
-
-        .logos-list {
-            display: flex;
-            align-items: center;
-            flex: 1;
-            justify-content: space-around;
-            padding: 0 10px;
-        }
-
-        .logo-item {
-            display: flex; align-items: center; justify-content: center;
-            padding: 4px 16px;
-            border-right: 1px solid rgba(255,255,255,0.08);
-            cursor: pointer;
-            transition: opacity 0.2s;
-        }
-        .logo-item:last-child { border-right: none; }
-        .logo-item:hover { opacity: 0.7; }
-
-        .brand { display: flex; align-items: center; gap: 7px; font-weight: 800; white-space: nowrap; }
-
-        /* MAERSK */
-        .maersk { color: #fff; font-size: 14px; letter-spacing: 1.5px; }
-        .star-box {
-            background: #1a56db; width: 26px; height: 26px; border-radius: 4px;
-            display: flex; align-items: center; justify-content: center; font-size: 11px; color: #fff; flex-shrink: 0;
-        }
-
-        /* MSC */
-        .msc-wrap { display: flex; flex-direction: column; align-items: center; line-height: 1; }
-        .msc-m { font-size: 20px; font-weight: 900; color: #fff; }
-        .msc-sc { font-size: 10px; font-weight: 800; color: #fff; letter-spacing: 2.5px; }
-
-        /* DP WORLD */
-        .dpworld { color: #fff; font-size: 13px; letter-spacing: 0.5px; }
-        .dp-icon { color: #22c55e; font-size: 14px; }
-
-        /* CMA CGM */
-        .cmacgm { color: #fff; font-size: 12px; font-weight: 900; letter-spacing: 1px; }
-
-        /* DHL */
-        .dhl { color: #f5c518; font-size: 22px; font-weight: 900; font-style: italic; letter-spacing: -1px; }
-
-        /* FedEx */
-        .fedex { font-size: 20px; font-weight: 900; }
-        .fed { color: #fff; }
-        .ex  { color: #f97316; }
-
-        /* COSCO */
-        .cosco-circle {
-            width: 38px; height: 38px; border-radius: 50%;
-            border: 2px solid #dc2626;
-            display: flex; flex-direction: column; align-items: center; justify-content: center;
-            font-size: 6px; font-weight: 900; color: #fff; line-height: 1.3; text-align: center;
-        }
-
-        /* ─── BOTTOM FEATURES ON BORDER LINE ─── */
-        .bottom-label {
-            display: flex;
-            align-items: center;
-            justify-content: space-around;
-            height: 0;
-            position: relative;
-        }
-
-        .bottom-label-inner {
-            background: transparent;
-            padding: 0 20px;
-            display: flex;
-            align-items: center;
-            gap: 0;
-            justify-content: space-around;
-            width: 92%;
-            position: relative;
-            
-        }
-
-        .feature {
-            display: flex; align-items: center; gap: 7px;
-            color: #94a3b8; font-size: 12px; font-weight: 500; white-space: nowrap;
-            padding: 0 20px;
-            border-right: 1px solid rgba(255,255,255,0.1);
-        }
-        .feature:last-child { border-right: none; }
-        .feature i { color: #3b82f6; font-size: 13px; }
-
-        .feat-dot {
-            width: 5px; height: 5px; border-radius: 50%;
-            background: rgba(100,150,255,0.5);
-            flex-shrink: 0;
-        }
-
-        /* ============================== */
-        /* 📱 RESPONSIVE FIXES */
-        /* ============================== */
-
-        @media (max-width: 1024px) {
-
-            /* Reduce side padding */
-            .trap-content {
-                padding: 0 20px;
-            }
-
-            /* Logos wrap instead of squeeze */
-            .logos-list {
-                flex-wrap: wrap;
+            <style>
+                .news-card .news-item {
+                display: flex;
                 gap: 14px;
-                justify-content: center;
-            }
+                align-items: center;
+                padding: 12px 0;
 
-            .logo-item {
-                border-right: none;
-                padding: 6px 10px;
-            }
+                opacity: 0;
+                transform: translateY(20px);
+                animation: newsFadeUp 0.7s ease forwards;
+                }
 
-            /* Hide nav arrows on tablet/mobile */
-            .nav-btn {
-                display: none;
-            }
+                /* Stagger animation */
 
-            /* Bottom features wrap */
-            .bottom-label-inner {
-                flex-wrap: wrap;
-                gap: 10px;
-                justify-content: center;
-            }
+                .news-card .news-item:nth-child(2) {
+                animation-delay: 0.15s;
+                }
 
-            .feature {
-                border-right: none;
-                padding: 0 10px;
-                font-size: 11px;
-            }
-        }
+                .news-card .news-item:nth-child(4) {
+                animation-delay: 0.3s;
+                }
 
-        @media (max-width: 768px) {
+                .news-card .news-item:nth-child(6) {
+                animation-delay: 0.45s;
+                }
 
-            /* Increase trapezoid height */
-            .trap-wrap {
-                padding-top: 30px;
-                padding-bottom: 30px;
-            }
+                .news-thumb {
+                width: 60px;
+                height: 60px;
+                border-radius: 6px;
+                overflow: hidden;
+                flex-shrink: 0;
+                }
 
-            /* Make title normal positioned */
-            .top-label {
-                position: static;
-                height: auto;
-                margin-bottom: 18px;
-            }
-
-            .top-label-text {
-                position: static;
-                top: 0;
-                font-size: 13px;
-                text-align: center;
-                white-space: normal;
-            }
-
-            /* Logos stacked grid style */
-            .logos-list {
-                display: grid;
-                grid-template-columns: repeat(2, 1fr);
-                gap: 18px;
-                padding: 0;
-            }
-
-            .logo-item {
-                justify-content: center;
-                border: none;
-            }
-
-            /* Make logo sizes slightly smaller */
-            .dhl { font-size: 18px; }
-            .fedex { font-size: 16px; }
-
-            /* Bottom features stacked */
-            .bottom-label {
-                position: static;
-                height: auto;
-                margin-top: 20px;
-            }
-
-            .bottom-label-inner {
+                .news-thumb img {
                 width: 100%;
-                flex-direction: column;
-                gap: 12px;
-            }
+                height: 100%;
+                object-fit: cover;
+                transition: transform 0.4s ease;
+                }
 
-            .feature {
+                /* Image zoom hover */
+
+                .news-item:hover .news-thumb img {
+                transform: scale(1.1);
+                }
+
+                .news-title {
+                font-size: 14px;
+                font-weight: 600;
+                color: #fff;
+                transition: color 0.3s;
+                }
+
+                .news-item:hover .news-title {
+                color: #60a5fa;
+                }
+
+                .news-date {
                 font-size: 12px;
-                padding: 0;
-            }
+                color: #9ca3af;
+                }
 
-            .feat-dot {
-                display: none;
-            }
-        }
-    </style>
+                .news-divider {
+                height: 1px;
+                background: rgba(255, 255, 255, 0.08);
+                margin: 8px 0;
+                }
+
+                /* Animation */
+
+                @keyframes newsFadeUp {
+                from {
+                    opacity: 0;
+                    transform: translateY(25px);
+                }
+
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+                }
+            </style>
+
+        </div>
+
+    </section>
+
+    
 
     <section class="bg-[#000000] overflow-hidden">
 
@@ -1974,5 +2032,390 @@
         margin-top:6px;
     }
 </style>
+
+    <section class="mx-auto px-6 bg-[#000000] mb-4 lg:px-16">
+        <div class="section">
+        <div class="trap-wrap">
+
+            <!-- SVG Trapezoid: top angled in on both sides, bottom full width -->
+            <svg class="trap-svg" viewBox="0 0 1200 130" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <!-- Gradient for top border line -->
+                <linearGradient id="topGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%"   stop-color="rgba(59,130,246,0.0)"/>
+                <stop offset="15%"  stop-color="rgba(59,130,246,0.8)"/>
+                <stop offset="85%"  stop-color="rgba(59,130,246,0.8)"/>
+                <stop offset="100%" stop-color="rgba(59,130,246,0.0)"/>
+                </linearGradient>
+                <!-- Gradient for bottom border -->
+                <linearGradient id="botGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%"   stop-color="rgba(59,130,246,0.0)"/>
+                <stop offset="10%"  stop-color="rgba(59,130,246,0.6)"/>
+                <stop offset="90%"  stop-color="rgba(59,130,246,0.6)"/>
+                <stop offset="100%" stop-color="rgba(59,130,246,0.0)"/>
+                </linearGradient>
+                <linearGradient id="bgGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%"   stop-color="#0b1f35"/>
+                <stop offset="100%" stop-color="#071525"/>
+                </linearGradient>
+            </defs>
+
+            <!-- Trapezoid fill: top corners angled inward -->
+            <!-- top-left: (55,0), top-right: (1145,0), bottom-right: (1200,130), bottom-left: (0,130) -->
+            <polygon
+                points="55,0 1145,0 1200,130 0,130"
+                fill="url(#bgGrad)"
+            />
+
+            <!-- Top border line -->
+            <line x1="55" y1="0" x2="1145" y2="0" stroke="url(#topGrad)" stroke-width="1.5" vector-effect="non-scaling-stroke"/>
+
+            <!-- Bottom border line -->
+            <line x1="0" y1="130" x2="1200" y2="130" stroke="url(#botGrad)" stroke-width="1.5" vector-effect="non-scaling-stroke"/>
+
+            <!-- Left angled side -->
+            <line x1="55" y1="0" x2="0" y2="130" stroke="rgba(59,130,246,0.5)" stroke-width="1.5" vector-effect="non-scaling-stroke"/>
+
+            <!-- Right angled side -->
+            <line x1="1145" y1="0" x2="1200" y2="130" stroke="rgba(59,130,246,0.5)" stroke-width="1.5" vector-effect="non-scaling-stroke"/>
+            </svg>
+
+            <!-- CONTENT -->
+            <div class="trap-content">
+
+            <!-- TITLE sits on the top border line -->
+            <div class="top-label">
+                <span class="top-label-text">
+                Our <span class="highlight">Global Partners</span> &amp; Networks
+                </span>
+            </div>
+
+            <!-- LOGOS ROW -->
+            <div class="logos-row">
+                <div class="nav-btn"><i class="fa-solid fa-chevron-left"></i></div>
+
+                <div class="logos-list">
+                <div class="logo-item">
+                    <div class="brand maersk">
+                    <div class="star-box"><i class="fa-solid fa-star"></i></div>
+                    MAERSK
+                    </div>
+                </div>
+                <div class="logo-item">
+                    <div class="msc-wrap">
+                    <span class="msc-m">m</span>
+                    <span class="msc-sc">sc</span>
+                    </div>
+                </div>
+                <div class="logo-item">
+                    <div class="brand dpworld">
+                    <i class="fa-solid fa-recycle dp-icon"></i>
+                    DP WORLD
+                    </div>
+                </div>
+                <div class="logo-item">
+                    <div class="brand cmacgm">CMA CGM</div>
+                </div>
+                <div class="logo-item">
+                    <span class="dhl">DHL</span>
+                </div>
+                <div class="logo-item">
+                    <span class="fedex"><span class="fed">Fed</span><span class="ex">Ex</span></span>
+                </div>
+                <div class="logo-item">
+                    <div class="cosco-circle">COSCO<br>SHIPPING</div>
+                </div>
+                </div>
+
+                <div class="nav-btn"><i class="fa-solid fa-chevron-right"></i></div>
+            </div>
+
+            <!-- FEATURES sit on the bottom border line -->
+            <div class="bottom-label">
+                <div class="bottom-label-inner">
+                <div class="feat-dot"></div>
+                <div class="feature"><i class="fa-solid fa-truck-fast"></i> Fast &amp; Secure Delivery</div>
+                <div class="feature"><i class="fa-solid fa-location-dot"></i> Real-Time Tracking</div>
+                <div class="feature"><i class="fa-solid fa-people-group"></i> Expert Logistics Team</div>
+                <div class="feature"><i class="fa-solid fa-headset"></i> 24/7 Customer Support</div>
+                <div class="feat-dot"></div>
+                </div>
+            </div>
+
+            </div>
+        </div>
+        </div>
+    </section>
+    <style>
+        
+
+        /* ─── TRAPEZOID CONTAINER ───
+            Trapezoid shape: top-left angled in, top-right angled in more sharply
+            Bottom is full width
+        */
+        .trap-wrap {
+            position: relative;
+            width: 100%;
+            background: #000000;
+        }
+
+        /* The SVG draws the full trapezoid shape as background + border */
+        .trap-svg {
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            overflow: visible;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        /* Content sits on top of SVG */
+        .trap-content {
+            position: relative;
+            z-index: 2;
+            padding: 0 50px;
+
+        }
+
+        /* ─── TITLE ON TOP BORDER ─── */
+        .top-label {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 0;
+            position: relative;
+            /* Push text to sit on the top border line */
+        bottom: -10px;
+        }
+
+        .top-label-text {
+            background: transparent;
+            padding: 0 18px;
+            color: #cbd5e1;
+            font-size: 14px;
+            font-weight: 500;
+            white-space: nowrap;
+            position: relative;
+            top: -10px; /* half the text height, so it straddles the line */
+        }
+        .top-label-text .highlight { color: #3b82f6; font-weight: 700; }
+
+        /* ─── LOGOS ROW ─── */
+        .logos-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 22px 0 18px;
+        }
+
+        .nav-btn {
+            width: 26px; height: 26px;
+            border-radius: 50%;
+            border: 1px solid rgba(255,255,255,0.2);
+            background: rgba(255,255,255,0.05);
+            color: #9ca3af;
+            font-size: 10px;
+            display: flex; align-items: center; justify-content: center;
+            cursor: pointer; flex-shrink: 0;
+            transition: all 0.2s;
+        }
+        .nav-btn:hover { border-color: #3b82f6; color: #3b82f6; }
+
+        .logos-list {
+            display: flex;
+            align-items: center;
+            flex: 1;
+            justify-content: space-around;
+            padding: 0 10px;
+        }
+
+        .logo-item {
+            display: flex; align-items: center; justify-content: center;
+            padding: 4px 16px;
+            border-right: 1px solid rgba(255,255,255,0.08);
+            cursor: pointer;
+            transition: opacity 0.2s;
+        }
+        .logo-item:last-child { border-right: none; }
+        .logo-item:hover { opacity: 0.7; }
+
+        .brand { display: flex; align-items: center; gap: 7px; font-weight: 800; white-space: nowrap; }
+
+        /* MAERSK */
+        .maersk { color: #fff; font-size: 14px; letter-spacing: 1.5px; }
+        .star-box {
+            background: #1a56db; width: 26px; height: 26px; border-radius: 4px;
+            display: flex; align-items: center; justify-content: center; font-size: 11px; color: #fff; flex-shrink: 0;
+        }
+
+        /* MSC */
+        .msc-wrap { display: flex; flex-direction: column; align-items: center; line-height: 1; }
+        .msc-m { font-size: 20px; font-weight: 900; color: #fff; }
+        .msc-sc { font-size: 10px; font-weight: 800; color: #fff; letter-spacing: 2.5px; }
+
+        /* DP WORLD */
+        .dpworld { color: #fff; font-size: 13px; letter-spacing: 0.5px; }
+        .dp-icon { color: #22c55e; font-size: 14px; }
+
+        /* CMA CGM */
+        .cmacgm { color: #fff; font-size: 12px; font-weight: 900; letter-spacing: 1px; }
+
+        /* DHL */
+        .dhl { color: #f5c518; font-size: 22px; font-weight: 900; font-style: italic; letter-spacing: -1px; }
+
+        /* FedEx */
+        .fedex { font-size: 20px; font-weight: 900; }
+        .fed { color: #fff; }
+        .ex  { color: #f97316; }
+
+        /* COSCO */
+        .cosco-circle {
+            width: 38px; height: 38px; border-radius: 50%;
+            border: 2px solid #dc2626;
+            display: flex; flex-direction: column; align-items: center; justify-content: center;
+            font-size: 6px; font-weight: 900; color: #fff; line-height: 1.3; text-align: center;
+        }
+
+        /* ─── BOTTOM FEATURES ON BORDER LINE ─── */
+        .bottom-label {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            height: 0;
+            position: relative;
+        }
+
+        .bottom-label-inner {
+            background: transparent;
+            padding: 0 20px;
+            display: flex;
+            align-items: center;
+            gap: 0;
+            justify-content: space-around;
+            width: 92%;
+            position: relative;
+            
+        }
+
+        .feature {
+            display: flex; align-items: center; gap: 7px;
+            color: #94a3b8; font-size: 12px; font-weight: 500; white-space: nowrap;
+            padding: 0 20px;
+            border-right: 1px solid rgba(255,255,255,0.1);
+        }
+        .feature:last-child { border-right: none; }
+        .feature i { color: #3b82f6; font-size: 13px; }
+
+        .feat-dot {
+            width: 5px; height: 5px; border-radius: 50%;
+            background: rgba(100,150,255,0.5);
+            flex-shrink: 0;
+        }
+
+        /* ============================== */
+        /* 📱 RESPONSIVE FIXES */
+        /* ============================== */
+
+        @media (max-width: 1024px) {
+
+            /* Reduce side padding */
+            .trap-content {
+                padding: 0 20px;
+            }
+
+            /* Logos wrap instead of squeeze */
+            .logos-list {
+                flex-wrap: wrap;
+                gap: 14px;
+                justify-content: center;
+            }
+
+            .logo-item {
+                border-right: none;
+                padding: 6px 10px;
+            }
+
+            /* Hide nav arrows on tablet/mobile */
+            .nav-btn {
+                display: none;
+            }
+
+            /* Bottom features wrap */
+            .bottom-label-inner {
+                flex-wrap: wrap;
+                gap: 10px;
+                justify-content: center;
+            }
+
+            .feature {
+                border-right: none;
+                padding: 0 10px;
+                font-size: 11px;
+            }
+        }
+
+        @media (max-width: 768px) {
+
+            /* Increase trapezoid height */
+            .trap-wrap {
+                padding-top: 30px;
+                padding-bottom: 30px;
+            }
+
+            /* Make title normal positioned */
+            .top-label {
+                position: static;
+                height: auto;
+                margin-bottom: 18px;
+            }
+
+            .top-label-text {
+                position: static;
+                top: 0;
+                font-size: 13px;
+                text-align: center;
+                white-space: normal;
+            }
+
+            /* Logos stacked grid style */
+            .logos-list {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 18px;
+                padding: 0;
+            }
+
+            .logo-item {
+                justify-content: center;
+                border: none;
+            }
+
+            /* Make logo sizes slightly smaller */
+            .dhl { font-size: 18px; }
+            .fedex { font-size: 16px; }
+
+            /* Bottom features stacked */
+            .bottom-label {
+                position: static;
+                height: auto;
+                margin-top: 20px;
+            }
+
+            .bottom-label-inner {
+                width: 100%;
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            .feature {
+                font-size: 12px;
+                padding: 0;
+            }
+
+            .feat-dot {
+                display: none;
+            }
+        }
+    </style>
 
 @endsection

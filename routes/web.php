@@ -45,7 +45,9 @@ Route::delete('/messages/{id}',[ContactController::class,'destroy'])->name('mess
 
 
 Route::get('/', function () {
-    return view('home');
+    $blogs = Blog::latest()->paginate(10);
+
+    return view('home',compact('blogs'));
 });
 
 
@@ -68,6 +70,18 @@ Route::get('/getquote', function () {
 Route::get('/challenge', function () {
     return view('challanges');
 });
+
+Route::get('/industry', function () {
+    return view('industry');
+});
+
+Route::get('/global', function () {
+    return view('global');
+});
+
+use App\Http\Controllers\ServiceController;
+
+Route::get('/services/{slug}', [ServiceController::class, 'show']);
 
 Route::get('/blog', function () {
     $blogs = Blog::latest()->paginate(10);

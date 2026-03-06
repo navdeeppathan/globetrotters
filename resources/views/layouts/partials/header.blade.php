@@ -54,28 +54,31 @@
                                 <ul class="py-3 text-sm text-gray-300">
 
                                     <li>
-                                        <a href="#" class="block px-5 py-2 hover:bg-blue-600/20 hover:text-blue-400 transition">
+                                        <a href="/services/air-freight" class="block px-5 py-2 hover:bg-blue-600/20 hover:text-blue-400 transition">
                                             Air Freight
                                         </a>
                                     </li>
 
                                     <li>
-                                        <a href="#" class="block px-5 py-2 hover:bg-blue-600/20 hover:text-blue-400 transition">
+                                        <a href="/services/ocean-freight" class="block px-5 py-2 hover:bg-blue-600/20 hover:text-blue-400 transition">
                                             Ocean Freight
                                         </a>
                                     </li>
 
                                     <li>
-                                        <a href="#" class="block px-5 py-2 hover:bg-blue-600/20 hover:text-blue-400 transition">
+                                        <a href="/services/road-freight" class="block px-5 py-2 hover:bg-blue-600/20 hover:text-blue-400 transition">
                                             Road Transport
                                         </a>
                                     </li>
 
                                     <li>
-                                        <a href="#" class="block px-5 py-2 hover:bg-blue-600/20 hover:text-blue-400 transition">
-                                            Warehousing
+                                        <a href="/services/rail-freight" class="block px-5 py-2 hover:bg-blue-600/20 hover:text-blue-400 transition">
+                                            Rail Transport
                                         </a>
                                     </li>
+
+                                    
+                                    
 
                                 </ul>
 
@@ -94,6 +97,22 @@
                         News & Insights
 
                         @if(request()->is('blog*'))
+                        <span class="absolute left-0 -bottom-2 w-full h-[2px] 
+                        bg-[#1ecbff] rounded-full shadow-[0_0_8px_#3b82f6]"></span>
+                        @endif
+
+                        </a>
+                        <a href="/industry"
+                        class="relative pb-1 text-gray-300 hover:text-blue-400
+                        after:absolute after:left-0 after:-bottom-2
+                        after:h-[2px] after:w-0 after:bg-blue-400
+                        after:transition-all after:duration-300
+                        hover:after:w-full">
+                        {{-- class="relative pb-1 {{ request()->is('challenge*') ? 'text-[#1ecbff]' : 'text-gray-300 hover:text-blue-400' }}"> --}}
+
+                        Industries we serve
+
+                        @if(request()->is('challenge*'))
                         <span class="absolute left-0 -bottom-2 w-full h-[2px] 
                         bg-[#1ecbff] rounded-full shadow-[0_0_8px_#3b82f6]"></span>
                         @endif
