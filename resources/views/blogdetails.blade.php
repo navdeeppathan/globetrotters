@@ -132,28 +132,30 @@ Related Articles
 
 
 
-
+@foreach($allblogs as $item)
 <div class="bg-[#0f1620] rounded-xl overflow-hidden border border-[#1d2a3a] hover:border-blue-500 transition">
 
 <img
-src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=800&q=80"
+src="{{ asset('blogs/'.$item->image) }}"
 class="h-48 w-full object-cover"
 />
 
 <div class="p-6">
 
 <h4 class="font-semibold mb-2">
-Warehouse Automation Trends
+<a href="{{ route('blogs.show',$item->slug) }}" class="hover:text-blue-400 transition">
+{{ $item->title }}
+</a>
 </h4>
 
-<p class="text-gray-400 text-sm">
-Automation technologies are revolutionizing
-warehouse management systems.
-</p>
+{{-- <p class="text-gray-400  text-sm">
+{!! $item->description !!}
+</p> --}}
 
 </div>
 
 </div>
+@endforeach
 
 </div>
 
@@ -169,11 +171,11 @@ warehouse management systems.
 <!-- SEARCH -->
 <div>
 
-<input
+{{-- <input
 type="text"
 placeholder="Search blog..."
 class="w-full bg-[#0f1620] border border-[#1d2a3a] px-4 py-3 rounded-lg text-white focus:border-blue-500 outline-none"
-/>
+/> --}}
 
 </div>
 

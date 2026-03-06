@@ -2,23 +2,29 @@
 
 @section('content')
 
-<section class="bg-[#000000] py-32 text-center relative overflow-hidden mt-10 reveal">
+{{-- HERO SECTION --}}
 
-<div class="absolute w-[400px] h-[400px] bg-blue-600/10 blur-[120px] -top-40 -left-40"></div>
-<div class="absolute w-[400px] h-[400px] bg-blue-600/10 blur-[120px] bottom-0 right-0"></div>
+<section class="relative bg-black py-32 overflow-hidden mt-10">
 
-<div class="max-w-5xl mx-auto px-6 relative z-10">
+<div class="absolute inset-0 ">
+<img src="{{ asset('c8.png') }}" class="w-full h-full object-fill">
+</div>
 
-<h1 class="text-white text-5xl font-bold mb-6 animate-fadeUp">
+<div class="absolute w-[500px] h-[500px] bg-blue-600/20 blur-[150px] -top-40 -left-40"></div>
+<div class="absolute w-[500px] h-[500px] bg-blue-600/20 blur-[150px] bottom-0 right-0"></div>
+
+<div class="relative z-10 max-w-6xl mx-auto px-6 text-center">
+
+<h1 class="text-white text-5xl md:text-6xl font-bold mb-6">
 LOGISTICS CHALLENGES
 </h1>
 
-<div class="w-24 h-[3px] bg-blue-500 mx-auto mb-8 animate-grow"></div>
+<div class="w-24 h-[3px] bg-blue-500 mx-auto mb-8"></div>
 
-<p class="text-gray-400 text-lg animate-fadeUp delay-200">
+<p class="text-gray-300 text-lg max-w-3xl mx-auto">
 Modern global supply chains face complex logistics challenges.
-Our expertise helps businesses overcome operational barriers
-and deliver cargo efficiently worldwide.
+Our expertise helps businesses overcome operational barriers,
+reduce delays, and deliver cargo efficiently across international markets.
 </p>
 
 </div>
@@ -27,17 +33,21 @@ and deliver cargo efficiently worldwide.
 
 
 
-<section class="bg-[#000000] py-4">
+{{-- CHALLENGE CARDS --}}
+
+<section class="bg-black py-20">
 
 <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-10">
 
-<div class="bg-[#0f1620] border border-[#1d2a3a] p-8 rounded-xl 
-hover:border-blue-500 transition duration-500
-hover:-translate-y-3
-hover:shadow-[0_10px_40px_rgba(59,130,246,0.25)]
-reveal">
+{{-- CARD 1 --}}
 
-<h3 class="text-white text-xl mb-4 font-semibold">
+<div class="bg-[#0f1620] rounded-xl overflow-hidden border border-[#1d2a3a] hover:border-blue-500 transition duration-500 group">
+
+<img src="{{ asset('s2.png') }}" class="h-56 w-full object-cover group-hover:scale-110 transition duration-500">
+
+<div class="p-8">
+
+<h3 class="text-white text-xl font-semibold mb-3">
 Global Shipping Delays
 </h3>
 
@@ -48,13 +58,19 @@ supply chains and delay deliveries worldwide.
 
 </div>
 
+</div>
 
-<div class="bg-[#0f1620] border border-[#1d2a3a] p-8 rounded-xl 
-hover:border-blue-500 transition duration-500
-hover:-translate-y-3
-hover:shadow-[0_10px_40px_rgba(59,130,246,0.25)]
-reveal">
-<h3 class="text-white text-xl mb-4 font-semibold">
+
+
+{{-- CARD 2 --}}
+
+<div class="bg-[#0f1620] rounded-xl overflow-hidden border border-[#1d2a3a] hover:border-blue-500 transition duration-500 group">
+
+<img src="{{ asset('c9.png') }}" class="h-56 w-full object-cover group-hover:scale-110 transition duration-500">
+
+<div class="p-8">
+
+<h3 class="text-white text-xl font-semibold mb-3">
 Rising Transportation Costs
 </h3>
 
@@ -65,13 +81,19 @@ on logistics budgets and shipping expenses.
 
 </div>
 
+</div>
 
-<div class="bg-[#0f1620] border border-[#1d2a3a] p-8 rounded-xl 
-hover:border-blue-500 transition duration-500
-hover:-translate-y-3
-hover:shadow-[0_10px_40px_rgba(59,130,246,0.25)]
-reveal">
-<h3 class="text-white text-xl mb-4 font-semibold">
+
+
+{{-- CARD 3 --}}
+
+<div class="bg-[#0f1620] rounded-xl overflow-hidden border border-[#1d2a3a] hover:border-blue-500 transition duration-500 group">
+
+<img src="{{ asset('c10.png') }}" class="h-56 w-full object-cover group-hover:scale-110 transition duration-500">
+
+<div class="p-8">
+
+<h3 class="text-white text-xl font-semibold mb-3">
 Supply Chain Complexity
 </h3>
 
@@ -84,11 +106,16 @@ advanced coordination and real-time tracking.
 
 </div>
 
+</div>
+
 </section>
 
 
 
-<section class="bg-[#000000] py-28">
+
+{{-- INDUSTRY CHALLENGES GRID --}}
+
+<section class="bg-[#050505] py-28">
 
 <div class="max-w-7xl mx-auto px-6">
 
@@ -104,48 +131,58 @@ KEY INDUSTRY CHALLENGES
 
 <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-10">
 
-<div class="bg-[#0f1620] border border-[#1d2a3a] p-8 rounded-xl 
-hover:border-blue-500 transition duration-500
-hover:-translate-y-3
-hover:shadow-[0_10px_40px_rgba(59,130,246,0.25)]
-reveal">
-<h3 class="text-white mb-3">Port Congestion</h3>
+{{-- ITEM --}}
+
+<div class="bg-[#0f1620] p-8 rounded-xl border border-[#1d2a3a] hover:border-blue-500 hover:-translate-y-2 transition duration-500">
+
+
+
+<h3 class="text-white mb-3 font-semibold">Port Congestion</h3>
+
 <p class="text-gray-400 text-sm">
-Busy ports can cause delays and increase shipping costs.
+Busy ports can cause delays and increase shipping costs across global supply chains.
 </p>
 
 </div>
 
-<div class="bg-[#0f1620] border border-[#1d2a3a] p-8 rounded-xl 
-hover:border-blue-500 transition duration-500
-hover:-translate-y-3
-hover:shadow-[0_10px_40px_rgba(59,130,246,0.25)]
-reveal">
-<h3 class="text-white mb-3">Customs Regulations</h3>
+
+
+<div class="bg-[#0f1620] p-8 rounded-xl border border-[#1d2a3a] hover:border-blue-500 hover:-translate-y-2 transition duration-500">
+
+
+
+<h3 class="text-white mb-3 font-semibold">Customs Regulations</h3>
+
 <p class="text-gray-400 text-sm">
-Complex customs requirements slow down international trade.
+Complex customs requirements slow down international trade and documentation processing.
 </p>
 
 </div>
-<div class="bg-[#0f1620] border border-[#1d2a3a] p-8 rounded-xl 
-hover:border-blue-500 transition duration-500
-hover:-translate-y-3
-hover:shadow-[0_10px_40px_rgba(59,130,246,0.25)]
-reveal">
-<h3 class="text-white mb-3">Cargo Security</h3>
+
+
+
+<div class="bg-[#0f1620] p-8 rounded-xl border border-[#1d2a3a] hover:border-blue-500 hover:-translate-y-2 transition duration-500">
+
+
+
+<h3 class="text-white mb-3 font-semibold">Cargo Security</h3>
+
 <p class="text-gray-400 text-sm">
-High value cargo requires strong safety and monitoring systems.
+High value cargo requires strong safety protocols and advanced monitoring systems.
 </p>
 
 </div>
-<div class="bg-[#0f1620] border border-[#1d2a3a] p-8 rounded-xl 
-hover:border-blue-500 transition duration-500
-hover:-translate-y-3
-hover:shadow-[0_10px_40px_rgba(59,130,246,0.25)]
-reveal">
-<h3 class="text-white mb-3">Last Mile Delivery</h3>
+
+
+
+<div class="bg-[#0f1620] p-8 rounded-xl border border-[#1d2a3a] hover:border-blue-500 hover:-translate-y-2 transition duration-500">
+
+
+
+<h3 class="text-white mb-3 font-semibold">Last Mile Delivery</h3>
+
 <p class="text-gray-400 text-sm">
-Urban deliveries require flexible and fast transportation solutions.
+Urban deliveries require flexible and fast transportation strategies.
 </p>
 
 </div>
@@ -157,7 +194,11 @@ Urban deliveries require flexible and fast transportation solutions.
 </section>
 
 
-<section class="bg-[#000000] py-28">
+
+
+{{-- SOLUTIONS SECTION --}}
+
+<section class="bg-black py-28">
 
 <div class="max-w-6xl mx-auto px-6">
 
@@ -171,42 +212,59 @@ OUR SOLUTIONS
 
 </div>
 
-<div class="grid md:grid-cols-3 gap-10">
+<div class="grid md:grid-cols-3 gap-14 text-center">
 
-<div class="text-center">
+{{-- ITEM --}}
 
-<div class="text-blue-500 text-5xl font-bold mb-4 animate-pulse">01</div>
+<div class="space-y-4">
 
-<h3 class="text-white mb-3">Advanced Planning</h3>
+<img src="{{ asset('icons/planning.png') }}" class="w-16 mx-auto">
+
+<div class="text-blue-500 text-5xl font-bold">01</div>
+
+<h3 class="text-white text-xl font-semibold">
+Advanced Planning
+</h3>
 
 <p class="text-gray-400">
-Strategic route planning and shipment optimization.
+Strategic route planning and shipment optimization reduce
+delays and improve logistics efficiency.
 </p>
 
 </div>
 
 
-<div class="text-center">
+<div class="space-y-4">
 
-<div class="text-blue-500 text-5xl font-bold mb-4 animate-pulse">02</div>
+<img src="{{ asset('icons/tracking.png') }}" class="w-16 mx-auto">
 
-<h3 class="text-white mb-3">Real-Time Tracking</h3>
+<div class="text-blue-500 text-5xl font-bold">02</div>
+
+<h3 class="text-white text-xl font-semibold">
+Real-Time Tracking
+</h3>
 
 <p class="text-gray-400">
-Modern tracking systems keep cargo visibility high.
+Modern tracking systems allow businesses to monitor shipments
+and maintain visibility throughout the supply chain.
 </p>
 
 </div>
 
 
-<div class="text-center">
+<div class="space-y-4">
 
-<div class="text-blue-500 text-5xl font-bold mb-4 animate-pulse">03</div>
+<img src="{{ asset('icons/network.png') }}" class="w-16 mx-auto">
 
-<h3 class="text-white mb-3">Global Partnerships</h3>
+<div class="text-blue-500 text-5xl font-bold">03</div>
+
+<h3 class="text-white text-xl font-semibold">
+Global Partnerships
+</h3>
 
 <p class="text-gray-400">
-Strong international logistics network ensures efficiency.
+Our strong international logistics network ensures faster
+and more reliable cargo transportation.
 </p>
 
 </div>
@@ -218,76 +276,29 @@ Strong international logistics network ensures efficiency.
 </section>
 
 
-<style>
-    .reveal{
-opacity:0;
-transform:translateY(40px);
-transition:all .8s ease;
-}
 
-.reveal.active{
-opacity:1;
-transform:translateY(0);
-}
+{{-- CTA SECTION --}}
 
+<section class="bg-gradient-to-r from-blue-600 to-blue-800 py-20">
 
-/* fade up animation */
+<div class="max-w-5xl mx-auto text-center px-6">
 
-@keyframes fadeUp{
-from{
-opacity:0;
-transform:translateY(40px);
-}
-to{
-opacity:1;
-transform:translateY(0);
-}
-}
+<h2 class="text-white text-4xl font-bold mb-6">
+Need Help Solving Your Logistics Challenges?
+</h2>
 
-.animate-fadeUp{
-animation:fadeUp .9s ease forwards;
-}
+<p class="text-blue-100 mb-8">
+Our global logistics experts help businesses optimize supply chains,
+reduce delays, and improve delivery performance.
+</p>
 
-.delay-200{
-animation-delay:.2s;
-}
+<a href="/contact"
+class="bg-white text-blue-700 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition">
+Contact Our Experts
+</a>
 
+</div>
 
-/* line animation */
+</section>
 
-@keyframes grow{
-from{
-width:0;
-}
-to{
-width:96px;
-}
-}
-
-.animate-grow{
-animation:grow 1s ease forwards;
-}
-
-</style>
-
-<script>
-
-const reveals = document.querySelectorAll(".reveal");
-
-const observer = new IntersectionObserver(entries => {
-
-entries.forEach(entry => {
-
-if(entry.isIntersecting){
-entry.target.classList.add("active");
-}
-
-});
-
-});
-
-reveals.forEach(el => observer.observe(el));
-
-</script>
 @endsection
-

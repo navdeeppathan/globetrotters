@@ -2,77 +2,110 @@
 
 @section('content')
 
-<section class="relative bg-[#000000] py-28 px-6 lg:px-16 overflow-hidden mt-10">
+<!-- HERO -->
 
-<!-- blue glow background -->
-    <div class="absolute w-[500px] h-[500px] bg-blue-600/10 blur-[120px] -top-40 -left-40"></div>
-    <div class="absolute w-[400px] h-[400px] bg-blue-500/10 blur-[120px] bottom-0 right-0"></div>
+<section class="relative bg-black py-36 overflow-hidden mt-10">
 
-    <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16  relative z-10">
+<div class="absolute inset-0 opacity-30">
+<img src="{{ asset('p4.png') }}" class="w-full h-full object-fill scale-110 animate-slowZoom">
+</div>
 
-    <!-- IMAGES -->
-    <div class="space-y-10">
+<div class="absolute w-[500px] h-[500px] bg-blue-600/20 blur-[150px] -top-40 -left-40"></div>
+<div class="absolute w-[500px] h-[500px] bg-blue-600/20 blur-[150px] bottom-0 right-0"></div>
 
-        <div class="overflow-hidden rounded-xl border border-[#1d2a3a] shadow-xl group">
-            <img src="{{ asset('a1.jpg') }}" class="w-full transform group-hover:scale-110 transition duration-700">
-        </div>
+<div class="relative z-10 text-center max-w-5xl mx-auto px-6">
 
-       
+<h1 class="text-white text-5xl md:text-6xl font-bold mb-6 reveal">
+ABOUT GLOBETROTTERS
+</h1>
 
-    </div>
+<div class="w-24 h-[3px] bg-blue-500 mx-auto mb-8 reveal"></div>
 
+<p class="text-gray-300 text-lg max-w-3xl mx-auto reveal">
+Professional global logistics solutions delivering efficient
+transportation, reliable supply chain management, and
+seamless cargo movement worldwide.
+</p>
 
-    <!-- CONTENT -->
-    <div class="text-white">
-
-        <h2 class="text-4xl md:text-5xl font-bold mb-4">
-        ABOUT GLOBETROTTERS
-        </h2>
-
-        <div class="w-24 h-[3px] bg-blue-500 mb-8"></div>
-
-            <p class="text-gray-400 leading-relaxed mb-6">
-            Globetrotters (GB) Ltd is an independent freight forwarding company
-            based in London delivering professional logistics services across
-            international markets. Our company specializes in Ocean Freight,
-            Air Freight, Customs Clearance, Warehousing and global supply chain
-            management.
-            </p>
-
-            <p class="text-gray-400 leading-relaxed">
-            With years of experience and strong global partnerships we provide
-            customized logistics solutions that help businesses move goods
-            efficiently, securely and cost effectively.
-            </p>
-
-        </div>
-
-    </div>
+</div>
 
 </section>
 
-<section class="bg-[#000000] py-24">
+
+
+<!-- ABOUT SECTION -->
+
+<section class="bg-black py-28 px-6 lg:px-16">
+
+<div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
+
+<div class="relative reveal">
+
+<img src="{{ asset('a1.jpg') }}" class="rounded-xl shadow-2xl">
+
+
+
+</div>
+
+
+
+<div class="text-white reveal">
+
+<h2 class="text-4xl font-bold mb-6">
+Who We Are
+</h2>
+
+<p class="text-gray-400 mb-6 leading-relaxed">
+Globetrotters (GB) Ltd is an independent freight forwarding company
+based in London delivering professional logistics services across
+international markets including ocean freight, air freight,
+customs clearance, warehousing and supply chain management.
+</p>
+
+<p class="text-gray-400 mb-6 leading-relaxed">
+With strong global partnerships and years of experience we deliver
+customized logistics solutions that help businesses move cargo
+efficiently, securely and cost effectively.
+</p>
+
+<p class="text-gray-400 leading-relaxed">
+Our experienced team manages the complete transportation process
+from cargo planning and documentation to final delivery ensuring
+smooth international trade operations.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- STATS -->
+
+<section class="bg-[#050505] py-24">
 
 <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-10 text-center">
 
-<div class="group bg-[#0f1620] border border-[#1d2a3a] rounded-xl p-10 hover:border-blue-500 transition hover:shadow-[0_10px_40px_rgba(59,130,246,0.25)]">
-<h3 class="text-blue-500 text-4xl font-bold mb-2">110+</h3>
-<p class="text-gray-400">Countries Covered</p>
+<div class="stat-card reveal">
+<h3 class="counter text-blue-500 text-5xl font-bold" data-target="110">0</h3>
+<p class="text-gray-400 mt-3">Countries Covered</p>
 </div>
 
-<div class="group bg-[#0f1620] border border-[#1d2a3a] rounded-xl p-10 hover:border-blue-500 transition hover:shadow-[0_10px_40px_rgba(59,130,246,0.25)]">
-<h3 class="text-blue-500 text-4xl font-bold mb-2">30+</h3>
-<p class="text-gray-400">Years Experience</p>
+<div class="stat-card reveal">
+<h3 class="counter text-blue-500 text-5xl font-bold" data-target="30">0</h3>
+<p class="text-gray-400 mt-3">Years Experience</p>
 </div>
 
-<div class="group bg-[#0f1620] border border-[#1d2a3a] rounded-xl p-10 hover:border-blue-500 transition hover:shadow-[0_10px_40px_rgba(59,130,246,0.25)]">
-<h3 class="text-blue-500 text-4xl font-bold mb-2">5000+</h3>
-<p class="text-gray-400">Successful Shipments</p>
+<div class="stat-card reveal">
+<h3 class="counter text-blue-500 text-5xl font-bold" data-target="5000">0</h3>
+<p class="text-gray-400 mt-3">Successful Shipments</p>
 </div>
 
-<div class="group bg-[#0f1620] border border-[#1d2a3a] rounded-xl p-10 hover:border-blue-500 transition hover:shadow-[0_10px_40px_rgba(59,130,246,0.25)]">
-<h3 class="text-blue-500 text-4xl font-bold mb-2">70+</h3>
-<p class="text-gray-400">Warehousing Locations</p>
+<div class="stat-card reveal">
+<h3 class="counter text-blue-500 text-5xl font-bold" data-target="70">0</h3>
+<p class="text-gray-400 mt-3">Warehousing Locations</p>
 </div>
 
 </div>
@@ -80,11 +113,14 @@
 </section>
 
 
-<section class="bg-[#000000] py-28">
+
+<!-- WHY CHOOSE US -->
+
+<section class="bg-black py-28">
 
 <div class="max-w-7xl mx-auto px-6">
 
-<div class="text-center mb-20">
+<div class="text-center mb-20 reveal">
 
 <h2 class="text-white text-4xl font-bold">
 WHY CHOOSE US
@@ -96,43 +132,45 @@ WHY CHOOSE US
 
 <div class="grid md:grid-cols-3 gap-10">
 
-<div class="bg-[#0f1620] border border-[#1d2a3a] p-8 rounded-xl hover:border-blue-500 transition hover:shadow-[0_10px_35px_rgba(59,130,246,0.25)]">
+<div class="feature-card reveal">
 
-<h3 class="text-white text-xl font-semibold mb-4">
+<h3 class="text-white text-xl mb-4 font-semibold">
 Global Logistics Network
 </h3>
 
 <p class="text-gray-400">
-Our international partnerships allow us to deliver efficient
-transportation services across global trade routes.
+Strong international partnerships ensure efficient transportation
+across global trade routes.
 </p>
 
 </div>
 
 
-<div class="bg-[#0f1620] border border-[#1d2a3a] p-8 rounded-xl hover:border-blue-500 transition hover:shadow-[0_10px_35px_rgba(59,130,246,0.25)]">
 
-<h3 class="text-white text-xl font-semibold mb-4">
+<div class="feature-card reveal">
+
+<h3 class="text-white text-xl mb-4 font-semibold">
 Reliable Supply Chain
 </h3>
 
 <p class="text-gray-400">
-We provide end-to-end supply chain management ensuring
-safe and timely cargo delivery.
+End-to-end logistics management ensuring safe
+and timely cargo delivery.
 </p>
 
 </div>
 
 
-<div class="bg-[#0f1620] border border-[#1d2a3a] p-8 rounded-xl hover:border-blue-500 transition hover:shadow-[0_10px_35px_rgba(59,130,246,0.25)]">
 
-<h3 class="text-white text-xl font-semibold mb-4">
-Advanced Logistics Technology
+<div class="feature-card reveal">
+
+<h3 class="text-white text-xl mb-4 font-semibold">
+Advanced Technology
 </h3>
 
 <p class="text-gray-400">
-We use modern tracking systems and logistics technologies
-to improve transparency and operational efficiency.
+Real-time tracking and modern logistics systems
+increase transparency and efficiency.
 </p>
 
 </div>
@@ -145,180 +183,202 @@ to improve transparency and operational efficiency.
 
 
 
+<!-- SERVICES -->
 
-<section class="bg-[#000000] py-32">
+<section class="bg-[#050505] py-28">
 
-<div class="max-w-[1400px] mx-auto px-10">
+<div class="max-w-7xl mx-auto px-6">
 
-    <!-- TITLE -->
-    <div class="text-center mb-20">
+<div class="text-center mb-20 reveal">
 
-        <h2 class="text-white text-4xl md:text-5xl font-bold tracking-wide">
-            VALUE ADDED SERVICES
-        </h2>
+<h2 class="text-white text-4xl font-bold">
+VALUE ADDED SERVICES
+</h2>
 
-        <div class="w-24 h-[3px] bg-blue-500 mx-auto mt-6"></div>
+<div class="w-24 h-[3px] bg-blue-500 mx-auto mt-6"></div>
 
-        <p class="text-gray-400 mt-6 max-w-2xl mx-auto">
-            Our logistics expertise goes beyond transportation by providing
-            additional services that enhance efficiency and protect your cargo.
-        </p>
+</div>
 
-    </div>
+<div class="grid md:grid-cols-2 lg:grid-cols-4 gap-10">
 
+<div class="service-card reveal">
+<div class="icon">🚚</div>
+<h3>Cargo Insurance</h3>
+<p>Comprehensive protection for cargo shipments worldwide.</p>
+</div>
 
-    <!-- SERVICES GRID -->
-    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-10">
+<div class="service-card reveal">
+<div class="icon">🏷️</div>
+<h3>Tag & Labelling</h3>
+<p>Professional tagging and product identification services.</p>
+</div>
 
+<div class="service-card reveal">
+<div class="icon">📦</div>
+<h3>Repack & Relabelling</h3>
+<p>Efficient repackaging for global shipping compliance.</p>
+</div>
 
-        <!-- CARD -->
-        <div class="group bg-[#0f1620] border border-[#1d2a3a] rounded-xl p-8 transition duration-300 hover:-translate-y-2 hover:border-blue-500 hover:shadow-[0_10px_35px_rgba(59,130,246,0.25)]">
+<div class="service-card reveal">
+<div class="icon">🔧</div>
+<h3>Returns & Repairs</h3>
+<p>Organized reverse logistics and repair services.</p>
+</div>
 
-            <div class="w-14 h-14 flex items-center justify-center rounded-lg bg-blue-500/10 text-blue-400 text-2xl mb-6 group-hover:scale-110 transition">
-                🚚
-            </div>
-
-            <h3 class="text-white text-lg font-semibold mb-3">
-                Cargo Insurance
-            </h3>
-
-            <p class="text-gray-400 text-sm leading-relaxed">
-                Comprehensive insurance coverage that protects shipments
-                from potential risks during global transportation.
-            </p>
-
-        </div>
-
-
-
-        <!-- CARD -->
-        <div class="group bg-[#0f1620] border border-[#1d2a3a] rounded-xl p-8 transition duration-300 hover:-translate-y-2 hover:border-blue-500 hover:shadow-[0_10px_35px_rgba(59,130,246,0.25)]">
-
-            <div class="w-14 h-14 flex items-center justify-center rounded-lg bg-blue-500/10 text-blue-400 text-2xl mb-6 group-hover:scale-110 transition">
-                🏷️
-            </div>
-
-            <h3 class="text-white text-lg font-semibold mb-3">
-                Tag & Labelling
-            </h3>
-
-            <p class="text-gray-400 text-sm leading-relaxed">
-                Professional tagging, bagging, re-pricing and care
-                labelling services for accurate product identification.
-            </p>
-
-        </div>
-
-
-
-        <!-- CARD -->
-        <div class="group bg-[#0f1620] border border-[#1d2a3a] rounded-xl p-8 transition duration-300 hover:-translate-y-2 hover:border-blue-500 hover:shadow-[0_10px_35px_rgba(59,130,246,0.25)]">
-
-            <div class="w-14 h-14 flex items-center justify-center rounded-lg bg-blue-500/10 text-blue-400 text-2xl mb-6 group-hover:scale-110 transition">
-                📦
-            </div>
-
-            <h3 class="text-white text-lg font-semibold mb-3">
-                Repack & Relabelling
-            </h3>
-
-            <p class="text-gray-400 text-sm leading-relaxed">
-                Efficient repackaging and relabelling to meet
-                international shipping and compliance standards.
-            </p>
-
-        </div>
-
-
-
-        <!-- CARD -->
-        <div class="group bg-[#0f1620] border border-[#1d2a3a] rounded-xl p-8 transition duration-300 hover:-translate-y-2 hover:border-blue-500 hover:shadow-[0_10px_35px_rgba(59,130,246,0.25)]">
-
-            <div class="w-14 h-14 flex items-center justify-center rounded-lg bg-blue-500/10 text-blue-400 text-2xl mb-6 group-hover:scale-110 transition">
-                🔧
-            </div>
-
-            <h3 class="text-white text-lg font-semibold mb-3">
-                Returns & Repairs
-            </h3>
-
-            <p class="text-gray-400 text-sm leading-relaxed">
-                Organized reverse logistics handling product
-                returns, rectification and repair services.
-            </p>
-
-        </div>
-
-
-    </div>
+</div>
 
 </div>
 
 </section>
 
+
+
 <style>
-    
-    .reveal{
-        opacity:0;
-        transform: translateY(60px);
-        transition: all 1s ease;
-    }
 
-    .reveal.active{
-        opacity:1;
-        transform: translateY(0);
-    }
+/* slow hero zoom */
 
-    
-
-    /* orange corner */
-    .corner-accent{
-        position:absolute;
-        bottom:0;
-        right:0;
-
-        width:0;
-        height:0;
-
-        border-left:90px solid transparent;
-        border-top:90px solid #e59c47;
-    }
-
-
-
-
-
-
-
-
-
-ul li{
-transition:0.3s;
+@keyframes slowZoom{
+0%{transform:scale(1)}
+100%{transform:scale(1.15)}
 }
 
-ul li:hover{
-color:#e19a49;
-transform:translateX(6px);
+.animate-slowZoom{
+animation:slowZoom 20s linear infinite alternate;
 }
+
+
+/* reveal animation */
+
+.reveal{
+opacity:0;
+transform:translateY(60px);
+transition:all 1s ease;
+}
+
+.reveal.active{
+opacity:1;
+transform:translateY(0);
+}
+
+
+/* stat cards */
+
+.stat-card{
+background:#0f1620;
+border:1px solid #1d2a3a;
+padding:40px;
+border-radius:12px;
+transition:0.4s;
+}
+
+.stat-card:hover{
+border-color:#3b82f6;
+transform:translateY(-8px);
+box-shadow:0 10px 40px rgba(59,130,246,0.25);
+}
+
+
+/* feature */
+
+.feature-card{
+background:#0f1620;
+border:1px solid #1d2a3a;
+padding:40px;
+border-radius:12px;
+transition:0.4s;
+}
+
+.feature-card:hover{
+border-color:#3b82f6;
+transform:translateY(-8px);
+box-shadow:0 10px 40px rgba(59,130,246,0.25);
+}
+
+
+/* service */
+
+.service-card{
+background:#0f1620;
+border:1px solid #1d2a3a;
+padding:35px;
+border-radius:12px;
+text-align:center;
+transition:0.4s;
+}
+
+.service-card:hover{
+border-color:#3b82f6;
+transform:translateY(-8px);
+box-shadow:0 10px 40px rgba(59,130,246,0.25);
+}
+
+.service-card .icon{
+font-size:35px;
+margin-bottom:15px;
+color:#3b82f6;
+}
+
+.service-card h3{
+color:white;
+font-size:18px;
+margin-bottom:10px;
+}
+
+.service-card p{
+color:#9ca3af;
+font-size:14px;
+}
+
 </style>
 
+
+
 <script>
+
+/* scroll reveal */
+
 const reveals = document.querySelectorAll(".reveal");
 
 function revealOnScroll(){
-    reveals.forEach(el=>{
-        const windowHeight = window.innerHeight;
-        const revealTop = el.getBoundingClientRect().top;
-        const revealPoint = 120;
-
-        if(revealTop < windowHeight - revealPoint){
-            el.classList.add("active");
-        }
-    });
+reveals.forEach(el=>{
+const windowHeight = window.innerHeight;
+const revealTop = el.getBoundingClientRect().top;
+if(revealTop < windowHeight - 120){
+el.classList.add("active");
+}
+});
 }
 
 window.addEventListener("scroll", revealOnScroll);
 revealOnScroll();
+
+
+/* counter animation */
+
+const counters = document.querySelectorAll('.counter');
+
+counters.forEach(counter => {
+
+const update = () => {
+
+const target = +counter.getAttribute('data-target');
+const c = +counter.innerText;
+
+const increment = target / 200;
+
+if(c < target){
+counter.innerText = Math.ceil(c + increment);
+setTimeout(update,10);
+}else{
+counter.innerText = target;
+}
+
+};
+
+update();
+
+});
+
 </script>
 
 

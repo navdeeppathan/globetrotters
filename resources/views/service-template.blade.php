@@ -5,15 +5,15 @@
 <section class="bg-black text-white">
 
 <!-- HERO -->
-<div class="py-28 text-center border-b border-blue-900/30">
+<div class="py-28  border-b border-blue-900/30">
 
     <div class="max-w-6xl mx-auto px-6">
 
-        <h1 class="text-5xl font-bold mb-6" data-aos="fade-up">
+        <h1 class="text-5xl text-center font-bold mb-6" data-aos="fade-up">
             {{ $service['title'] }}
         </h1>
 
-        <p class="text-gray-400 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="200">
+        <p class="text-gray-400 text-base items-start mx-auto" data-aos="fade-up" data-aos-delay="200">
             {{ $service['description'] }}
         </p>
 
@@ -52,6 +52,12 @@
 
     </div>
 
+</div>
+
+<div class="max-w-7xl mx-auto px-6 border border-gray-100 rounded-xl py-4">
+    <p class="text-gray-400 text-lg items-start font-medium mx-auto" data-aos="fade-up" data-aos-delay="200">
+            {{ $service['description2'] }}
+        </p>
 </div>
 
 
