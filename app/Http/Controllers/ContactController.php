@@ -16,14 +16,16 @@ class ContactController extends Controller
             'name' => 'required|max:255',
             'email' => 'required|email',
             'subject' => 'nullable|max:255',
-            'message' => 'required'
+            'message' => 'required',
+            'phone' => 'nullable'
         ]);
 
         ContactMessage::create([
             'name' => $request->name,
             'email' => $request->email,
             'subject' => $request->subject,
-            'message' => $request->message
+            'message' => $request->message,
+            'phone' => $request->phone
         ]);
 
         return back()->with('success','Message sent successfully');

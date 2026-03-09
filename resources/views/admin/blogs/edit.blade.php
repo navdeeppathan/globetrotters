@@ -16,16 +16,19 @@ class="space-y-6">
 @csrf
 @method('PUT')
 
+<label for="title" class="block text-sm font-medium leading-6 ">Blog Title</label>
 
 <input type="text"
 name="title"
 value="{{ $blog->title }}"
-class="w-full bg-[#0f1620] border border-[#1d2a3a] p-3 rounded text-white">
+class="w-full bg-white border border-gray-300 p-3 rounded text-black">
 
+<label for="description" class="block text-sm font-medium leading-6 ">Description</label>
 
 <textarea name="description"
+id="description"
 rows="6"
-class="w-full bg-[#0f1620] border border-[#1d2a3a] p-3 rounded text-white">{{ $blog->description }}</textarea>
+class="w-full  p-3 rounded text-white">{{ $blog->description }}</textarea>
 
 
 <input type="file"
@@ -36,47 +39,47 @@ class="">
 <input type="date"
 name="published_at"
 value="{{ \Carbon\Carbon::parse($blog->published_at)->format('Y-m-d') }}"
-class="bg-[#0f1620] border border-[#1d2a3a] p-3 rounded text-white">
+class="bg-white border border-gray-300 p-3 rounded text-black">
 
 
 
-<label for="short_description" class="block text-sm font-medium leading-6 text-gray-900">Short Description</label>
+<label for="short_description" class="block text-sm font-medium leading-6 ">Short Description</label>
 <textarea name="short_description"
 id="short_description"
 rows="3"
 placeholder="Short Description"
-class="w-full bg-[#0f1620] border border-[#1d2a3a] p-3 rounded text-white">{{ $blog->short_description }}</textarea>
+class="w-full  p-3 rounded text-white">{{ $blog->short_description }}</textarea>
 
 
-<label for="challanges" class="block text-sm font-medium leading-6 text-gray-900">Challanges</label>
+<label for="challanges" class="block text-sm font-medium leading-6 ">Challanges</label>
 <textarea 
 name="challanges"
 id="challanges"
 placeholder="Enter Challanges"
 rows="6"
-class="w-full bg-[#0f1620] border border-[#1d2a3a] p-3 rounded text-white">
+class="w-full  p-3 rounded text-white">
 {{ $blog->challanges }}
 </textarea>
 
-<label for="quote" class="block text-sm font-medium leading-6 text-gray-900">Quote</label>
+<label for="quote" class="block text-sm font-medium leading-6 ">Quote</label>
 <textarea name="quote"
 rows="3"
 placeholder="Quote"
-class="w-full bg-[#0f1620] border border-[#1d2a3a] p-3 rounded text-white">{{ $blog->quote }}</textarea>
+class="w-full bg-white border border-gray-300 p-3 rounded text-black">{{ $blog->quote }}</textarea>
 
 
-<label for="author_name" class="block text-sm font-medium leading-6 text-gray-900">Author Name</label>
+<label for="author_name" class="block text-sm font-medium leading-6 ">Author Name</label>
 <input type="text"
 name="author_name"
 value = "{{ $blog->author_name }}"
 placeholder="Author Name"
-class="w-full bg-[#0f1620] border border-[#1d2a3a] p-3 rounded text-white">
+class="w-full bg-white border border-gray-300 p-3 rounded text-black">
 
-<label for="category" class="block text-sm font-medium leading-6 text-gray-900">Category</label>
+<label for="category" class="block text-sm font-medium leading-6 ">Category</label>
 <select 
 name="category"
 value = "{{ $blog->category }}"
-class="w-full bg-[#0f1620] border border-[#1d2a3a] p-3 rounded text-white">
+class="w-full bg-white border border-gray-300 p-3 rounded text-black">
 
 <option value="">Select Category</option>
 
@@ -90,32 +93,32 @@ class="w-full bg-[#0f1620] border border-[#1d2a3a] p-3 rounded text-white">
 
 </select>
 
-<label for="bio" class="block text-sm font-medium leading-6 text-gray-900">Author Bio</label>
+<label for="bio" class="block text-sm font-medium leading-6 ">Author Bio</label>
 <textarea name="bio"
 rows="3"
 placeholder="Author Bio"
-class="w-full bg-[#0f1620] border border-[#1d2a3a] p-3 rounded text-white">{{ $blog->bio }}</textarea>
+class="w-full bg-white border border-gray-300 p-3 rounded text-black">{{ $blog->bio }}</textarea>
 
-<label for="fb_link" class="block text-sm font-medium leading-6 text-gray-900">Facebook Link</label>
+<label for="fb_link" class="block text-sm font-medium leading-6 ">Facebook Link</label>
 <input type="text"
 name="fb_link"
 value = "{{ $blog->fb_link }}"
 placeholder="Facebook Link"
-class="w-full bg-[#0f1620] border border-[#1d2a3a] p-3 rounded text-white">
+class="w-full bg-white border border-gray-300 p-3 rounded text-black">
 
-<label for="twitter" class="block text-sm font-medium leading-6 text-gray-900">Twitter Link</label>
+<label for="twitter" class="block text-sm font-medium leading-6 ">Twitter Link</label>
 <input type="text"
 name="twitter"
 value = "{{ $blog->twitter }}"
 placeholder="Twitter Link"
-class="w-full bg-[#0f1620] border border-[#1d2a3a] p-3 rounded text-white">
+class="w-full bg-white border border-gray-300 p-3 rounded text-black">
 
-<label for="linkedin" class="block text-sm font-medium leading-6 text-gray-900">LinkedIn Link</label>
+<label for="linkedin" class="block text-sm font-medium leading-6 ">LinkedIn Link</label>
 <input type="text"
 name="linkedin"
 value = "{{ $blog->linkedin }}"
 placeholder="LinkedIn Link"
-class="w-full bg-[#0f1620] border border-[#1d2a3a] p-3 rounded text-white">
+class="w-full bg-white border border-gray-300 p-3 rounded text-black">
 
 
 

@@ -15,7 +15,7 @@ LATEST BLOG
 
 <div class="w-24 h-[3px] bg-blue-500 mx-auto mt-6"></div>
 
-<p class="text-gray-400 mt-6 max-w-2xl mx-auto">
+<p class="text-gray-600 mt-6 max-w-2xl mx-auto">
 Insights and updates from the world of logistics, transportation
 and global supply chain management.
 </p>

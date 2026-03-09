@@ -6,7 +6,7 @@
 
 <section class="relative bg-white py-36 overflow-hidden mt-10">
 
-<div class="absolute inset-0 opacity-30">
+<div class="absolute inset-0 ">
 <img src="{{ asset('p4.png') }}" class="w-full h-full object-fill scale-110 animate-slowZoom">
 </div>
 
@@ -15,7 +15,7 @@
 
 <div class="relative z-10 text-center max-w-5xl mx-auto px-6">
 
-<h1 class="text-white text-5xl md:text-6xl font-bold mb-6 reveal">
+<h1 class="text-white text-4xl md:text-6xl font-bold mb-6 reveal">
 ABOUT GLOBETROTTERS
 </h1>
 
@@ -49,26 +49,26 @@ seamless cargo movement worldwide.
 
 
 
-<div class="text-white reveal">
+<div class="text-black reveal">
 
 <h2 class="text-4xl font-bold mb-6">
 Who We Are
 </h2>
 
-<p class="text-gray-400 mb-6 leading-relaxed">
+<p class="text-gray-600 mb-6 leading-relaxed">
 Globetrotters (GB) Ltd is an independent freight forwarding company
 based in London delivering professional logistics services across
 international markets including ocean freight, air freight,
 customs clearance, warehousing and supply chain management.
 </p>
 
-<p class="text-gray-400 mb-6 leading-relaxed">
+<p class="text-gray-600 mb-6 leading-relaxed">
 With strong global partnerships and years of experience we deliver
 customized logistics solutions that help businesses move cargo
 efficiently, securely and cost effectively.
 </p>
 
-<p class="text-gray-400 leading-relaxed">
+<p class="text-gray-600 leading-relaxed">
 Our experienced team manages the complete transportation process
 from cargo planning and documentation to final delivery ensuring
 smooth international trade operations.
@@ -84,7 +84,7 @@ smooth international trade operations.
 
 <!-- STATS -->
 
-<section class="bg-[#050505] py-24">
+<section class="bg-gradient-to-r from-[#0d2a4a] via-[#0b2238] to-[#0d2a4a] py-24">
 
 <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-10 text-center">
 
@@ -122,7 +122,7 @@ smooth international trade operations.
 
 <div class="text-center mb-20 reveal">
 
-<h2 class="text-white text-4xl font-bold">
+<h2 class="text-black text-4xl font-bold">
 WHY CHOOSE US
 </h2>
 
@@ -132,7 +132,7 @@ WHY CHOOSE US
 
 <div class="grid md:grid-cols-3 gap-10">
 
-<div class="feature-card reveal">
+<div class="feature-card bg-gradient-to-r from-[#0d2a4a] via-[#0b2238] to-[#0d2a4a] reveal">
 
 <h3 class="text-white text-xl mb-4 font-semibold">
 Global Logistics Network
@@ -147,7 +147,7 @@ across global trade routes.
 
 
 
-<div class="feature-card reveal">
+<div class="feature-card bg-gradient-to-r from-[#0d2a4a] via-[#0b2238] to-[#0d2a4a] reveal">
 
 <h3 class="text-white text-xl mb-4 font-semibold">
 Reliable Supply Chain
@@ -162,7 +162,7 @@ and timely cargo delivery.
 
 
 
-<div class="feature-card reveal">
+<div class="feature-card bg-gradient-to-r from-[#0d2a4a] via-[#0b2238] to-[#0d2a4a] reveal">
 
 <h3 class="text-white text-xl mb-4 font-semibold">
 Advanced Technology
@@ -185,7 +185,7 @@ increase transparency and efficiency.
 
 <!-- SERVICES -->
 
-<section class="bg-[#050505] py-28">
+<section class="bg-gradient-to-r from-[#0d2a4a] via-[#0b2238] to-[#0d2a4a] py-28">
 
 <div class="max-w-7xl mx-auto px-6">
 
@@ -281,7 +281,7 @@ box-shadow:0 10px 40px rgba(59,130,246,0.25);
 /* feature */
 
 .feature-card{
-background:#0f1620;
+
 border:1px solid #1d2a3a;
 padding:40px;
 border-radius:12px;

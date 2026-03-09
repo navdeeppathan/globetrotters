@@ -14,7 +14,8 @@ class ContactMessage extends Model
         'name',
         'email',
         'subject',
-        'message'
+        'message',
+        'phone'
     ];
 
     protected $casts = [

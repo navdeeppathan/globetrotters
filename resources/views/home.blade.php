@@ -395,7 +395,7 @@
 
         .news-text {}
         .news-title {
-            color: #e2e8f0;
+            color: #000000;
             font-size: 12px;
             font-weight: 600;
             line-height: 1.4;
@@ -613,7 +613,7 @@
                             </p>
 
                             <!-- Stats -->
-                            <div class="mt-10 flex flex-col md:flex-row items-center gap-10">
+                            {{-- <div class="mt-10 flex flex-col md:flex-row items-center gap-10">
 
                                 <div>
                                     <h3 class="text-2xl font-semibold text-[#2563eb]">150+</h3>
@@ -634,7 +634,35 @@
                                     <p class="text-gray-500 text-sm mt-1">Years Experience</p>
                                 </div>
 
-                            </div>
+                            </div> --}}
+                            <!-- Stats -->
+<div class="mt-10 grid grid-cols-1 sm:grid-cols-2 md:flex md:flex-row items-center gap-6 md:gap-10">
+
+    <!-- Box 1 -->
+    <div class="text-center md:text-left bg-gray-50 md:bg-transparent p-5 md:p-0 rounded-xl md:rounded-none shadow-sm md:shadow-none border md:border-0 border-gray-200">
+        <h3 class="text-2xl font-semibold text-[#2563eb]">150+</h3>
+        <p class="text-gray-500 text-sm mt-1">Global Destinations</p>
+    </div>
+
+    <!-- Divider desktop only -->
+    <div class="hidden md:block h-10 w-px bg-gray-300"></div>
+
+    <!-- Box 2 -->
+    <div class="text-center md:text-left bg-gray-50 md:bg-transparent p-5 md:p-0 rounded-xl md:rounded-none shadow-sm md:shadow-none border md:border-0 border-gray-200">
+        <h3 class="text-2xl font-semibold text-[#0f172a]">24/7</h3>
+        <p class="text-gray-500 text-sm mt-1">Tracking & Support</p>
+    </div>
+
+    <!-- Divider desktop only -->
+    <div class="hidden md:block h-10 w-px bg-gray-300"></div>
+
+    <!-- Box 3 -->
+    <div class="text-center md:text-left bg-gray-50 md:bg-transparent p-5 md:p-0 rounded-xl md:rounded-none shadow-sm md:shadow-none border md:border-0 border-gray-200">
+        <h3 class="text-2xl font-semibold text-[#0f172a]">10+</h3>
+        <p class="text-gray-500 text-sm mt-1">Years Experience</p>
+    </div>
+
+</div>
 
                             <!-- Buttons -->
                             <div class="mt-12 flex flex-col sm:flex-row gap-5">
@@ -882,6 +910,7 @@
 
                 <input type="text" name="name" placeholder="Your Name" required />
                 <input type="email" name="email" placeholder="Your Email" required />
+                <input type="tel" name="phone" placeholder="Contact Number" required />
                 <input type="text" name="subject" placeholder="Subject" required />
                 <textarea name="message" placeholder="Message" rows="4"></textarea>
 
@@ -1282,7 +1311,7 @@
                 .news-title {
                 font-size: 14px;
                 font-weight: 600;
-                color: #fff;
+                color: #000;
                 transition: color 0.3s;
                 }
 
@@ -1380,7 +1409,7 @@
 
                 <div class="w-20 h-[3px] bg-blue-500 mx-auto mt-6"></div>
 
-                <p class="text-gray-400 mt-6 max-w-2xl mx-auto">
+                <p class="text-gray-600 mt-6 max-w-2xl mx-auto">
                     Delivering world-class logistics solutions through innovation,
                     reliability and global expertise.
                 </p>
@@ -1707,7 +1736,7 @@
 
             <div class="w-24 h-[3px] bg-blue-500 mx-auto mt-6"></div>
 
-            <p class="text-gray-400 mt-6 max-w-2xl mx-auto">
+            <p class="text-gray-600 mt-6 max-w-2xl mx-auto">
                 We deliver reliable logistics solutions across the globe with
                 advanced transportation networks and supply chain expertise.
             </p>
@@ -1840,7 +1869,7 @@
 
             <div class="w-24 h-[3px] bg-blue-500 mx-auto mt-6"></div>
 
-            <p class="text-gray-400 mt-6 max-w-2xl mx-auto">
+            <p class="text-gray-600 mt-6 max-w-2xl mx-auto">
                 Our logistics portfolio reflects years of experience delivering
                 reliable transportation, supply chain optimization and global freight solutions.
             </p>
@@ -2022,79 +2051,150 @@
     }
 </style>
 
-   <section class="mx-auto px-6 lg:px-16 mb-10">
+   <section class="mx-auto px-4 sm:px-6 lg:px-16 mb-14">
 
-    <div class="relative bg-gradient-to-r from-[#0d2a4a] via-[#0b2238] to-[#0d2a4a]  rounded-xl shadow-xl border border-blue-500/30 py-14">
+<div class="relative bg-gradient-to-r from-[#eef6ff] via-[#dbeafe] to-[#eef6ff] rounded-xl shadow-xl border border-blue-500/30 py-12 sm:py-14">
 
-        <!-- TOP TITLE -->
-        <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-blue-500 rounded-full px-4">
-            <h3 class="text-sm text-slate-300 font-medium whitespace-nowrap">
-               <span class="text-white font-semibold"> Our Global Partners & Networks</span>
-            </h3>
-        </div>
+    <!-- TOP TITLE -->
+    <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-blue-500 rounded-full px-4 py-1">
+        <h3 class="text-xs sm:text-sm text-slate-200 font-medium whitespace-nowrap">
+        <span class="text-white font-semibold">Our Global Partners & Networks</span>
+        </h3>
+    </div>
 
-        <!-- SLIDER AREA -->
-        <div class="flex items-center justify-between px-6 lg:px-10">
+    <!-- SLIDER AREA -->
+    <!-- SLIDER AREA -->
+    <div class="flex items-center justify-between px-2 sm:px-6 lg:px-10">
 
-            <!-- LEFT BUTTON -->
-            <button class="w-8 h-8 rounded-full border border-white/20 flex items-center justify-center text-gray-300 hover:text-blue-400">
-                <i class="fa-solid fa-chevron-left text-xs"></i>
-            </button>
+        <!-- LEFT BUTTON -->
+        <button id="slideLeft" class="hidden sm:flex w-8 h-8 rounded-full border-2 border-[#0d2a4a] hover:shadow items-center justify-center text-[#0d2a4a] hover:text-blue-400">
+        <i class="fa-solid fa-chevron-left text-xs"></i>
+        </button>
 
-            <!-- LOGOS -->
-            <div class="flex items-center justify-between flex-1 px-6 gap-8 overflow-hidden">
+        <!-- LOGOS -->
+        <div id="logoSlider" class="flex items-center flex-1 px-2 sm:px-6 gap-8 overflow-x-auto scroll-smooth no-scrollbar">
 
-                <div class="text-white font-bold">MAERSK</div>
-                <div class="text-white font-bold">MSC</div>
-                <div class="text-white font-bold">DP WORLD</div>
-                <div class="text-white font-bold">CMA CGM</div>
-                <div class="text-yellow-400 font-bold">DHL</div>
-                <div class="text-white font-bold">
-                    <span class="text-white">Fed</span><span class="text-orange-500">Ex</span>
-                </div>
-                <div class="text-white font-bold">COSCO</div>
-
+            <div class="min-w-[120px] flex justify-center">
+            <img src="https://www.wcaworld.com/Assets/images/logo_wcaworld.png" class="h-8 w-auto">
             </div>
 
-            <!-- RIGHT BUTTON -->
-            <button class="w-8 h-8 rounded-full border border-white/20 flex items-center justify-center text-gray-300 hover:text-blue-400">
-                <i class="fa-solid fa-chevron-right text-xs"></i>
-            </button>
+            <div class="min-w-[120px] flex justify-center">
+            <img src="{{asset('jc.png')}}" class="h-8 w-auto">
+            </div>
+
+            <div class="min-w-[120px] flex justify-center">
+            <img src="https://freightmidpoint.com/public/img/logo/FreightMidpoint(FM)_logo.webp" class="h-8 w-auto">
+            </div>
+
+            <div class="min-w-[120px] flex justify-center">
+            <img src="https://www.glafamily.com/images/logo.webp" class="h-8 w-auto">
+            </div>
+
+            <div class="min-w-[120px] flex justify-center">
+            <img src="https://mgln.net/_next/static/media/logo.371c7488.png" class="h-8 w-auto">
+            </div>
+
+            <div class="min-w-[120px] flex justify-center">
+            <img src="https://framerusercontent.com/images/q0vfMRT0gvqIXSAMlXaHrxtahg.png" class="h-8 w-auto">
+            </div>
+
+            <div class="min-w-[120px] flex justify-center">
+            <img src="https://s29.q4cdn.com/562286712/files/design/logo/Largo-Logo-RGB-Reverse.png" class="h-8 w-auto">
+            </div>
+
+            <div class="min-w-[120px] flex justify-center">
+            <img src="https://www.interconnex.world/images/logo.svg" class="h-8 w-auto">
+            </div>
+
+            <div class="min-w-[120px] flex justify-center">
+            <img src="https://bifa.org/wp-content/uploads/2023/03/BIFA-Logo-1.svg" class="h-8 w-auto">
+            </div>
+
+            <div class="min-w-[120px] flex justify-center">
+            <img src="https://res.cloudinary.com/lcci/image/upload/c_fill,g_auto,w_256/f_auto/q_auto/dpr_1.5/v1/placeholder-2/header-logo?_a=ATO2BAA0" class="h-8 w-auto">
+            </div>
+
+            <div class="min-w-[120px] flex justify-center">
+            <img src="https://i.abcc.com/i/0e/0e14bd4969ab305db5b514a64b74d185.svg%2Bxml" class="h-8 w-auto">
+            </div>
+
+            <div class="min-w-[120px] flex justify-center">
+            <img src="https://b2838811.smushcdn.com/2838811/wp-content/uploads/2022/11/wllc-logo-300x120.jpg?lossy=1&strip=1&webp=1" class="h-8 w-auto">
+            </div>
 
         </div>
 
+        <!-- RIGHT BUTTON -->
+        <button id="slideRight" class="hidden sm:flex w-8 h-8 rounded-full border-2 border-[#0d2a4a] hover:shadow items-center justify-center text-[#0d2a4a] hover:text-blue-400">
+        <i class="fa-solid fa-chevron-right text-xs"></i>
+        </button>
 
-        <!-- BOTTOM FEATURES -->
-        <div class="absolute -bottom-2 p-2 left-1/2 -translate-x-1/2 bg-gradient-to-r from-[#0d2a4a] via-[#0b2238] to-[#0d2a4a]  rounded-full px-6">
+    </div>
+    <style>
+        .no-scrollbar::-webkit-scrollbar {
+        display: none;
+        }
+        .no-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+        }
+    </style>
+    <script>
 
-            <div class="flex items-center gap-8 text-xs text-white whitespace-nowrap">
+        const slider = document.getElementById('logoSlider');
+        const leftBtn = document.getElementById('slideLeft');
+        const rightBtn = document.getElementById('slideRight');
 
-                <div class="flex items-center gap-2">
-                    <i class="fa-solid fa-truck-fast text-blue-500"></i>
-                    Fast & Secure Delivery
-                </div>
+        const scrollAmount = 300;
 
-                <div class="flex items-center gap-2">
-                    <i class="fa-solid fa-location-dot text-blue-500"></i>
-                    Real-Time Tracking
-                </div>
+        rightBtn.addEventListener('click', () => {
+        slider.scrollBy({
+        left: scrollAmount,
+        behavior: "smooth"
+        });
+        });
 
-                <div class="flex items-center gap-2">
-                    <i class="fa-solid fa-people-group text-blue-500"></i>
-                    Expert Logistics Team
-                </div>
+        leftBtn.addEventListener('click', () => {
+        slider.scrollBy({
+        left: -scrollAmount,
+        behavior: "smooth"
+        });
+        });
 
-                <div class="flex items-center gap-2">
-                    <i class="fa-solid fa-headset text-blue-500"></i>
-                    24/7 Customer Support
-                </div>
+    </script>
 
+
+    <!-- BOTTOM FEATURES -->
+    <div class="absolute -bottom-4 left-1/2 -translate-x-1/2 bg-gradient-to-r from-[#0d2a4a] via-[#0b2238] to-[#0d2a4a] rounded-full px-4 sm:px-6 py-2 max-w-[95%] overflow-x-auto">
+
+        <div class="flex items-center gap-5 sm:gap-8 text-[10px] sm:text-xs text-white whitespace-nowrap">
+
+            <div class="flex items-center gap-2">
+            <i class="fa-solid fa-truck-fast text-blue-500"></i>
+            Fast & Secure Delivery
+            </div>
+
+            <div class="flex items-center gap-2">
+            <i class="fa-solid fa-location-dot text-blue-500"></i>
+            Real-Time Tracking
+            </div>
+
+            <div class="flex items-center gap-2">
+            <i class="fa-solid fa-people-group text-blue-500"></i>
+            Expert Logistics Team
+            </div>
+
+            <div class="flex items-center gap-2">
+            <i class="fa-solid fa-headset text-blue-500"></i>
+            24/7 Customer Support
             </div>
 
         </div>
 
     </div>
 
-    </section>
+</div>
+
+</section>
 
 @endsection

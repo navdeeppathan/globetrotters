@@ -191,7 +191,7 @@
                     </div>
 
                     <!-- MOBILE MENU BUTTON -->
-                    <button id="menuBtn" class="lg:hidden text-white text-2xl">
+                    <button id="menuBtn" class="lg:hidden  text-2xl">
                         ☰
                     </button>
 
@@ -220,60 +220,60 @@
 
 
             <!-- MOBILE MENU -->
-<div id="mobileMenu" class="lg:hidden hidden bg-[#0b2238] border-t border-white/10">
+            <div id="mobileMenu" class="lg:hidden hidden bg-[#0b2238] border-t border-white/10">
 
-    <div class="px-6 py-6 space-y-4 text-gray-300 text-sm">
+                <div class="px-6 py-6 space-y-4 text-gray-300 text-sm">
 
-        <a href="/" class="block hover:text-blue-400 transition">
-            Home
-        </a>
+                    <a href="/" class="block hover:text-blue-400 transition">
+                        Home
+                    </a>
 
-        <a href="/services/air-freight" class="block hover:text-blue-400 transition">
-            Air Freight
-        </a>
+                    <a href="/services/air-freight" class="block hover:text-blue-400 transition">
+                        Air Freight
+                    </a>
 
-        <a href="/services/ocean-freight" class="block hover:text-blue-400 transition">
-            Ocean Freight
-        </a>
+                    <a href="/services/ocean-freight" class="block hover:text-blue-400 transition">
+                        Ocean Freight
+                    </a>
 
-        <a href="/services/road-freight" class="block hover:text-blue-400 transition">
-            Road Transport
-        </a>
+                    <a href="/services/road-freight" class="block hover:text-blue-400 transition">
+                        Road Transport
+                    </a>
 
-        <a href="/services/rail-freight" class="block hover:text-blue-400 transition">
-            Rail Transport
-        </a>
+                    <a href="/services/rail-freight" class="block hover:text-blue-400 transition">
+                        Rail Transport
+                    </a>
 
-        <a href="/blog" class="block hover:text-blue-400 transition">
-            News & Insights
-        </a>
+                    <a href="/blog" class="block hover:text-blue-400 transition">
+                        News & Insights
+                    </a>
 
-        <a href="/industry" class="block hover:text-blue-400 transition">
-            Industries we serve
-        </a>
+                    <a href="/industry" class="block hover:text-blue-400 transition">
+                        Industries we serve
+                    </a>
 
-        <a href="/challenge" class="block hover:text-blue-400 transition">
-            Challenges
-        </a>
+                    <a href="/challenge" class="block hover:text-blue-400 transition">
+                        Challenges
+                    </a>
 
-        <a href="/about" class="block hover:text-blue-400 transition">
-            About Us
-        </a>
+                    <a href="/about" class="block hover:text-blue-400 transition">
+                        About Us
+                    </a>
 
-        <a href="/contact" class="block hover:text-blue-400 transition">
-            Contact
-        </a>
+                    <a href="/contact" class="block hover:text-blue-400 transition">
+                        Contact
+                    </a>
 
-        <!-- Get Quote Button -->
-        <a href="/contact"
-           class="block mt-4 text-center bg-blue-600 hover:bg-blue-500
-           transition px-5 py-2 rounded-md font-semibold">
-            Get Quote
-        </a>
+                    <!-- Get Quote Button -->
+                    <a href="/contact"
+                    class="block mt-4 text-center bg-blue-600 hover:bg-blue-500
+                    transition px-5 py-2 rounded-md font-semibold">
+                        Get Quote
+                    </a>
 
-    </div>
+                </div>
 
-</div>
+            </div>
 
         </header>
         <script>

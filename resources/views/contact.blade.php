@@ -101,28 +101,35 @@ Send Us a Message
 type="text"
 name="name"
 placeholder="Your Name"
-class="w-full bg-white border border-[#1d2a3a] rounded-lg px-4 py-3 text-white focus:border-blue-500 focus:outline-none"
+class="w-full bg-white border border-[#1d2a3a] rounded-lg px-4 py-3 text-gray-600 focus:border-blue-500 focus:outline-none"
 />
 
 <input
 type="email"
 name="email"
 placeholder="Email Address"
-class="w-full bg-white border border-[#1d2a3a] rounded-lg px-4 py-3 text-white focus:border-blue-500 focus:outline-none"
+class="w-full bg-white border border-[#1d2a3a] rounded-lg px-4 py-3 text-gray-600 focus:border-blue-500 focus:outline-none"
+/>
+
+<input
+type="tel"
+name="phone"
+placeholder="Contact Number"
+class="w-full bg-white border border-[#1d2a3a] rounded-lg px-4 py-3 text-gray-600 focus:border-blue-500 focus:outline-none"
 />
 
 <input
 type="text"
 name="subject"
 placeholder="Subject"
-class="w-full bg-white border border-[#1d2a3a] rounded-lg px-4 py-3 text-white focus:border-blue-500 focus:outline-none"
+class="w-full bg-white border border-[#1d2a3a] rounded-lg px-4 py-3 text-gray-600 focus:border-blue-500 focus:outline-none"
 />
 
 <textarea
 rows="5"
 name="message"
 placeholder="Your Message"
-class="w-full bg-white border border-[#1d2a3a] rounded-lg px-4 py-3 text-white focus:border-blue-500 focus:outline-none"
+class="w-full bg-white border border-[#1d2a3a] rounded-lg px-4 py-3 text-gray-600 focus:border-blue-500 focus:outline-none"
 ></textarea>
 
 <button

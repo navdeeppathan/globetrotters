@@ -43,7 +43,7 @@ reduce delays, and deliver cargo efficiently across international markets.
 
 <div class="bg-[#0f1620] rounded-xl overflow-hidden border border-[#1d2a3a] hover:border-blue-500 transition duration-500 group">
 
-<img src="{{ asset('s2.png') }}" class="h-56 w-full object-cover group-hover:scale-110 transition duration-500">
+<img src="{{ asset('s2.png') }}" class="h-56 w-full object-fill group-hover:scale-110 transition duration-500">
 
 <div class="p-8">
 
@@ -66,7 +66,7 @@ supply chains and delay deliveries worldwide.
 
 <div class="bg-[#0f1620] rounded-xl overflow-hidden border border-[#1d2a3a] hover:border-blue-500 transition duration-500 group">
 
-<img src="{{ asset('c9.png') }}" class="h-56 w-full object-cover group-hover:scale-110 transition duration-500">
+<img src="{{ asset('c9.png') }}" class="h-56 w-full object-fill group-hover:scale-110 transition duration-500">
 
 <div class="p-8">
 
@@ -89,7 +89,7 @@ on logistics budgets and shipping expenses.
 
 <div class="bg-[#0f1620] rounded-xl overflow-hidden border border-[#1d2a3a] hover:border-blue-500 transition duration-500 group">
 
-<img src="{{ asset('c10.png') }}" class="h-56 w-full object-cover group-hover:scale-110 transition duration-500">
+<img src="{{ asset('c10.png') }}" class="h-56 w-full object-fill group-hover:scale-110 transition duration-500">
 
 <div class="p-8">
 

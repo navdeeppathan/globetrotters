@@ -2,7 +2,7 @@
 
 @section('content')
 
-<section class="bg-white text-white">
+<section class="bg-white text-black">
 
 <!-- HERO -->
 <div class="py-28  border-b border-blue-900/30">
@@ -13,7 +13,7 @@
             {{ $service['title'] }}
         </h1>
 
-        <p class="text-gray-400 text-base items-start mx-auto" data-aos="fade-up" data-aos-delay="200">
+        <p class="text-gray-600 text-base items-start mx-auto" data-aos="fade-up" data-aos-delay="200">
             {{ $service['description'] }}
         </p>
 
@@ -38,7 +38,7 @@
         </h2>
 
         <h3 class="text-2xl font-semibold mb-6">{{ $service['heading'] }}</h3>
-        <ul class="space-y-3 text-gray-300">
+        <ul class="space-y-3 text-gray-600">
 
              @foreach($service['services'] as $item)
                 <li class="flex gap-3">
@@ -54,10 +54,21 @@
 
 </div>
 
-<div class="max-w-7xl mx-auto px-6 border border-gray-100 rounded-xl py-4">
-    <p class="text-gray-400 text-lg items-start font-medium mx-auto" data-aos="fade-up" data-aos-delay="200">
-            {{ $service['description2'] }}
-        </p>
+<div class="max-w-7xl mx-auto px-6 border border-gray-200 rounded-xl py-10 mt-10">
+
+<ul class="grid md:grid-cols-2 gap-4 text-gray-600 text-lg leading-relaxed">
+
+@foreach($service['description2'] as $point)
+
+<li class="flex gap-3">
+<i class="fa-solid fa-circle-check text-blue-600 mt-1"></i>
+{{ $point }}
+</li>
+
+@endforeach
+
+</ul>
+
 </div>
 
 

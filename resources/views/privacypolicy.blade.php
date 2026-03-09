@@ -61,7 +61,7 @@
     padding: 60px 20px;
     line-height: 1.8;
     font-family: "Inter", sans-serif;
-    color: #d1d5db;
+    color: #000;
 }
 
 /* Main Heading */
@@ -69,7 +69,7 @@
     font-size: 42px;
     font-weight: 700;
     margin-bottom: 30px;
-    color: #ffffff;
+    color: #000;
     border-bottom: 3px solid #2563eb;
     padding-bottom: 15px;
     padding-top: 15px;
@@ -88,7 +88,7 @@
 .et_pb_text_inner p {
     font-size: 16px;
     margin-bottom: 18px;
-    color: #cbd5e1;
+    color: #000;
 }
 
 /* Lists */
@@ -140,6 +140,7 @@
 
     .et_pb_text_inner h1 {
         font-size: 34px;
+        padding-top: 60px;
     }
 
     .et_pb_text_inner h2 {

@@ -146,7 +146,7 @@
                         class="hover:text-blue-400 transition">
                         Terms & Conditions
                     </a>
-                    <a href="#" class="hover:text-blue-400 transition">Cookies</a>
+                    {{-- <a href="#" class="hover:text-blue-400 transition">Cookies</a> --}}
                 </div>
 
             </div>

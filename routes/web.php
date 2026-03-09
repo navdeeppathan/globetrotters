@@ -1,10 +1,12 @@
 <?php
 
+use App\Http\Controllers\AdminDashboardController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\ContactController;
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BlogController;
+
 use App\Models\Blog;
 
 /*
@@ -30,14 +32,13 @@ Route::post('/login',[AuthController::class,'login']);
 
 Route::post('/logout',[AuthController::class,'logout'])->name('logout');
 
-Route::get('/dashboard', function () {
-    return view('admin.dashboard');
-})->middleware('auth')->name('dashboard');
+
 
 
 
 Route::middleware(['auth'])->prefix('admin')->name('admin.')->group(function () {
 
+Route::get('/dashboard', [AdminDashboardController::class, 'index'])->name('dashboard');
 
 
 Route::resource('blogs', BlogController::class);

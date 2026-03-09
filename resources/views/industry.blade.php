@@ -18,7 +18,7 @@
     <p
       data-aos="fade-up"
       data-aos-delay="200"
-      class="text-gray-400 max-w-2xl mx-auto"
+      class="text-gray-600 max-w-2xl mx-auto"
     >
       Our logistics specialists understand the challenges
       of every industry and deliver reliable solutions.
@@ -48,12 +48,12 @@
       Retail Logistics
     </h2>
 
-    <p class="text-gray-400 mb-6">
+    <p class="text-gray-600 mb-6">
       We support global retailers with efficient supply chains
       and smart logistics solutions.
     </p>
 
-    <ul class="space-y-2 text-gray-300">
+    <ul class="space-y-2 text-gray-600">
       <li>Inventory optimization</li>
       <li>Retail warehouse distribution</li>
       <li>Fast store replenishment</li>
@@ -74,7 +74,7 @@
       Manufacturing Logistics
     </h2>
 
-    <p class="text-gray-400 mb-6">
+    <p class="text-gray-600 mb-6">
       Industrial logistics solutions designed
       to support manufacturing supply chains.
     </p>
@@ -96,7 +96,7 @@
 
   <h2
     data-aos="zoom-in"
-    class="text-4xl font-bold mb-6"
+    class="text-4xl text-white font-bold mb-6"
   >
     Need Logistics For Your Industry?
   </h2>
@@ -104,7 +104,7 @@
   <p
     data-aos="fade-up"
     data-aos-delay="200"
-    class="text-gray-400 mb-8 max-w-xl mx-auto"
+    class="text-gray-200 mb-8 max-w-xl mx-auto"
   >
     Contact our logistics specialists to get customized
     solutions tailored for your business.
@@ -131,12 +131,12 @@
   <div data-aos="fade-right">
     <h2 class="text-3xl font-bold mb-4">Automotive Industry</h2>
 
-    <p class="text-gray-400 mb-6">
+    <p class="text-gray-600 mb-6">
       Logistics services designed for automotive manufacturers,
       spare parts distribution and global vehicle shipping.
     </p>
 
-    <ul class="space-y-2 text-gray-300">
+    <ul class="space-y-2 text-gray-600">
       <li>Vehicle transport</li>
       <li>Automotive spare parts logistics</li>
       <li>Manufacturing supply chain</li>
@@ -165,12 +165,12 @@
   <div data-aos="fade-left">
     <h2 class="text-3xl font-bold mb-4">Healthcare Logistics</h2>
 
-    <p class="text-gray-400 mb-6">
+    <p class="text-gray-600 mb-6">
       Our healthcare supply chain solutions support medical
       manufacturers and hospitals worldwide.
     </p>
 
-    <ul class="space-y-2 text-gray-300">
+    <ul class="space-y-2 text-gray-600">
       <li>Medical device shipping</li>
       <li>Pharmaceutical logistics</li>
       <li>Healthcare warehousing</li>
@@ -187,12 +187,12 @@
   <div data-aos="fade-right">
     <h2 class="text-3xl font-bold mb-4">Fashion Industry</h2>
 
-    <p class="text-gray-400 mb-6">
+    <p class="text-gray-600 mb-6">
       Our global logistics network helps fashion brands
       move products quickly from factory to retail stores.
     </p>
 
-    <ul class="space-y-2 text-gray-300">
+    <ul class="space-y-2 text-gray-600">
       <li>Luxury apparel logistics</li>
       <li>Global fashion distribution</li>
       <li>Retail inventory movement</li>
@@ -221,12 +221,12 @@
   <div data-aos="fade-left">
     <h2 class="text-3xl font-bold mb-4">Oil & Energy</h2>
 
-    <p class="text-gray-400 mb-6">
+    <p class="text-gray-600 mb-6">
       Specialized logistics services for the energy industry,
       including oversized equipment transportation.
     </p>
 
-    <ul class="space-y-2 text-gray-300">
+    <ul class="space-y-2 text-gray-600">
       <li>Wind turbine transport</li>
       <li>Energy infrastructure logistics</li>
       <li>Heavy cargo handling</li>
@@ -243,12 +243,12 @@
   <div data-aos="fade-right">
     <h2 class="text-3xl font-bold mb-4">Technology</h2>
 
-    <p class="text-gray-400 mb-6">
+    <p class="text-gray-600 mb-6">
       High-value electronics require secure and fast transportation
       solutions that our logistics specialists provide.
     </p>
 
-    <ul class="space-y-2 text-gray-300">
+    <ul class="space-y-2 text-gray-600">
       <li>Electronics distribution</li>
       <li>Secure high-value transport</li>
       <li>Tech supply chain management</li>
@@ -277,12 +277,12 @@
   <div data-aos="fade-left">
     <h2 class="text-3xl font-bold mb-4">Aviation & Aerospace</h2>
 
-    <p class="text-gray-400 mb-6">
+    <p class="text-gray-600 mb-6">
       Logistics for aircraft parts, maintenance equipment,
       and aerospace supply chains.
     </p>
 
-    <ul class="space-y-2 text-gray-300">
+    <ul class="space-y-2 text-gray-600">
       <li>Aircraft parts transportation</li>
       <li>Aircraft-on-ground support</li>
       <li>Aerospace supply chains</li>

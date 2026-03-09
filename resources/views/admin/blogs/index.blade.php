@@ -11,7 +11,7 @@ Blogs
 </h1>
 
 <a href="{{ route('admin.blogs.create') }}"
-class="bg-blue-600 px-5 py-2 rounded  hover:bg-blue-500">
+class="bg-blue-600 text-white px-5 py-2 rounded  hover:bg-blue-500">
 Create Blog
 </a>
 
@@ -22,32 +22,39 @@ Create Blog
 
 @foreach($blogs as $blog)
 
-<div class="group bg-[#0f1620] border border-[#1d2a3a] rounded-xl overflow-hidden">
+<div class="group bg-gray-100 border border-gray-300 rounded-xl overflow-hidden">
 
 <img src="{{ asset('blogs/'.$blog->image) }}"
 class="w-full h-[200px] object-cover group-hover:scale-110 transition duration-500">
 
 
 <div class="p-6">
+<div class="flex justify-between items-center mb-2">
+    <p class="text-blue-400 text-sm ">
+    {{ \Carbon\Carbon::parse($blog->published_at)->format('d F Y') }}
+    </p>
 
-<p class="text-blue-400 text-sm mb-2">
-{{ $blog->published_at }}
-</p>
 
-<h3 class="text-white text-xl font-semibold mb-3">
+    <div class="text-gray-600 rounded-full text-xs bg-gray-100 border border-gray-300 px-3 py-1 text-sm">
+        {{ $blog->status }}
+    </div>
+
+</div>
+
+<h3 class="text-black text-xl font-semibold mb-3">
 {{ $blog->title }}
 </h3>
 
-<p class="text-gray-400 text-sm mb-5">
-{{ Str::limit($blog->description,120) }}
+<p class=" text-sm mb-5">
+{!! Str::limit($blog->description,120) !!}
 </p>
 
 
-<div class="flex gap-4">
+<div class="flex items-center justify-end mt-4 gap-4">
 
 <a href="{{ route('admin.blogs.edit',$blog->id) }}"
 class="text-blue-400 hover:text-blue-300">
-Edit
+<i class="fa-regular fa-pen-to-square"></i>
 </a>
 
 <form method="POST"
@@ -57,7 +64,7 @@ action="{{ route('admin.blogs.destroy',$blog->id) }}">
 @method('DELETE')
 
 <button class="text-red-400 hover:text-red-300">
-Delete
+<i class="fa-regular fa-trash-can"></i>
 </button>
 
 </form>
