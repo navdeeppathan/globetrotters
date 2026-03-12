@@ -2243,7 +2243,7 @@
 background:#0b2238;
 padding:30px;
 border-radius:12px;
-width:420px;
+width:550px;
 max-width:90%;
 color:white;
 position:relative;
