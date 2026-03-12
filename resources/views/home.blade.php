@@ -903,7 +903,7 @@
 
                 <span class="close-popup">&times;</span>
 
-                <h3>Request Quote</h3>
+                <h3 style="color: #000;">Request Quote</h3>
 
                 <form method="POST" action="{{ route('contact.send') }}" class="space-y-6">
                 @csrf
@@ -922,6 +922,7 @@
             </div>
             </div>
             <style>
+                
                 /* === MAIN CARD === */
                 .send-card {
                     background: #f8fafc;
@@ -1002,14 +1003,15 @@
 
                 /* Popup */
 
-                .quote-modal {
-                position: fixed;
-                inset: 0;
-                background: rgba(0,0,0,0.7);
-                display: none;
-                align-items: center;
-                justify-content: center;
-                z-index: 9999;
+                .quote-modal{
+                    position: fixed;
+                    inset: 0;
+                    background: rgba(0,0,0,0.7);
+                    display: none;
+                    align-items: center;
+                    justify-content: center;
+                    z-index: 9999;
+                    overflow-y: auto;
                 }
 
                 .quote-modal-content {
@@ -1123,6 +1125,29 @@
                 .send-btn:hover {
                     opacity: 0.9;
                 }
+
+                /* =========================
+                MOBILE RESPONSIVE
+                ========================= */
+                @media (max-width:768px){
+
+                .quote-modal{
+                    align-items:flex-start;
+                    padding-top:40px;
+                    overflow-y:auto;
+                }
+
+                .quote-modal-content{
+                    width:95%;
+                    max-height:80vh;
+                    overflow-y:auto;
+                    padding:20px;
+                    -webkit-overflow-scrolling:touch;
+                }
+
+                }
+
+                
             </style>
 
             <script>
@@ -2334,7 +2359,7 @@
             0 0 0 1px rgba(30, 90, 200, 0.08),
             0 24px 60px rgba(7, 25, 55, 0.22),
             0 8px 24px rgba(7, 25, 55, 0.12);
-        overflow: hidden;
+        
         animation: modalSlideIn 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
     }
 
