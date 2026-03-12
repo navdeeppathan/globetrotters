@@ -2199,29 +2199,98 @@
 
 <!-- AUTO OPEN REQUEST POPUP -->
 <div id="autoPopup" class="quote-modal">
+    <div class="quote-modal-overlay"></div>
     <div class="quote-modal-content">
 
-        <span class="close-popup" id="closeAutoPopup">&times;</span>
+        <button class="close-popup" id="closeAutoPopup" aria-label="Close">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+            </svg>
+        </button>
 
-        <h3 style="margin-bottom:15px;">Request Transport Quote</h3>
+        <div class="modal-header">
+            <div class="modal-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/>
+                    <polyline points="9,22 9,12 15,12 15,22"/>
+                </svg>
+            </div>
+            <div>
+                <h3 class="modal-title">Booking Request</h3>
+                <p class="modal-subtitle">Fill in your details and we'll get back to you shortly</p>
+            </div>
+        </div>
 
-        <form method="POST" action="{{ route('contact.send.mail') }}" class="space-y-3">
+        <form method="POST" action="{{ route('contact.send.mail') }}" class="booking-form">
             @csrf
 
-            <input type="text" name="name" placeholder="Your Name" required>
-            <input type="email" name="email" placeholder="Your Email" required>
-            <input type="tel" name="phone" placeholder="Phone Number" required>
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Full Name</label>
+                    <div class="input-wrapper">
+                        <svg class="input-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/>
+                        </svg>
+                        <input type="text" name="name" placeholder="John Doe" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Email Address</label>
+                    <div class="input-wrapper">
+                        <svg class="input-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/>
+                        </svg>
+                        <input type="email" name="email" placeholder="john@example.com" required>
+                    </div>
+                </div>
+            </div>
 
-            <input type="text" name="country" placeholder="Country" required>
+            <div class="form-group">
+                <label>Phone Number</label>
+                <div class="input-wrapper">
+                    <svg class="input-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
+                    </svg>
+                    <input type="tel" name="phone" placeholder="+1 (555) 000-0000" required>
+                </div>
+            </div>
 
-            <input type="text" name="source" placeholder="Source Location" required>
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Source Location</label>
+                    <div class="input-wrapper">
+                        <svg class="input-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/>
+                        </svg>
+                        <input type="text" name="source" placeholder="City, Country" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Destination</label>
+                    <div class="input-wrapper">
+                        <svg class="input-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/>
+                        </svg>
+                        <input type="text" name="destination" placeholder="City, Country" required>
+                    </div>
+                </div>
+            </div>
 
-            <input type="text" name="destination" placeholder="Destination Location" required>
-
-            <textarea name="message" rows="3" placeholder="Message"></textarea>
+            <div class="form-group">
+                <label>Message <span class="optional">(Optional)</span></label>
+                <div class="input-wrapper">
+                    <svg class="input-icon textarea-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/>
+                    </svg>
+                    <textarea name="message" rows="3" placeholder="Any special requirements or notes..."></textarea>
+                </div>
+            </div>
 
             <button type="submit" class="send-btn">
-                Submit Request
+                <span>Submit Booking Request</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <line x1="22" y1="2" x2="11" y2="13"/><polygon points="22,2 15,22 11,13 2,9"/>
+                </svg>
             </button>
         </form>
 
@@ -2229,37 +2298,279 @@
 </div>
 
 <style>
-    .quote-modal{
-    position: fixed;
-    inset:0;
-    background: rgba(0,0,0,0.7);
-    display:none;
-    align-items:center;
-    justify-content:center;
-    z-index:99999;
-}
+    @import url('https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&display=swap');
 
-.quote-modal-content{
-background:#0b2238;
-padding:30px;
-border-radius:12px;
-width:550px;
-max-width:90%;
-color:white;
-position:relative;
-}
+    .quote-modal {
+        position: fixed;
+        inset: 0;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        z-index: 99999;
+        font-family: 'Sora', sans-serif;
+        padding: 16px;
+    }
 
-.quote-modal-content input,
-.quote-modal-content textarea{
-width:100%;
-padding:10px;
-border-radius:6px;
-border:1px solid rgba(255,255,255,0.1);
-background:#06121e;
-color:white;
-margin-bottom:10px;
-}
+    .quote-modal.active {
+        display: flex;
+    }
 
+    .quote-modal-overlay {
+        position: absolute;
+        inset: 0;
+        background: rgba(7, 25, 55, 0.75);
+        backdrop-filter: blur(6px);
+        -webkit-backdrop-filter: blur(6px);
+    }
+
+    .quote-modal-content {
+        background: #ffffff;
+        border-radius: 20px;
+        width: 580px;
+        max-width: 100%;
+        position: relative;
+        z-index: 1;
+        box-shadow:
+            0 0 0 1px rgba(30, 90, 200, 0.08),
+            0 24px 60px rgba(7, 25, 55, 0.22),
+            0 8px 24px rgba(7, 25, 55, 0.12);
+        overflow: hidden;
+        animation: modalSlideIn 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    @keyframes modalSlideIn {
+        from { opacity: 0; transform: translateY(24px) scale(0.96); }
+        to   { opacity: 1; transform: translateY(0) scale(1); }
+    }
+
+    /* Header */
+    .modal-header {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        padding: 28px 30px 24px;
+        border-radius: 10px;
+        background: linear-gradient(135deg, #0f3877 0%, #1a5dbe 60%, #2176d9 100%);
+        position: relative;
+        overflow: hidden;
+    }
+
+    .modal-header::before {
+        content: '';
+        position: absolute;
+        top: -40px; right: -40px;
+        width: 160px; height: 160px;
+        border-radius: 50%;
+        background: rgba(255,255,255,0.06);
+    }
+
+    .modal-header::after {
+        content: '';
+        position: absolute;
+        bottom: -60px; left: 30%;
+        width: 200px; height: 200px;
+        border-radius: 50%;
+        background: rgba(255,255,255,0.04);
+    }
+
+    .modal-icon {
+        width: 48px; height: 48px;
+        border-radius: 12px;
+        background: rgba(255,255,255,0.15);
+        border: 1px solid rgba(255,255,255,0.2);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        flex-shrink: 0;
+        backdrop-filter: blur(4px);
+    }
+
+    .modal-title {
+        font-size: 20px;
+        font-weight: 700;
+        color: #ffffff;
+        margin: 0 0 3px;
+        letter-spacing: -0.3px;
+    }
+
+    .modal-subtitle {
+        font-size: 13px;
+        color: rgba(255,255,255,0.72);
+        margin: 0;
+        font-weight: 400;
+    }
+
+    /* Close button */
+    .close-popup {
+        position: absolute;
+        top: 18px; right: 18px;
+        width: 32px; height: 32px;
+        border-radius: 8px;
+        border: 1px solid rgba(255,255,255,0.2);
+        background: rgba(255, 255, 255, 0.12);
+        color: rgba(11, 10, 10, 0.85);
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 10;
+        transition: all 0.2s ease;
+        backdrop-filter: blur(4px);
+    }
+
+    .close-popup:hover {
+        background: rgba(255,255,255,0.25);
+        color: white;
+        transform: scale(1.05);
+    }
+
+    /* Form body */
+    .booking-form {
+        padding: 26px 30px 28px;
+    }
+
+    .form-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 14px;
+    }
+
+    .form-group {
+        margin-bottom: 16px;
+    }
+
+    .form-group label {
+        display: block;
+        font-size: 12.5px;
+        font-weight: 600;
+        color: #1e3a5f;
+        margin-bottom: 7px;
+        letter-spacing: 0.2px;
+        text-transform: uppercase;
+    }
+
+    .optional {
+        font-weight: 400;
+        color: #94a3b8;
+        text-transform: none;
+        font-size: 11px;
+    }
+
+    .input-wrapper {
+        position: relative;
+    }
+
+    .input-icon {
+        position: absolute;
+        left: 13px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #3b82f6;
+        pointer-events: none;
+        z-index: 1;
+    }
+
+    .textarea-icon {
+        top: 14px;
+        transform: none;
+    }
+
+    .booking-form input,
+    .booking-form textarea {
+        width: 100%;
+        padding: 11px 14px 11px 40px;
+        border-radius: 10px;
+        border: 1.5px solid #e2eaf4;
+        background: #f7faff;
+        color: #1e3a5f;
+        font-family: 'Sora', sans-serif;
+        font-size: 14px;
+        font-weight: 400;
+        transition: all 0.2s ease;
+        box-sizing: border-box;
+        outline: none;
+    }
+
+    .booking-form input::placeholder,
+    .booking-form textarea::placeholder {
+        color: #9db3cc;
+        font-weight: 300;
+    }
+
+    .booking-form input:focus,
+    .booking-form textarea:focus {
+        border-color: #2176d9;
+        background: #ffffff;
+        box-shadow: 0 0 0 4px rgba(33, 118, 217, 0.1);
+    }
+
+    .booking-form textarea {
+        resize: none;
+        min-height: 88px;
+    }
+
+    /* Submit button */
+    .send-btn {
+        width: 100%;
+        padding: 14px 24px;
+        border-radius: 12px;
+        border: none;
+        background: linear-gradient(135deg, #0f3877 0%, #1a5dbe 50%, #2176d9 100%);
+        color: white;
+        font-family: 'Sora', sans-serif;
+        font-size: 15px;
+        font-weight: 600;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        letter-spacing: 0.1px;
+        transition: all 0.25s ease;
+        margin-top: 4px;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .send-btn::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(135deg, rgba(255,255,255,0.15), rgba(255,255,255,0));
+        opacity: 0;
+        transition: opacity 0.25s ease;
+    }
+
+    .send-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 24px rgba(21, 78, 193, 0.4);
+    }
+
+    .send-btn:hover::before {
+        opacity: 1;
+    }
+
+    .send-btn:active {
+        transform: translateY(0);
+        box-shadow: 0 4px 12px rgba(21, 78, 193, 0.3);
+    }
+
+    /* Responsive */
+    @media (max-width: 500px) {
+        .form-row {
+            grid-template-columns: 1fr;
+            gap: 0;
+        }
+
+        .modal-header {
+            padding: 22px 20px 20px;
+        }
+
+        .booking-form {
+            padding: 20px 20px 24px;
+        }
+    }
 </style>
 
 <script>

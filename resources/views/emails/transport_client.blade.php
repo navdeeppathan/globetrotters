@@ -34,8 +34,8 @@ Our logistics team will review your request and contact you shortly.
 </tr>
 
 <tr>
-<td><strong>Country</strong></td>
-<td>{{ $data['country'] }}</td>
+<td valign="top"><strong>Message:</strong></td>
+<td>{{ $data['message'] }}</td>
 </tr>
 
 </table>

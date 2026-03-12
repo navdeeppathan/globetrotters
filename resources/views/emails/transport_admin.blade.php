@@ -31,10 +31,7 @@
 <td>{{ $data['phone'] }}</td>
 </tr>
 
-<tr>
-<td><strong>Country:</strong></td>
-<td>{{ $data['country'] }}</td>
-</tr>
+
 
 <tr>
 <td><strong>Source:</strong></td>

@@ -19,7 +19,7 @@ class ContactController extends Controller
             'name' => 'required',
             'email' => 'required|email',
             'phone' => 'required',
-            'country' => 'required',
+            // 'country' => 'required',
             'source' => 'required',
             'destination' => 'required',
             'message' => 'nullable'
