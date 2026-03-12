@@ -2,11 +2,37 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\AdminTransportRequestMail;
+use App\Mail\ClientTransportRequestMail;
+
 use Illuminate\Http\Request;
 use App\Models\ContactMessage;
+use Illuminate\Support\Facades\Mail;
 
 class ContactController extends Controller
 {
+
+
+    public function send(Request $request)
+    {
+        $data = $request->validate([
+            'name' => 'required',
+            'email' => 'required|email',
+            'phone' => 'required',
+            'country' => 'required',
+            'source' => 'required',
+            'destination' => 'required',
+            'message' => 'nullable'
+        ]);
+
+        // Send to Admin
+        Mail::to(env('MAIL_USERNAME'))->send(new AdminTransportRequestMail($data));
+
+        // Send confirmation to Client
+        Mail::to($request->email)->send(new ClientTransportRequestMail($data));
+
+        return back()->with('success','Request sent successfully!');
+    }
 
  // STORE CONTACT MESSAGE
     public function store(Request $request)

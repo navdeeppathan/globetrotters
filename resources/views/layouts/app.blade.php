@@ -21,10 +21,13 @@
     rel="stylesheet"
     />
 
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     @stack('styles')
 </head>
 
 <body class="">
+
+    
 
     {{-- HEADER --}}
     @include('layouts.partials.header')
@@ -104,6 +107,19 @@
     });
     </script>
     <section class="bg-white text-white">
+
+        @if(session('success'))
+        <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            Swal.fire({
+                icon: 'success',
+                title: 'Success',
+                text: "{{ session('success') }}",
+                confirmButtonColor: '#2563eb'
+            });
+        });
+        </script>
+        @endif
 
     @stack('scripts')
 

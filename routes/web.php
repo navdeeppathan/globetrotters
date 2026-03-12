@@ -2,10 +2,11 @@
 
 use App\Http\Controllers\AdminDashboardController;
 use App\Http\Controllers\AuthController;
-use App\Http\Controllers\ContactController;
+
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BlogController;
+use App\Http\Controllers\ContactController;
 
 use App\Models\Blog;
 
@@ -19,6 +20,11 @@ use App\Models\Blog;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+
+
+
+
+Route::post('/send-transport-request',[ContactController::class,'send'])->name('contact.send.mail');
 
 Route::get('/blogs/{slug}', [BlogController::class, 'show'])->name('blogs.show');
 

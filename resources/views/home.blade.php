@@ -636,33 +636,33 @@
 
                             </div> --}}
                             <!-- Stats -->
-<div class="mt-10 grid grid-cols-1 sm:grid-cols-2 md:flex md:flex-row items-center gap-6 md:gap-10">
+                            <div class="mt-10 grid grid-cols-1 sm:grid-cols-2 md:flex md:flex-row items-center gap-6 md:gap-10">
 
-    <!-- Box 1 -->
-    <div class="text-center md:text-left bg-gray-50 md:bg-transparent p-5 md:p-0 rounded-xl md:rounded-none shadow-sm md:shadow-none border md:border-0 border-gray-200">
-        <h3 class="text-2xl font-semibold text-[#2563eb]">150+</h3>
-        <p class="text-gray-500 text-sm mt-1">Global Destinations</p>
-    </div>
+                                <!-- Box 1 -->
+                                <div class="text-center md:text-left bg-gray-50 md:bg-transparent p-5 md:p-0 rounded-xl md:rounded-none shadow-sm md:shadow-none border md:border-0 border-gray-200">
+                                    <h3 class="text-2xl font-semibold text-[#2563eb]">150+</h3>
+                                    <p class="text-gray-500 text-sm mt-1">Global Destinations</p>
+                                </div>
 
-    <!-- Divider desktop only -->
-    <div class="hidden md:block h-10 w-px bg-gray-300"></div>
+                                <!-- Divider desktop only -->
+                                <div class="hidden md:block h-10 w-px bg-gray-300"></div>
 
-    <!-- Box 2 -->
-    <div class="text-center md:text-left bg-gray-50 md:bg-transparent p-5 md:p-0 rounded-xl md:rounded-none shadow-sm md:shadow-none border md:border-0 border-gray-200">
-        <h3 class="text-2xl font-semibold text-[#0f172a]">24/7</h3>
-        <p class="text-gray-500 text-sm mt-1">Tracking & Support</p>
-    </div>
+                                <!-- Box 2 -->
+                                <div class="text-center md:text-left bg-gray-50 md:bg-transparent p-5 md:p-0 rounded-xl md:rounded-none shadow-sm md:shadow-none border md:border-0 border-gray-200">
+                                    <h3 class="text-2xl font-semibold text-[#0f172a]">24/7</h3>
+                                    <p class="text-gray-500 text-sm mt-1">Tracking & Support</p>
+                                </div>
 
-    <!-- Divider desktop only -->
-    <div class="hidden md:block h-10 w-px bg-gray-300"></div>
+                                <!-- Divider desktop only -->
+                                <div class="hidden md:block h-10 w-px bg-gray-300"></div>
 
-    <!-- Box 3 -->
-    <div class="text-center md:text-left bg-gray-50 md:bg-transparent p-5 md:p-0 rounded-xl md:rounded-none shadow-sm md:shadow-none border md:border-0 border-gray-200">
-        <h3 class="text-2xl font-semibold text-[#0f172a]">10+</h3>
-        <p class="text-gray-500 text-sm mt-1">Years Experience</p>
-    </div>
+                                <!-- Box 3 -->
+                                <div class="text-center md:text-left bg-gray-50 md:bg-transparent p-5 md:p-0 rounded-xl md:rounded-none shadow-sm md:shadow-none border md:border-0 border-gray-200">
+                                    <h3 class="text-2xl font-semibold text-[#0f172a]">10+</h3>
+                                    <p class="text-gray-500 text-sm mt-1">Years Experience</p>
+                                </div>
 
-</div>
+                            </div>
 
                             <!-- Buttons -->
                             <div class="mt-12 flex flex-col sm:flex-row gap-5">
@@ -2196,5 +2196,98 @@
 </div>
 
 </section>
+
+<!-- AUTO OPEN REQUEST POPUP -->
+<div id="autoPopup" class="quote-modal">
+    <div class="quote-modal-content">
+
+        <span class="close-popup" id="closeAutoPopup">&times;</span>
+
+        <h3 style="margin-bottom:15px;">Request Transport Quote</h3>
+
+        <form method="POST" action="{{ route('contact.send.mail') }}" class="space-y-3">
+            @csrf
+
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <input type="tel" name="phone" placeholder="Phone Number" required>
+
+            <input type="text" name="country" placeholder="Country" required>
+
+            <input type="text" name="source" placeholder="Source Location" required>
+
+            <input type="text" name="destination" placeholder="Destination Location" required>
+
+            <textarea name="message" rows="3" placeholder="Message"></textarea>
+
+            <button type="submit" class="send-btn">
+                Submit Request
+            </button>
+        </form>
+
+    </div>
+</div>
+
+<style>
+    .quote-modal{
+    position: fixed;
+    inset:0;
+    background: rgba(0,0,0,0.7);
+    display:none;
+    align-items:center;
+    justify-content:center;
+    z-index:99999;
+}
+
+.quote-modal-content{
+background:#0b2238;
+padding:30px;
+border-radius:12px;
+width:420px;
+max-width:90%;
+color:white;
+position:relative;
+}
+
+.quote-modal-content input,
+.quote-modal-content textarea{
+width:100%;
+padding:10px;
+border-radius:6px;
+border:1px solid rgba(255,255,255,0.1);
+background:#06121e;
+color:white;
+margin-bottom:10px;
+}
+
+</style>
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function(){
+
+    const popup = document.getElementById("autoPopup");
+    const closeBtn = document.getElementById("closeAutoPopup");
+
+    // show popup after page load
+    setTimeout(function(){
+        popup.style.display = "flex";
+    }, 1000);
+
+    // close button
+    closeBtn.addEventListener("click", function(){
+        popup.style.display = "none";
+    });
+
+    // close outside click
+    window.addEventListener("click", function(e){
+        if(e.target === popup){
+            popup.style.display = "none";
+        }
+    });
+
+});
+
+</script>
 
 @endsection
