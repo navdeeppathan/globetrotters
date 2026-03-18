@@ -43,7 +43,7 @@
     <div class="floating-contact">
         
         <!-- WhatsApp -->
-        <a href="https://wa.me/+44(0)2084322983" target="_blank" class="whatsapp">
+        <a href="https://wa.me/442084322983" target="_blank" class="whatsapp">
             <i class="fa-brands fa-whatsapp"></i>
         </a>
 

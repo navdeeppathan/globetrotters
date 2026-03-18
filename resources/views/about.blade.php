@@ -86,27 +86,24 @@ smooth international trade operations.
 
 <section class="bg-gradient-to-r from-[#0d2a4a] via-[#0b2238] to-[#0d2a4a] py-24">
 
-<div class="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-10 text-center">
+<div class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-10 text-center">
 
-<div class="stat-card reveal">
-<h3 class="counter text-blue-500 text-5xl font-bold" data-target="110">0</h3>
-<p class="text-gray-400 mt-3">Countries Covered</p>
-</div>
+    <div class="stat-card reveal">
+    <h3 class="counter text-blue-500 text-5xl font-bold" data-target="110">0</h3>
+    <p class="text-gray-400 mt-3">Countries Covered</p>
+    </div>
 
-<div class="stat-card reveal">
-<h3 class="counter text-blue-500 text-5xl font-bold" data-target="30">0</h3>
-<p class="text-gray-400 mt-3">Years Experience</p>
-</div>
+    <div class="stat-card reveal">
+    <h3 class="counter text-blue-500 text-5xl font-bold" data-target="20">0</h3>
+    <p class="text-gray-400 mt-3">+Years Experience</p>
+    </div>
 
-<div class="stat-card reveal">
-<h3 class="counter text-blue-500 text-5xl font-bold" data-target="5000">0</h3>
-<p class="text-gray-400 mt-3">Successful Shipments</p>
-</div>
+    <div class="stat-card reveal">
+    <h3 class="counter text-blue-500 text-5xl font-bold" data-target="50000">0</h3>
+    <p class="text-gray-400 mt-3">Successful Shipments</p>
+    </div>
 
-<div class="stat-card reveal">
-<h3 class="counter text-blue-500 text-5xl font-bold" data-target="70">0</h3>
-<p class="text-gray-400 mt-3">Warehousing Locations</p>
-</div>
+
 
 </div>
 

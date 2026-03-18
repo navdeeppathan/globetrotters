@@ -43,19 +43,19 @@
 
                 <!-- Social Icons -->
                 <div class="flex items-center gap-4">
-                    <a href="#" class="w-9 h-9 flex items-center justify-center rounded-md 
+                    {{-- <a href="#" class="w-9 h-9 flex items-center justify-center rounded-md 
                         bg-white/50 border border-white/10
                         hover:bg-blue-600/20 hover:text-blue-400 transition">
                         <i class="fa-brands fa-facebook-f"></i>
-                    </a>
+                    </a> --}}
 
-                    <a href="#" class="w-9 h-9 flex items-center justify-center rounded-md 
+                    <a href="https://www.linkedin.com/company/globetrotters-gb-ltd/linkedin" class="w-9 h-9 flex items-center justify-center rounded-md 
                         bg-white/50 border border-white/10
                         hover:bg-blue-600/20 hover:text-blue-400 transition">
                         <i class="fa-brands fa-linkedin-in"></i>
                     </a>
 
-                    <a href="#" class="w-9 h-9 flex items-center justify-center rounded-md 
+                    {{-- <a href="#" class="w-9 h-9 flex items-center justify-center rounded-md 
                         bg-white/50 border border-white/10
                         hover:bg-blue-600/20 hover:text-blue-400 transition">
                         <i class="fa-brands fa-x-twitter"></i>
@@ -65,7 +65,7 @@
                         bg-white/50 border border-white/10
                         hover:bg-blue-600/20 hover:text-blue-400 transition">
                         <i class="fa-brands fa-instagram"></i>
-                    </a>
+                    </a> --}}
                 </div>
             </div>
 
@@ -109,8 +109,9 @@
                     <div class="flex items-start gap-3">
                         <i class="fa-solid fa-location-dot text-blue-400 mt-1"></i>
                         <span>
-                            123 Global Trade Avenue<br>
-                            London, United Kingdom
+                            Vista Business Centre,<br>
+                            50 Salisbury Road, Hounslow<br>
+                            Middlesex TW4 6JQ, UK
                         </span>
                     </div>
 
