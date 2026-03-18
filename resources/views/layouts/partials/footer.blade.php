@@ -74,7 +74,7 @@
                 <h4 class="text-white font-semibold mb-5">Company</h4>
                 <ul class="space-y-3 text-sm text-gray-400">
                     <li><a href="/about" class="hover:text-blue-400 transition">About Us</a></li>
-                    <li><a href="/services" class="hover:text-blue-400 transition">Our Services</a></li>
+                    <li><a href="/services/air-freight" class="hover:text-blue-400 transition">Our Services</a></li>
                     <li><a href="/global" class="hover:text-blue-400 transition">Global Network</a></li>
                     {{-- <li>
                         <a href="{{ asset('terms.pdf') }}" 
