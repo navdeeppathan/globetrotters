@@ -2598,6 +2598,42 @@
     }
 </style>
 
+<a
+ href="https://wa.me/447950234842?text=Hello%20I%20want%20to%20enquire"
+  target="_blank"
+  class="whatsapp-float"
+>
+  <i class="fab fa-whatsapp"></i>
+</a>
+
+<style>
+    <style>
+  .whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 55px;
+    height: 55px;
+    background-color: #25D366;
+    color: white;
+    border-radius: 50%;
+    font-size: 26px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+    z-index: 1000;
+    transition: 0.3s ease;
+  }
+
+  .whatsapp-float:hover {
+    background-color: #20ba5a;
+    transform: scale(1.1);
+  }
+</style>
+</style>
+
 <script>
 
 document.addEventListener("DOMContentLoaded", function(){
