@@ -43,7 +43,7 @@
     <div class="floating-contact">
         
         <!-- WhatsApp -->
-        <a href="https://wa.me/442084322983" target="_blank" class="whatsapp">
+        <a  href="https://wa.me/447950234842?text=Hello%20I%20want%20to%20enquire" target="_blank" class="whatsapp">
             <i class="fa-brands fa-whatsapp"></i>
         </a>
 
