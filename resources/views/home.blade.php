@@ -2600,6 +2600,7 @@
 
 <a
  href="https://wa.me/447950234842?text=Hello%20I%20want%20to%20enquire"
+
   target="_blank"
   class="whatsapp-float"
 >
@@ -2612,8 +2613,8 @@
     position: fixed;
     bottom: 20px;
     right: 20px;
-    width: 55px;
-    height: 55px;
+    width: 50px;
+    height: 50px;
     background-color: #25D366;
     color: white;
     border-radius: 50%;
