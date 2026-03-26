@@ -827,99 +827,120 @@
             <!-- ═══ CARD 1: SEND TRANSPORT REQUEST ═══ -->
             <!-- ═══ CARD 1: SEND TRANSPORT REQUEST ═══ -->
             <div class="send-card">
-            <div class="send-title">Send Transport Request</div>
+                <div class="send-title">Send Transport Request</div>
 
-            <!-- TABS -->
-            <div class="send-tabs">
-                <button class="send-tab send-active" data-tab="container">Container</button>
-                <button class="send-tab" data-tab="freight">Freight</button>
-                <button class="send-tab" data-tab="bulk">Bulk Cargo</button>
-                <button class="send-tab" data-tab="express">Express</button>
-            </div>
+                <!-- TABS -->
+                {{-- <div class="send-tabs">
+                    <button class="send-tab send-active" data-tab="container">Container</button>
+                    <button class="send-tab" data-tab="freight">Freight</button>
+                    <button class="send-tab" data-tab="bulk">Bulk Cargo</button>
+                    <button class="send-tab" data-tab="express">Express</button>
+                </div> --}}
 
-            <!-- FORM -->
-            <form id="quoteForm">
+                <!-- FORM -->
+                <form 
+                {{-- id="quoteForm" --}}
+                method="POST" action="{{ route('contact.send') }}"
+                >
+                @csrf
 
-                <!-- CONTAINER -->
-                <div class="tab-content active" id="container">
-                <div class="send-input-row">
-                    <input class="send-input-field" placeholder="From (Country/Port)" />
-                    <input class="send-input-field" placeholder="To (Country/Port)" />
-                </div>
+                    <!-- CONTAINER -->
+                    {{-- <div class="tab-content active" id="container">
+                        <div class="send-input-row">
+                            <input class="send-input-field" placeholder="From (Country/Port)" />
+                            <input class="send-input-field" placeholder="To (Country/Port)" />
+                        </div>
 
-                <div class="send-select-row">
-                    <input class="send-input-field" placeholder="Container Type" />
-                    <input class="send-input-field" type="date" />
-                </div>
-                </div>
+                        <div class="send-select-row">
+                            <input class="send-input-field" placeholder="Container Type" />
+                            <input class="send-input-field" type="date" />
+                        </div>
+                    </div> --}}
 
-                <!-- FREIGHT -->
-                <div class="tab-content" id="freight">
-                <div class="send-input-row">
-                    <input class="send-input-field" placeholder="Origin Country" />
-                    <input class="send-input-field" placeholder="Destination Country" />
-                </div>
+                    <div class="tab-content active" id="container">
+                        <div class="send-input-row">
+                            <input type="text" class="send-input-field" name="name" placeholder="Your Name" required />
+                            <input type="email" class="send-input-field" name="email" placeholder="Your Email" required />
+                        </div>
 
-                <div class="send-select-row">
-                    <input class="send-input-field" placeholder="Weight (KG)" />
-                    <input class="send-input-field" type="date" />
-                </div>
-                </div>
+                        <div class="send-select-row">
+                            <input type="tel" class="send-input-field" name="phone" placeholder="Contact Number" required />
+                            <input type="text" class="send-input-field" name="subject" placeholder="Subject" required />
+                        </div>
+                        
+                    </div>
+                    <textarea name="message"  class="send-input-field" style="width: 100%"  placeholder="Message" rows="4"></textarea>
 
-                <!-- BULK -->
-                <div class="tab-content" id="bulk">
-                <div class="send-input-row">
-                    <input class="send-input-field" placeholder="Cargo Type" />
-                    <input class="send-input-field" placeholder="Quantity (Tons)" />
-                </div>
+                    <!-- FREIGHT -->
+                    {{-- <div class="tab-content" id="freight">
+                        <div class="send-input-row">
+                            <input class="send-input-field" placeholder="Origin Country" />
+                            <input class="send-input-field" placeholder="Destination Country" />
+                        </div>
 
-                <div class="send-select-row">
-                    <input class="send-input-field" placeholder="Loading Port" />
-                    <input class="send-input-field" type="date" />
-                </div>
-                </div>
+                        <div class="send-select-row">
+                            <input class="send-input-field" placeholder="Weight (KG)" />
+                            <input class="send-input-field" type="date" />
+                        </div>
+                    </div> --}}
 
-                <!-- EXPRESS -->
-                <div class="tab-content" id="express">
-                <div class="send-input-row">
-                    <input class="send-input-field" placeholder="Pickup Address" />
-                    <input class="send-input-field" placeholder="Delivery Address" />
-                </div>
+                    <!-- BULK -->
+                    {{-- <div class="tab-content" id="bulk">
+                        <div class="send-input-row">
+                            <input class="send-input-field" placeholder="Cargo Type" />
+                            <input class="send-input-field" placeholder="Quantity (Tons)" />
+                        </div>
 
-                <div class="send-select-row">
-                    <input class="send-input-field" placeholder="Package Weight" />
-                    <input class="send-input-field" type="date" />
-                </div>
-                </div>
+                        <div class="send-select-row">
+                            <input class="send-input-field" placeholder="Loading Port" />
+                            <input class="send-input-field" type="date" />
+                        </div>
+                    </div> --}}
 
-                <button type="button" id="openQuotePopup" class="send-btn">
-                Get Quote
-                </button>
-            </form>
+                    <!-- EXPRESS -->
+                    {{-- <div class="tab-content" id="express">
+                        <div class="send-input-row">
+                            <input class="send-input-field" placeholder="Pickup Address" />
+                            <input class="send-input-field" placeholder="Delivery Address" />
+                        </div>
+
+                        <div class="send-select-row">
+                            <input class="send-input-field" placeholder="Package Weight" />
+                            <input class="send-input-field" type="date" />
+                        </div>
+                    </div> --}}
+
+                    <button type="submit"
+                     {{-- id="openQuotePopup" --}}
+                      class="send-btn">
+                    {{-- Get Quote --}}
+                     Submit Request
+                    </button>
+                </form>
             </div>
 
             <div id="quotePopup" class="quote-modal">
-            <div class="quote-modal-content">
+                <div class="quote-modal-content">
 
-                <span class="close-popup">&times;</span>
+                    <span class="close-popup">&times;</span>
 
-                <h3 style="color: #000;">Request Quote</h3>
+                    <h3 style="color: #000;">Request Quote</h3>
 
-                <form method="POST" action="{{ route('contact.send') }}" class="space-y-6">
-                @csrf
+                    <form method="POST" action="{{ route('contact.send') }}" class="space-y-6">
+                    @csrf
 
-                <input type="text" name="name" placeholder="Your Name" required />
-                <input type="email" name="email" placeholder="Your Email" required />
-                <input type="tel" name="phone" placeholder="Contact Number" required />
-                <input type="text" name="subject" placeholder="Subject" required />
-                <textarea name="message" placeholder="Message" rows="4"></textarea>
+                    <input type="text" name="name" placeholder="Your Name" required />
+                    <input type="email" name="email" placeholder="Your Email" required />
+                    <input type="tel" name="phone" placeholder="Contact Number" required />
+                    <input type="text" name="subject" placeholder="Subject" required />
+                    <textarea name="message" placeholder="Message" rows="4"></textarea>
 
-                <button type="submit" class="send-btn">
-                    Submit Request
-                </button>
-                </form>
+                    <button type="submit" class="send-btn">
+                        Submit Request
+                    </button>
+                    </form>
 
-            </div>
+                </div>
             </div>
             <style>
                 
@@ -2598,42 +2619,7 @@
     }
 </style>
 
-<a
- href="https://wa.me/447950234842?text=Hello%20I%20want%20to%20enquire"
 
-  target="_blank"
-  class="whatsapp-float"
->
-  <i class="fab fa-whatsapp"></i>
-</a>
-
-<style>
-    <style>
-  .whatsapp-float {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    width: 50px;
-    height: 50px;
-    background-color: #25D366;
-    color: white;
-    border-radius: 50%;
-    font-size: 26px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
-    z-index: 1000;
-    transition: 0.3s ease;
-  }
-
-  .whatsapp-float:hover {
-    background-color: #20ba5a;
-    transform: scale(1.1);
-  }
-</style>
-</style>
 
 <script>
 

@@ -92,7 +92,7 @@
 
 
 <!-- FOOD -->
-<div class="bg-[#06121e] py-24 text-center">
+{{-- <div class="bg-[#06121e] py-24 text-center">
 
   <h2
     data-aos="zoom-in"
@@ -121,7 +121,7 @@
     Request Transport Quote
   </a>
 
-</div>
+</div> --}}
 
 
 

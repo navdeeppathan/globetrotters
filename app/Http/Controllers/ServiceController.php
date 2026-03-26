@@ -18,7 +18,7 @@ class ServiceController extends Controller
 
         $service = $services[$slug];
 
-        return view('service-template', compact('service'));
+        return view('service-template', compact('service', 'slug'));
 
     }
 
