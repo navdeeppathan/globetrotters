@@ -68,6 +68,10 @@ Route::get('/about', function () {
     return view('about');
 });
 
+Route::get('/seo', function () {
+    return view('seo-schema');
+});
+
 Route::get('/contact', function () {
     return view('contact');
 });
