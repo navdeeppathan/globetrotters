@@ -63,7 +63,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=Jost:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
  
   {{-- ═══ CSS / VITE ═══ --}}
-  @vite(['resources/css/app.css', 'resources/js/app.js'])
+  {{-- @vite(['resources/css/app.css', 'resources/js/app.js']) --}}
+  <link rel="stylesheet" href="{{ asset('css/app.css') }}">
   {{-- Or if not using Vite:
   <link rel="stylesheet" href="{{ asset('css/app.css') }}"/>
   --}}
