@@ -38,12 +38,16 @@
         </p>
         <p>
             <strong>Data Protection Policy -</strong> Globetrotters handles personal data in compliance with GDPR to meet
-            legal and organisational obligations.<span> Read our Data Protection Policy.</span>
+            legal and organisational obligations.<span id="openDataModal" style="cursor:pointer; color:#2563eb;">
+                Read our Data Protection Policy.
+            </span>
         </p>
         <p>
             <strong>Data Protection Privacy Notice – Customers -</strong> This notice applies to personal data held by
             Globetrotters and outlines what information we collect, how we use and protect it, and who we share it with.
-            <span>Read More.</span>
+            <span id="openReadMoreModal" style="cursor:pointer; color:#2563eb;">
+                Read More.
+            </span>
         </p>
         <br />
         <h1> Reports</h1>
@@ -90,8 +94,7 @@
             margin-bottom: 30px;
             color: #000;
             border-bottom: 3px solid #2563eb;
-            padding-bottom: 15px;
-            padding-top: 15px;
+
         }
 
         /* Section Headings */
@@ -502,6 +505,184 @@
 
         </div>
     </div>
+    <div id="dataModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" id="closeDataModal">&times;</span>
+
+            <h2>DATA PROTECTION POLICY</h2>
+
+            <h3>1. Context and Overview</h3>
+            <p>
+                Globetrotters collects and uses personal data relating to customers, suppliers, employees,
+                and business contacts. This policy explains how such data must be handled to comply with
+                data protection laws and best practices.
+            </p>
+
+            <h4>Why this Policy exists</h4>
+            <ul>
+                <li>To comply with data protection law</li>
+                <li>To protect the rights of staff, customers and partners</li>
+                <li>To ensure transparency in data handling</li>
+                <li>To protect against risks of data breaches</li>
+            </ul>
+
+            <h3>Data Protection Principles</h3>
+            <ul>
+                <li>Data must be processed fairly and lawfully</li>
+                <li>Collected for specific lawful purposes</li>
+                <li>Adequate, relevant and not excessive</li>
+                <li>Accurate and kept up to date</li>
+                <li>Not retained longer than necessary</li>
+                <li>Processed in line with individual rights</li>
+                <li>Protected appropriately</li>
+                <li>Not transferred outside EEA without protection</li>
+            </ul>
+
+            <h3>2. People, Risks and Responsibilities</h3>
+            <p>This policy applies to all staff, departments, contractors and partners handling personal data.</p>
+
+            <h4>Key Responsibilities</h4>
+            <ul>
+                <li>Board of Directors ensures legal compliance</li>
+                <li>Head of Legal manages policies, training, and data requests</li>
+                <li>IT Managers ensure system security</li>
+                <li>Marketing Managers ensure compliant communications</li>
+            </ul>
+
+            <h3>3. General Staff Guidelines</h3>
+            <ul>
+                <li>Only authorised staff should access data</li>
+                <li>Data must not be shared informally</li>
+                <li>Use strong passwords and keep data secure</li>
+                <li>Delete data when no longer required</li>
+            </ul>
+
+            <h3>4. Data Storage</h3>
+            <ul>
+                <li>Paper records must be securely stored</li>
+                <li>Electronic data must be password protected</li>
+                <li>Use approved systems and secure servers</li>
+                <li>Regular backups must be maintained</li>
+            </ul>
+
+            <h3>5. Data Use</h3>
+            <ul>
+                <li>Data must be used only for valid purposes</li>
+                <li>Must be encrypted when transferred</li>
+                <li>Must not be shared externally without authority</li>
+            </ul>
+
+            <h3>6. Data Accuracy</h3>
+            <ul>
+                <li>Data must be kept accurate and updated</li>
+                <li>Incorrect data must be corrected or deleted</li>
+            </ul>
+
+            <h3>7. Subject Access Requests</h3>
+            <p>
+                Individuals have the right to request access to their personal data and understand how it is used.
+            </p>
+
+            <h3>8. Disclosing Data</h3>
+            <p>
+                Data may be disclosed to law enforcement where legally required, ensuring legitimacy of requests.
+            </p>
+
+            <h3>9. Providing Information</h3>
+            <p>
+                Globetrotters ensures individuals understand how their data is used and their rights.
+            </p>
+
+            <h3>10. Related Policies</h3>
+            <ul>
+                <li>Privacy Notices</li>
+                <li>IT Policy</li>
+                <li>Records Management Policy</li>
+            </ul>
+
+        </div>
+    </div>
+    <div id="readMoreModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" id="closeReadMoreModal">&times;</span>
+
+            <h2>DATA PROTECTION PRIVACY NOTICE – CUSTOMERS</h2>
+
+            <h3>1. Introduction</h3>
+            <p>
+                This Privacy Notice explains how Globetrotters collects, uses, and protects personal information
+                relating to customers and individuals connected to their business. It applies even after your
+                relationship with us ends.
+            </p>
+
+            <h3>2. Information We Collect</h3>
+            <ul>
+                <li>Personal details (name, contact information)</li>
+                <li>Email, phone number, company role</li>
+                <li>Market research responses</li>
+                <li>Login and account data</li>
+                <li>Communication records (email, calls, etc.)</li>
+                <li>Cookies and browsing data</li>
+                <li>Financial and risk-related information</li>
+            </ul>
+
+            <h3>3. How We Use Information</h3>
+            <ul>
+                <li>Providing and managing services</li>
+                <li>Processing agreements</li>
+                <li>Improving services and customer experience</li>
+                <li>Marketing and communication</li>
+                <li>Risk management and analytics</li>
+                <li>Legal compliance</li>
+            </ul>
+
+            <h3>Tracking & Monitoring</h3>
+            <p>
+                Interactions such as calls, emails, meetings, and CCTV recordings may be monitored to improve
+                services and ensure security.
+            </p>
+
+            <h3>4. Sharing Information</h3>
+            <ul>
+                <li>With group companies and service providers</li>
+                <li>With regulators, courts, and legal authorities</li>
+                <li>With insurers and auditors</li>
+                <li>With authorised third parties</li>
+            </ul>
+
+            <h3>5. Data Retention</h3>
+            <p>
+                Information is typically stored for up to 6 years after the relationship ends, unless longer
+                retention is required by law.
+            </p>
+
+            <h3>6. Your Rights</h3>
+            <ul>
+                <li>Access your data</li>
+                <li>Correct or update data</li>
+                <li>Request deletion</li>
+                <li>Restrict or object to processing</li>
+                <li>Withdraw consent</li>
+            </ul>
+
+            <h3>7. Credit Checks</h3>
+            <p>
+                Credit and identity checks may be performed using credit reference agencies to assess risk
+                and manage accounts.
+            </p>
+
+            <h3>8. Data Security</h3>
+            <p>
+                Data is protected using encryption, secure systems, and strict access controls.
+            </p>
+
+            <h3>9. Contact</h3>
+            <p>
+                For more information, contact Globetrotters at info@daviesturner.co.uk
+            </p>
+
+        </div>
+    </div>
     <style>
         .modal {
             display: none;
@@ -621,6 +802,38 @@
 
         window.addEventListener("click", function (event) {
             let modal = document.getElementById("reportModal");
+            if (event.target === modal) {
+                modal.style.display = "none";
+            }
+        });
+    </script>
+    <script>
+        document.getElementById("openDataModal").onclick = function () {
+            document.getElementById("dataModal").style.display = "block";
+        };
+
+        document.getElementById("closeDataModal").onclick = function () {
+            document.getElementById("dataModal").style.display = "none";
+        };
+
+        window.addEventListener("click", function (event) {
+            let modal = document.getElementById("dataModal");
+            if (event.target === modal) {
+                modal.style.display = "none";
+            }
+        });
+    </script>
+    <script>
+        document.getElementById("openReadMoreModal").onclick = function () {
+            document.getElementById("readMoreModal").style.display = "block";
+        };
+
+        document.getElementById("closeReadMoreModal").onclick = function () {
+            document.getElementById("readMoreModal").style.display = "none";
+        };
+
+        window.addEventListener("click", function (event) {
+            let modal = document.getElementById("readMoreModal");
             if (event.target === modal) {
                 modal.style.display = "none";
             }
