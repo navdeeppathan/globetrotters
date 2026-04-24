@@ -74,7 +74,7 @@ www.globetrottersltd.com
 <div>
 <p class="text-black text-xs md:text-sm">Office Address</p>
 <p class="text-black text-sm md:text-base leading-relaxed">
-Vista Business Centre,<br>
+A2-14, Vista Business Centre,<br>
 50 Salisbury Road, Hounslow<br>
 Middlesex TW4 6JQ, UK
 </p>

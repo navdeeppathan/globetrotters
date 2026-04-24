@@ -109,7 +109,7 @@
                     <div class="flex items-start gap-3">
                         <i class="fa-solid fa-location-dot text-blue-400 mt-1"></i>
                         <span>
-                            Vista Business Centre,<br>
+                            A2-14, Vista Business Centre,<br>
                             50 Salisbury Road, Hounslow<br>
                             Middlesex TW4 6JQ, UK
                         </span>
