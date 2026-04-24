@@ -2234,6 +2234,15 @@
             <i class="fa-solid fa-headset text-blue-500"></i>
             24/7 Customer Support
             </div>
+            <div class="flex items-center gap-2">
+            <i class="fa-solid fa-people-group text-blue-500"></i>
+            SSL Secured
+            </div>
+
+            <div class="flex items-center gap-2">
+            <i class="fa-solid fa-headset text-blue-500"></i>
+            GDPR Compliant
+            </div>
 
         </div>
 

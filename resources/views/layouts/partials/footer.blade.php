@@ -84,7 +84,8 @@
                         Terms & Conditions
                         </a>
                     </li> --}}
-                    {{-- <li><a href="/privacy-policy" class="hover:text-blue-400 transition">Privacy Policy</a></li> --}}
+                   <!-- <li><a href="/privacy-policy" class="hover:text-blue-400 transition">Privacy Policy</a></li>  -->
+                   <li><a href="/policy-statements-and-reports" class="hover:text-blue-400 transition">Policy & Reports</a></li> 
                     <li><a href="/contact" class="hover:text-blue-400 transition">Contact</a></li>
                 </ul>
             </div>

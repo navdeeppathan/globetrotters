@@ -147,13 +147,12 @@
                         bg-[#1ecbff] rounded-full shadow-[0_0_8px_#3b82f6]"></span>
                         @endif
 
-                        <a href="/seo"
+                        <!-- <a href="/seo"
                         class="relative pb-1 text-gray-900 hover:text-blue-400
                         after:absolute after:left-0 after:-bottom-2
                         after:h-[2px] after:w-0 after:bg-blue-400
                         after:transition-all after:duration-300
                         hover:after:w-full">
-                        {{-- class="relative pb-1 {{ request()->is('about*') ? 'text-[#1ecbff]' : 'text-gray-300 hover:text-blue-400' }}"> --}}
 
                         SEO
 
@@ -162,7 +161,7 @@
                         bg-[#1ecbff] rounded-full shadow-[0_0_8px_#3b82f6]"></span>
                         @endif
 
-                        </a>
+                        </a> -->
                         <a href="/contact"
                         class="relative pb-1 text-gray-900 hover:text-blue-400
                         after:absolute after:left-0 after:-bottom-2

@@ -103,6 +103,10 @@ Route::get('/blog-details', function () {
 Route::get('/privacy-policy', function () {
     return view('privacypolicy');
 });
+Route::get('/policy-statements-and-reports', function () {
+    return view('reportpolicy');
+});
+
 
 use App\Http\Controllers\ServiceController;
 
